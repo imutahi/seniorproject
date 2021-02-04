@@ -15,16 +15,17 @@ class ClientsTest < ApplicationSystemTestCase
     click_on "New Client"
 
     fill_in "Address", with: @client.address
-    check "Admin" if @client.admin
     fill_in "City", with: @client.city
+    fill_in "Client", with: @client.client_id
+    fill_in "Client name", with: @client.client_name
     fill_in "Company", with: @client.company
     fill_in "Email", with: @client.email
     fill_in "Fax", with: @client.fax
-    fill_in "Name", with: @client.name
     fill_in "Notes", with: @client.notes
     fill_in "Phone", with: @client.phone
     fill_in "State", with: @client.state
     check "Status" if @client.status
+    fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
     click_on "Create Client"
 
@@ -37,16 +38,17 @@ class ClientsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Address", with: @client.address
-    check "Admin" if @client.admin
     fill_in "City", with: @client.city
+    fill_in "Client", with: @client.client_id
+    fill_in "Client name", with: @client.client_name
     fill_in "Company", with: @client.company
     fill_in "Email", with: @client.email
     fill_in "Fax", with: @client.fax
-    fill_in "Name", with: @client.name
     fill_in "Notes", with: @client.notes
     fill_in "Phone", with: @client.phone
     fill_in "State", with: @client.state
     check "Status" if @client.status
+    fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
     click_on "Update Client"
 

@@ -1,29 +1,27 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  client_name: MyString
+  invoice_data: MyString
   first_name: MyString
   middle_name: MyString
   last_name: MyString
   maiden_name: MyString
   dob: MyString
   ssn: MyString
-  dl_num: MyString
   dl_state: MyString
+  dl_number: MyString
   notes: MyString
-  user_id: 1
-  client_id: 1
+  client_request: MyString
 
 two:
-  client_name: MyString
+  invoice_data: MyString
   first_name: MyString
   middle_name: MyString
   last_name: MyString
   maiden_name: MyString
   dob: MyString
   ssn: MyString
-  dl_num: MyString
   dl_state: MyString
+  dl_number: MyString
   notes: MyString
-  user_id: 1
-  client_id: 1
+  client_request: MyString

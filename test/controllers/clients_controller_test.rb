@@ -17,7 +17,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create client" do
     assert_difference('Client.count') do
-      post clients_url, params: { client: { address: @client.address, admin: @client.admin, city: @client.city, company: @client.company, email: @client.email, fax: @client.fax, name: @client.name, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, zip: @client.zip } }
+      post clients_url, params: { client: { address: @client.address, city: @client.city, client_id: @client.client_id, client_name: @client.client_name, company: @client.company, email: @client.email, fax: @client.fax, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, total_requests: @client.total_requests, zip: @client.zip } }
     end
 
     assert_redirected_to client_url(Client.last)
@@ -34,7 +34,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update client" do
-    patch client_url(@client), params: { client: { address: @client.address, admin: @client.admin, city: @client.city, company: @client.company, email: @client.email, fax: @client.fax, name: @client.name, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, zip: @client.zip } }
+    patch client_url(@client), params: { client: { address: @client.address, city: @client.city, client_id: @client.client_id, client_name: @client.client_name, company: @client.company, email: @client.email, fax: @client.fax, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, total_requests: @client.total_requests, zip: @client.zip } }
     assert_redirected_to client_url(@client)
   end
 

@@ -12,18 +12,28 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :client_name %>
+    <%= form.text_field :client_name %>
+  </div>
+
+  <div class="field">
     <%= form.label :status %>
     <%= form.check_box :status %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :total_requests %>
+    <%= form.number_field :total_requests %>
   </div>
 
   <div class="field">
     <%= form.label :company %>
     <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
   </div>
 
   <div class="field">
@@ -57,18 +67,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
     <%= form.label :notes %>
     <%= form.text_field :notes %>
   </div>
 
   <div class="field">
-    <%= form.label :admin %>
-    <%= form.check_box :admin %>
+    <%= form.label :client_id %>
+    <%= form.number_field :client_id %>
   </div>
 
   <div class="actions">

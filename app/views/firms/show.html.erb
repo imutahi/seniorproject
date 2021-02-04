@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice data:</strong>
+  <%= @firm.invoice_data %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @firm.first_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @firm.middle_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @firm.last_name %>
+</p>
+
+<p>
+  <strong>Maiden name:</strong>
+  <%= @firm.maiden_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @firm.dob %>
+</p>
+
+<p>
+  <strong>Ssn:</strong>
+  <%= @firm.ssn %>
+</p>
+
+<p>
+  <strong>Dl state:</strong>
+  <%= @firm.dl_state %>
+</p>
+
+<p>
+  <strong>Dl number:</strong>
+  <%= @firm.dl_number %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @firm.notes %>
+</p>
+
+<p>
+  <strong>Client request:</strong>
+  <%= @firm.client_request %>
+</p>
+
+<%= link_to 'Edit', edit_firm_path(@firm) %> |
+<%= link_to 'Back', firms_path %>

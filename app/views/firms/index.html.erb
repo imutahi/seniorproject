@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Firms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Invoice data</th>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th>Maiden name</th>
+      <th>Dob</th>
+      <th>Ssn</th>
+      <th>Dl state</th>
+      <th>Dl number</th>
+      <th>Notes</th>
+      <th>Client request</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @firms.each do |firm| %>
+      <tr>
+        <td><%= firm.invoice_data %></td>
+        <td><%= firm.first_name %></td>
+        <td><%= firm.middle_name %></td>
+        <td><%= firm.last_name %></td>
+        <td><%= firm.maiden_name %></td>
+        <td><%= firm.dob %></td>
+        <td><%= firm.ssn %></td>
+        <td><%= firm.dl_state %></td>
+        <td><%= firm.dl_number %></td>
+        <td><%= firm.notes %></td>
+        <td><%= firm.client_request %></td>
+        <td><%= link_to 'Show', firm %></td>
+        <td><%= link_to 'Edit', edit_firm_path(firm) %></td>
+        <td><%= link_to 'Destroy', firm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Firm', new_firm_path %>

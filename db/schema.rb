@@ -10,38 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_175404) do
+ActiveRecord::Schema.define(version: 2021_02_04_014401) do
 
   create_table "clients", force: :cascade do |t|
+    t.string "client_name"
     t.boolean "status"
-    t.string "name"
+    t.integer "total_requests"
     t.string "company"
+    t.string "email"
     t.string "address"
     t.string "city"
     t.string "state"
     t.string "zip"
     t.string "phone"
     t.string "fax"
-    t.string "email"
     t.string "notes"
-    t.boolean "admin"
+    t.integer "client_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "requests", force: :cascade do |t|
-    t.string "client_name"
+  create_table "firms", force: :cascade do |t|
+    t.string "invoice_data"
     t.string "first_name"
     t.string "middle_name"
     t.string "last_name"
     t.string "maiden_name"
     t.string "dob"
     t.string "ssn"
-    t.string "dl_num"
     t.string "dl_state"
+    t.string "dl_number"
     t.string "notes"
-    t.integer "user_id"
-    t.integer "client_id"
+    t.string "client_request"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
