@@ -1,32 +1,35 @@
-<%= form_with(model: service, local: true) do |form| %>
-  <% if service.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+<div class="container-fluid">
+  <%= form_with(model: service, local: true) do |form| %>
+    <% if service.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
-      <ul>
-        <% service.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% service.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field mb-3">
+      <%= form.label :service_type, class:"form-label" %>
+      <%= form.text_field :service_type, class:"form-control" %>
+    </div>
+
+    <div class="field mb-3">
+      <%= form.label :description, class:"form-label" %>
+      <%= form.text_field :description, class:"form-control" %>
+    </div>
+
+    <div class="field mb-3">
+      <%= form.label :price, class:"form-label" %>
+      <%= form.text_field :price, class:"form-control" %>
+    </div>
+
+    <div class="actions mb-3">
+      <%= form.submit class:"btn btn-primary" %>
+      <i class="fas fa-paper-plane"></i>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :service_type %>
-    <%= form.text_field :service_type %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
