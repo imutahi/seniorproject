@@ -1,4 +1,4 @@
-# TALON SERVICES
+# TALON SERVICES - Encrypted Request Manager
 
 ## Table of Contents
 
