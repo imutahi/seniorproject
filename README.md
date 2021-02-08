@@ -34,6 +34,6 @@ MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App tha
 
 ## Sprint Deliverables
 
-- 2/10 - Basic app working with minimal features (3 scaffolds/pages) , basic front-end features (bootstrap, HTML), Unit Testing (passing), Field Validations, SimpleCov (passing), Travis-CI (passing), all hosted on Heroku.  
+- 2/10 - Basic app working with minimal features (3 scaffolds/pages), basic front-end features (bootstrap, HTML), Unit Testing (passing) and Field Validations (bin/rails test:system), SimpleCov (passing), Travis-CI (passing), all hosted on Heroku.  
 
 - 2/24 - coming soon
