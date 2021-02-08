@@ -1,59 +1,78 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Invoice data:</strong>
-  <%= @firm.invoice_data %>
-</p>
+<!--<p>-->
+<!--  <strong>Invoice Data:</strong>-->
+  <%#= @firm.invoice_data %>
+<!--</p>-->
 
-<p>
-  <strong>First name:</strong>
-  <%= @firm.first_name %>
-</p>
+<!--<p>-->
+<!--  <strong>First Name:</strong>-->
+  <%#= @firm.first_name %>
+<!--</p>-->
 
-<p>
-  <strong>Middle name:</strong>
-  <%= @firm.middle_name %>
-</p>
+<!--<p>-->
+<!--  <strong>Middle Name:</strong>-->
+  <%#= @firm.middle_name %>
+<!--</p>-->
 
-<p>
-  <strong>Last name:</strong>
-  <%= @firm.last_name %>
-</p>
+<!--<p>-->
+<!--  <strong>Last Name:</strong>-->
+  <%#= @firm.last_name %>
+<!--</p>-->
 
-<p>
-  <strong>Maiden name:</strong>
-  <%= @firm.maiden_name %>
-</p>
+<!--<p>-->
+<!--  <strong>Maiden Name:</strong>-->
+  <%#= @firm.maiden_name %>
+<!--</p>-->
 
-<p>
-  <strong>Dob:</strong>
-  <%= @firm.dob %>
-</p>
+<!--<p>-->
+<!--  <strong>DOB:</strong>-->
+  <%#= @firm.dob %>
+<!--</p>-->
 
-<p>
-  <strong>Ssn:</strong>
-  <%= @firm.ssn %>
-</p>
+<!--<p>-->
+<!--  <strong>SSN:</strong>-->
+  <%#= @firm.ssn %>
+<!--</p>-->
 
-<p>
-  <strong>Dl state:</strong>
-  <%= @firm.dl_state %>
-</p>
+<!--<p>-->
+<!--  <strong>Dl State:</strong>-->
+  <%#= @firm.dl_state %>
+<!--</p>-->
 
-<p>
-  <strong>Dl number:</strong>
-  <%= @firm.dl_number %>
-</p>
+<!--<p>-->
+<!--  <strong>Dl Number:</strong>-->
+  <%#= @firm.dl_number %>
+<!--</p>-->
 
-<p>
-  <strong>Notes:</strong>
-  <%= @firm.notes %>
-</p>
+<!--<p>-->
+<!--  <strong>Notes:</strong>-->
+  <%#= @firm.notes %>
+<!--</p>-->
 
-<p>
-  <strong>Client request:</strong>
-  <%= @firm.client_request %>
-</p>
+<!--<p>-->
+<!--  <strong>Client Request:</strong>-->
+  <%#= @firm.client_request %>
+<!--</p>-->
 
-<%= link_to 'Edit', edit_firm_path(@firm) %> |
-<%= link_to 'Back', firms_path %>
+<dl class="row">
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><%= @firm.first_name %> <%= @firm.last_name %></dd>
+  <dt class="col-sm-3">Invoice Data:</dt>
+  <dd class="col-sm-9"><%= @firm.invoice_data %></dd>
+  <dt class="col-sm-3">DOB:</dt>
+  <dd class="col-sm-9"><%= @firm.dob %></dd>
+  <dt class="col-sm-3">SSN:</dt>
+  <dd class="col-sm-9"><%= @firm.ssn %></dd>
+  <dt class="col-sm-3">DL State:</dt>
+  <dd class="col-sm-9"><%= @firm.dl_state %></dd>
+  <dt class="col-sm-3">DL Number:</dt>
+  <dd class="col-sm-9"><%= @firm.dl_number %></dd>
+  <dt class="col-sm-3">Notes:</dt>
+  <dd class="col-sm-9"><%= @firm.notes %></dd>
+  <dt class="col-sm-3">Client Request:</dt>
+  <dd class="col-sm-9"><%= @firm.client_request %></dd>
+</dl>
+
+<%= link_to 'Edit', edit_firm_path(@firm), class:"btn btn-dark" %> |
+<%= link_to 'Back', firms_path, class:"btn btn-dark" %>
