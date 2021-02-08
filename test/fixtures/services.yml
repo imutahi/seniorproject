@@ -3,9 +3,9 @@
 one:
   service_type: MyString
   description: MyString
-  price: MyString
+  price: 100.00
 
 two:
   service_type: MyString
   description: MyString
-  price: MyString
+  price: 30.00

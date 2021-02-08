@@ -6,9 +6,9 @@ one:
   middle_name: MyString
   last_name: MyString
   maiden_name: MyString
-  dob: MyString
-  ssn: MyString
-  dl_state: MyString
+  dob: 01-01-2021
+  ssn: 111-22-3333
+  dl_state: CO
   dl_number: MyString
   notes: MyString
   client_request: MyString
@@ -19,9 +19,9 @@ two:
   middle_name: MyString
   last_name: MyString
   maiden_name: MyString
-  dob: MyString
-  ssn: MyString
-  dl_state: MyString
+  dob: 01-01-2021
+  ssn: 22-33-4444
+  dl_state: CO
   dl_number: MyString
   notes: MyString
   client_request: MyString
