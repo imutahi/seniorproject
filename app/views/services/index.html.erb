@@ -2,16 +2,16 @@
 
 <h1>Services</h1>
 
-<table>
+<!-- https://getbootstrap.com/docs/5.0/content/tables/ -->
+<table class="table table-striped table-info">
   <thead>
     <tr>
-      <th>Service type</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
+      <th scope="col">Service type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @services.each do |service| %>
       <tr>
@@ -26,6 +26,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Service', new_service_path %>
+<%= link_to 'New Service', new_service_path, class:"btn btn-primary" %>

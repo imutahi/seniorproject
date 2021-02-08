@@ -22,57 +22,58 @@
     </div>
 
     <div class="field mb-3">
-      <%= form.label :first_name %>
-      <%= form.text_field :first_name %>
+      <%= form.label :first_name, class:"form-label" %>
+      <%= form.text_field :first_name, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :middle_name %>
-      <%= form.text_field :middle_name %>
+      <%= form.label :middle_name, class:"form-label" %>
+      <%= form.text_field :middle_name, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :last_name %>
-      <%= form.text_field :last_name %>
+      <%= form.label :last_name, class:"form-label" %>
+      <%= form.text_field :last_name, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :maiden_name %>
-      <%= form.text_field :maiden_name %>
+      <%= form.label :maiden_name, class:"form-label" %>
+      <%= form.text_field :maiden_name, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :dob %>
-      <%= form.text_field :dob %>
+      <%= form.label :dob, class:"form-label" %>
+      <%= form.text_field :dob, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :ssn %>
-      <%= form.text_field :ssn %>
+      <%= form.label :ssn, class:"form-label" %>
+      <%= form.text_field :ssn, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :dl_state %>
-      <%= form.text_field :dl_state %>
+      <%= form.label :dl_state, class:"form-label" %>
+      <%= form.text_field :dl_state, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :dl_number %>
-      <%= form.text_field :dl_number %>
+      <%= form.label :dl_number, class:"form-label" %>
+      <%= form.text_field :dl_number, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :notes %>
-      <%= form.text_field :notes %>
+      <%= form.label :notes, class:"form-label" %>
+      <%= form.text_field :notes, class:"form-control" %>
     </div>
 
     <div class="field mb-3">
-      <%= form.label :client_request %>
-      <%= form.text_field :client_request %>
+      <%= form.label :client_request, class:"form-label" %>
+      <%= form.text_field :client_request, class:"form-control" %>
     </div>
 
     <div class="actions mb-3">
-      <%= form.submit %>
+      <%= form.submit "Create Request", class:"btn btn-primary" %>
+      <i class="fas fa-paper-plane"></i>
     </div>
   <% end %>
 </div>

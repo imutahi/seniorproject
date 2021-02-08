@@ -17,7 +17,7 @@ class ServicesTest < ApplicationSystemTestCase
     fill_in "Description", with: @service.description
     fill_in "Price", with: @service.price
     fill_in "Service type", with: @service.service_type
-    click_on "Create Service"
+    click_on "Submit for Approval"
 
     assert_text "Service was successfully created"
     click_on "Back"
@@ -30,7 +30,7 @@ class ServicesTest < ApplicationSystemTestCase
     fill_in "Description", with: @service.description
     fill_in "Price", with: @service.price
     fill_in "Service type", with: @service.service_type
-    click_on "Update Service"
+    click_on "Submit for Approval"
 
     assert_text "Service was successfully updated"
     click_on "Back"
