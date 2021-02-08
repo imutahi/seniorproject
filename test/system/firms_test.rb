@@ -7,12 +7,12 @@ class FirmsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit firms_url
-    assert_selector "h1", text: "Firms"
+    assert_selector "h1", text: "Requests"
   end
 
   test "creating a Firm" do
     visit firms_url
-    click_on "New Firm"
+    click_on "New Request"
 
     fill_in "Client request", with: @firm.client_request
     fill_in "Dl number", with: @firm.dl_number
@@ -25,7 +25,7 @@ class FirmsTest < ApplicationSystemTestCase
     fill_in "Middle name", with: @firm.middle_name
     fill_in "Notes", with: @firm.notes
     fill_in "Ssn", with: @firm.ssn
-    click_on "Create Firm"
+    click_on "Create Request"
 
     assert_text "Firm was successfully created"
     click_on "Back"
@@ -46,7 +46,7 @@ class FirmsTest < ApplicationSystemTestCase
     fill_in "Middle name", with: @firm.middle_name
     fill_in "Notes", with: @firm.notes
     fill_in "Ssn", with: @firm.ssn
-    click_on "Update Firm"
+    click_on "Create Request"
 
     assert_text "Firm was successfully updated"
     click_on "Back"
