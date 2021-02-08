@@ -4,7 +4,7 @@
 
 > (coming soon)
 
-MSU Denver Senior Project for CS4360, Spring 2021. This project sets out to develop a secure and accessible web application that will allow clients to share background check reports easily and confidentially.
+MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App that allows clients to make encrypted service requests.
 
 ## Team Members
 
