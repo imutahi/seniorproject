@@ -1,4 +1,4 @@
-# TALON SERVICES - encrypted backgroud check request manager
+# TALON SERVICES
 
 ## Table of Contents
 
