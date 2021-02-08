@@ -8,10 +8,12 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
         address: '1000 Test Ave.',
         city: 'Testing',
         state: 'CO',
+        zip: '12345',
         email: 'dom@test.com',
         company: 'Test Inc.',
         notes: 'test test test',
-        phone: '111-222-3333'
+        phone: '111-222-3333',
+        fax: '111-222-3333'
     }
   end
 

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-07T17:18:19-07:00">2021-02-07T17:18:19-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-07T17:54:56-07:00">2021-02-07T17:54:56-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -216,7 +216,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8cd3e4ffac60a2ef4a8f2158633d7124ac3ec9e3" class="src_link" title="app/models/client.rb">app/models/client.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">11</td>
             <td class="cell--number">11</td>
             <td class="cell--number">0</td>
@@ -227,7 +227,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#456d849055ac94334eb4a6ade4cfe3e03b297ef6" class="src_link" title="app/models/firm.rb">app/models/firm.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">10</td>
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
@@ -501,7 +501,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8cd3e4ffac60a2ef4a8f2158633d7124ac3ec9e3" class="src_link" title="app/models/client.rb">app/models/client.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">11</td>
             <td class="cell--number">11</td>
             <td class="cell--number">0</td>
@@ -512,7 +512,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#456d849055ac94334eb4a6ade4cfe3e03b297ef6" class="src_link" title="app/models/firm.rb">app/models/firm.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">10</td>
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
@@ -4174,18 +4174,18 @@
 
             
 
-            <code class="ruby">  validates :state, length: { maximum: 40 }</code>
+            <code class="ruby">  validates :state,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">  validates :zip, length: { maximum: 20 }</code>
+            <code class="ruby">            format: {with: %r{\A\w{2}\Z}}</code>
           </li>
         </div>
       
@@ -4196,18 +4196,18 @@
 
             
 
-            <code class="ruby">  validates :phone, length: { maximum: 40 }</code>
+            <code class="ruby">  validates :zip,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="10">
+            
             
 
             
 
-            <code class="ruby">  validates :fax, length: { maximum: 40 }</code>
+            <code class="ruby">            format: {with: %r{\A\d{5}\Z}}</code>
           </li>
         </div>
       
@@ -4218,7 +4218,7 @@
 
             
 
-            <code class="ruby">  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP },</code>
+            <code class="ruby">  validates :phone,</code>
           </li>
         </div>
       
@@ -4229,18 +4229,18 @@
 
             
 
-            <code class="ruby">            presence: true,</code>
+            <code class="ruby">            format: {with: %r{\A\d{3}-\d{3}-\d{4}\Z}}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">            length: {maximum: 40}</code>
+            
+
+            <code class="ruby">  validates :fax,</code>
           </li>
         </div>
       
@@ -4251,7 +4251,7 @@
 
             
 
-            <code class="ruby">            #,uniqueness: {case_sensitive: false}</code>
+            <code class="ruby">            format: {with: %r{\A\d{3}-\d{3}-\d{4}\Z}}</code>
           </li>
         </div>
       
@@ -4262,12 +4262,56 @@
 
             
 
-            <code class="ruby">  validates :notes, length: { maximum: 140 }</code>
+            <code class="ruby">  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP },</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">            presence: true,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">            length: {maximum: 40}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">            #,uniqueness: {case_sensitive: false}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :notes, length: { maximum: 140 }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -4381,18 +4425,18 @@
 
             
 
-            <code class="ruby">  validates :dob, presence: true, length: { maximum: 40 }</code>
+            <code class="ruby">  validates :dob,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="8">
+            
             
 
             
 
-            <code class="ruby">  validates :ssn,</code>
+            <code class="ruby">            format: {with: %r{\A\d{2}-\d{2}-\d{4}\Z}},</code>
           </li>
         </div>
       
@@ -4403,12 +4447,34 @@
 
             
 
+            <code class="ruby">            presence: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :ssn,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
             <code class="ruby">            format: {with: %r{\A\d{3}-\d{2}-\d{4}\Z}}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -4419,7 +4485,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
+          <li class="covered" data-hits="1" data-linenumber="13">
             <span class="hits">1</span>
             
 
@@ -4430,18 +4496,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="14">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  validates :dl_state, length: { maximum: 40 }</code>
+            <code class="ruby">  validates :dl_state,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">            format: {with: %r{\A\w{2}\Z}}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -4452,7 +4529,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 

@@ -8,7 +8,7 @@ one:
   maiden_name: MyString
   dob: 01-01-2021
   ssn: 111-22-3333
-  dl_state: MyString
+  dl_state: CO
   dl_number: MyString
   notes: MyString
   client_request: MyString
@@ -21,7 +21,7 @@ two:
   maiden_name: MyString
   dob: 01-01-2021
   ssn: 22-33-4444
-  dl_state: MyString
+  dl_state: CO
   dl_number: MyString
   notes: MyString
   client_request: MyString

@@ -7,7 +7,8 @@ class FirmsControllerTest < ActionDispatch::IntegrationTest
         first_name: 'Michael',
         last_name: 'Tests',
         dob: '01-01-2000',
-        ssn: '111-22-3333'
+        ssn: '111-22-3333',
+        dl_state: 'CO'
     }
   end
 

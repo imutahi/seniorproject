@@ -8,7 +8,7 @@ one:
   email: MyString@mystring.com
   address: MyString
   city: MyString
-  state: MyString
+  state: CO
   zip: 11111
   phone: 504-504-5045
   fax: 504-504-5045
@@ -23,7 +23,7 @@ two:
   email: MyString@mystring.com
   address: MyString
   city: MyString
-  state: MyString
+  state: CO
   zip: 11111
   phone: 504-504-5045
   fax: 504-504-5045
