@@ -1,5 +1,6 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start 'rails'
+Rails.application.eager_load!
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
