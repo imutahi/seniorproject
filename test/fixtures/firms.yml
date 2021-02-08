@@ -6,8 +6,8 @@ one:
   middle_name: MyString
   last_name: MyString
   maiden_name: MyString
-  dob: MyString
-  ssn: MyString
+  dob: 01-01-2021
+  ssn: 111-22-3333
   dl_state: MyString
   dl_number: MyString
   notes: MyString
@@ -19,8 +19,8 @@ two:
   middle_name: MyString
   last_name: MyString
   maiden_name: MyString
-  dob: MyString
-  ssn: MyString
+  dob: 01-01-2021
+  ssn: 22-33-4444
   dl_state: MyString
   dl_number: MyString
   notes: MyString

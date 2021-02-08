@@ -5,13 +5,13 @@ one:
   status: false
   total_requests: 1
   company: MyString
-  email: MyString
+  email: MyString@mystring.com
   address: MyString
   city: MyString
   state: MyString
-  zip: MyString
-  phone: MyString
-  fax: MyString
+  zip: 11111
+  phone: 504-504-5045
+  fax: 504-504-5045
   notes: MyString
   client_id: 1
 
@@ -20,12 +20,12 @@ two:
   status: false
   total_requests: 1
   company: MyString
-  email: MyString
+  email: MyString@mystring.com
   address: MyString
   city: MyString
   state: MyString
-  zip: MyString
-  phone: MyString
-  fax: MyString
+  zip: 11111
+  phone: 504-504-5045
+  fax: 504-504-5045
   notes: MyString
   client_id: 1
