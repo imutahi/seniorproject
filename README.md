@@ -1,24 +1,33 @@
-# README
+# TALON SERVICES
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
 
-Things you may want to cover:
+> (coming soon)
 
-* Ruby version
+MSU Denver Senior Project for CS4360, Spring 2021. This project sets out to develop a secure and accessible web application that will allow clients to share background check reports easily and confidentially.
 
-* System dependencies
+## Team Members
 
-* Configuration
+- Dominick Licciardi (Product Owner)
 
-* Database creation
+- Warren Joseph Ramos (Scrum Master)
 
-* Database initialization
+- Stuart Griffin (Development Team)
 
-* How to run the test suite
+- Muhammad Monsoor (Development Team)
 
-* Services (job queues, cache servers, search engines, etc.)
+- Grant Schumacher (Development Team)
 
-* Deployment instructions
+- Ian Mutahi (Development Team)
 
-* ...
+- Jose Velasquez (Development Team)
+
+## Notes
+
+- Ruby on Rails: a familiar and robust framework that allows the team to quickly and easily work in an MVC environment
+
+- Test Driven Development Approach: this project implements a TDD approach to ensure code quality and integrity
+
+- PostGreSQL Database: a free and popular relational database management system that will allow the project to be deployed to Heroku
+
+- Travis CI: allows for continuous integration to maintain code quality and integrity
