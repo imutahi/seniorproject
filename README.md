@@ -32,13 +32,13 @@ MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App tha
 
 - Travis CI: allows for continuous integration to maintain code quality and integrity
 
-## Sprint Deliverables
+## Sprint Deliverables - 2/10
 
-- 2/10 - 1) Basic app working with minimal features (3 scaffolds/pages) 
-       - 2) basic front-end features (bootstrap, HTML)
-       - 3) Unit Testing (passing) and Field Validations (bin/rails test:system)
-       - 4) SimpleCov (passing)
-       - 5) Travis-CI (passing)
-       - 6) all hosted on Heroku.  
+- Basic app working with minimal features (3 scaffolds/pages) 
+- basic front-end features (bootstrap, HTML)
+- Unit Testing (passing) and Field Validations (bin/rails test:system)
+- SimpleCov (passing)
+- Travis-CI (passing)
+- all hosted on Heroku.  
 
-- 2/24 - coming soon
+## Sprint Deliverables - 2/24 - coming soon
