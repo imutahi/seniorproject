@@ -31,3 +31,7 @@ MSU Denver Senior Project for CS4360, Spring 2021. This project sets out to deve
 - PostGreSQL Database: a free and popular relational database management system that will allow the project to be deployed to Heroku
 
 - Travis CI: allows for continuous integration to maintain code quality and integrity
+
+## Deliverables
+
+- 2/10 - Basic app working with minimal features (3 scaffolds/pages) , basic front-end features (bootstrap, HTML), Unit Testing (passing), Field Validations, SimpleCov (passing), Travis-CI (passing), all hosted on Heroku.  
