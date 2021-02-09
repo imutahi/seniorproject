@@ -16,16 +16,16 @@ one:
   client_id: 1
 
 two:
-  client_name: MyString
+  client_name: "Jeff Hostetler"
   status: false
   total_requests: 1
-  company: MyString
-  email: MyString@mystring.com
-  address: MyString
+  company: 333
+  email: "email@email.com"
+  address: 333
   city: MyString
   state: CO
-  zip: 11111
-  phone: 504-504-5045
-  fax: 504-504-5045
+  zip:
+  phone: 504-
+  fax: 504-504-
   notes: MyString
   client_id: 1

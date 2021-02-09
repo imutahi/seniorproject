@@ -36,6 +36,30 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to client_url(Client.last)
   end
 
+  test "should stay on same page if create client is invalid" do
+    assert_no_difference('Client.count') do
+      post clients_url, params: {
+        client: {
+          address: 123,
+          city: "Nowhere City",
+          client_id: 2,
+          client_name: "Invalid User",
+          company: "ABC Company",
+          email: 123,
+          fax: 123,
+          notes: "invalid entry",
+          phone: 123,
+          state: "CO",
+          status: 1,
+          total_requests: 2,
+          zip: "90210"
+        }
+      }
+    end
+
+    assert_response 422
+  end
+
   test "should show client" do
     get client_url(@client)
     assert_response :success
@@ -49,6 +73,30 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should update client" do
     patch client_url(@client), params: { client: @update }
     assert_redirected_to client_url(@client)
+  end
+
+  test "should stay on same page if update client is invalid" do
+    assert_no_changes(@client) do
+      patch client_url(@client), params: {
+        client: {
+          address: 123,
+          city: "Nowhere City",
+          client_id: 2,
+          client_name: "Invalid User",
+          company: "ABC Company",
+          email: 123,
+          fax: 123,
+          notes: "invalid entry",
+          phone: 123,
+          state: "CO",
+          status: 1,
+          total_requests: 2,
+          zip: "90210"
+        }
+      }
+    end
+
+    assert_response 422
   end
 
   test "should destroy client" do

@@ -36,6 +36,28 @@ class FirmsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to firm_url(Firm.last)
   end
 
+  test "should stay on same page if create firm is invalid" do
+    assert_no_difference('Firm.count') do
+      post firms_url, params: {
+        firm: {
+          invoice_data: 123,
+          first_name: "Invalid firm",
+          middle_name: 123,
+          last_name: 123,
+          maiden_name: 123,
+          dob: "invalid entry",
+          ssn: "invalid entry",
+          dl_state: 123,
+          dl_number: "invalid entry",
+          notes: 123,
+          client_request: 123
+        }
+      }
+    end
+
+    assert_response 422
+  end
+
   test "should show firm" do
     get firm_url(@firm)
     assert_response :success
@@ -49,6 +71,28 @@ class FirmsControllerTest < ActionDispatch::IntegrationTest
   test "should update firm" do
     patch firm_url(@firm), params: { firm: @update }
     assert_redirected_to firm_url(@firm)
+  end
+
+  test "should stay on same page if update firm is invalid" do
+    assert_no_changes(@firm) do
+      patch firm_url(@firm), params: {
+        firm: {
+          invoice_data: 123,
+          first_name: "Invalid firm",
+          middle_name: 123,
+          last_name: 123,
+          maiden_name: 123,
+          dob: "invalid entry",
+          ssn: "invalid entry",
+          dl_state: 123,
+          dl_number: "invalid entry",
+          notes: 123,
+          client_request: 123
+        }
+      }
+    end
+
+    assert_response 422
   end
 
   test "should destroy firm" do
