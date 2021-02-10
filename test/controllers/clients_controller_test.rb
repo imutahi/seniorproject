@@ -15,6 +15,21 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
         phone: '111-222-3333',
         fax: '111-222-3333'
     }
+    @invalidClient = {
+      address: 123,
+      city: "Nowhere City",
+      client_id: 2,
+      client_name: "Invalid User",
+      company: "ABC Company",
+      email: 123,
+      fax: 123,
+      notes: "invalid entry",
+      phone: 123,
+      state: "CO",
+      status: 1,
+      total_requests: 2,
+      zip: "90210"
+    }
   end
 
   test "should get index" do
@@ -39,21 +54,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should stay on same page if create client is invalid" do
     assert_no_difference('Client.count') do
       post clients_url, params: {
-        client: {
-          address: 123,
-          city: "Nowhere City",
-          client_id: 2,
-          client_name: "Invalid User",
-          company: "ABC Company",
-          email: 123,
-          fax: 123,
-          notes: "invalid entry",
-          phone: 123,
-          state: "CO",
-          status: 1,
-          total_requests: 2,
-          zip: "90210"
-        }
+        client: @invalidClient
       }
     end
 
