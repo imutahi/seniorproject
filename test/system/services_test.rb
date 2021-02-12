@@ -44,4 +44,20 @@ class ServicesTest < ApplicationSystemTestCase
 
     assert_text "Service was successfully destroyed"
   end
+
+  test "make sure error messages appear if invalid services is created" do
+    visit new_service_url
+    click_on "Submit for Approval"
+    assert_selector "h2", text: /\A*errors*/
+  end
+
+  test "make sure error messages appear if updated service is invalid" do
+    visit services_url
+    click_on "Edit", match: :first
+    fill_in "Service type", with: ""
+    fill_in "Price", with: ""
+    click_on "Submit for Approval"
+    assert_selector "h2", text: /\A*errors*/
+  end
+
 end
