@@ -64,4 +64,20 @@ class ClientsTest < ApplicationSystemTestCase
 
     assert_text "Client was successfully destroyed"
   end
+
+  test "make sure error messages appear if invalid client is created" do
+    visit new_client_url
+    click_on "Create Client"
+    assert_selector "h2", text: /\A*errors*/
+  end
+
+  test "make sure error messages appear if invalid client is updated" do
+    visit clients_url
+    click_on "Edit", match: :first
+    fill_in "Client name", with: ""
+    fill_in "Email", with: ""
+    click_on "Update Client"
+    assert_selector "h2", text: /\A*errors*/
+  end
+
 end

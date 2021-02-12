@@ -60,4 +60,21 @@ class FirmsTest < ApplicationSystemTestCase
 
     assert_text "Firm was successfully destroyed"
   end
+
+  test "make sure error messages appear if invalid firm is created" do
+    visit new_firm_url
+    click_on "Create Request"
+    assert_selector "h2", text: /\A*errors*/
+  end
+
+  test "make sure error messages appear if updated firm is invalid" do
+    visit firms_url
+    click_on "Edit", match: :first
+    fill_in "Invoice data", with: ""
+    fill_in "First name", with: ""
+    fill_in "Dob", with: ""
+    click_on "Create Request"
+    assert_selector "h2", text: /\A*errors*/
+  end
+
 end
