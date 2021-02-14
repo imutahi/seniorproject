@@ -42,3 +42,6 @@ yarn-debug.log*
 
 # Ignore SimpleCov coverage files
 /coverage
+
+# Auth0 secrets
+/config/secrets.yml
