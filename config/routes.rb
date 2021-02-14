@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :firms
   resources :services
   resources :clients
+  
+  get 'auth/auth0/callback' => 'auth0#callback'
+  get 'auth/failure' => 'auth0#failure'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
