@@ -27,7 +27,7 @@ class ClientsTest < ApplicationSystemTestCase
     check "Status" if @client.status
     fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
-    click_on "Create Client"
+    click_on "Save Client"
 
     assert_text "Client was successfully created"
     click_on "Back"
@@ -50,7 +50,7 @@ class ClientsTest < ApplicationSystemTestCase
     check "Status" if @client.status
     fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
-    click_on "Update Client"
+    click_on "Save Client"
 
     assert_text "Client was successfully updated"
     click_on "Back"
@@ -64,20 +64,4 @@ class ClientsTest < ApplicationSystemTestCase
 
     assert_text "Client was successfully destroyed"
   end
-
-  test "make sure error messages appear if invalid client is created" do
-    visit new_client_url
-    click_on "Create Client"
-    assert_selector "h2", text: /\A*errors*/
-  end
-
-  test "make sure error messages appear if invalid client is updated" do
-    visit clients_url
-    click_on "Edit", match: :first
-    fill_in "Client name", with: ""
-    fill_in "Email", with: ""
-    click_on "Update Client"
-    assert_selector "h2", text: /\A*errors*/
-  end
-
 end
