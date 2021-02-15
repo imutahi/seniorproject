@@ -1,5 +1,7 @@
 <div class="container-fluid center">
   <!--<section class="  image_insert">-->
+  <%= link_to 'My Login', 'auth/auth0', method: :post, class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+  <%= session[:userinfo].inspect %>
   <br>
   <div class="row">
     <div class="col-md-12">
