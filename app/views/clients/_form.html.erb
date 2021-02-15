@@ -12,6 +12,7 @@
   <% end %>
 
 
+<!--Form inspired by: https://getbootstrap.com/docs/4.0/examples/checkout/ -->
 <body class="bg-light">
 
     <div class="container">
@@ -20,7 +21,7 @@
         <p class="lead">New Client Form</p>
       </div>
 
-      <div class="col-md-8 order-md-1">
+
           <h4 class="mb-3">Contact Information</h4>
             <hr class="mb-4">
             <div class="row">
@@ -96,11 +97,18 @@
               <%= form.check_box :status %>
               <%= form.label :status, class:"form-label" %>
             </div>
+
           <hr class="mb-4">
-        </div>
+
+
 </body>
 
-  <div class="actions">
-    <%= form.submit nil, class: 'btn btn-primary' %>
-  </div>
+       <div class="actions mb-3">
+      <!-- https://stackoverflow.com/questions/13167535/how-to-put-icon-in-rails-submit-button -->
+      <%= button_tag( :class => "btn btn-primary") do %>
+        Save Client <i class="fas fa-paper-plane"></i>
+      <% end %>
+      <!-- <%= form.submit class:"btn btn-primary" %>
+      <i class="fas fa-paper-plane"></i> -->
+    </div>
 <% end %>
