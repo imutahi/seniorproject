@@ -54,7 +54,7 @@
 <!--  <strong>Client Request:</strong>-->
   <%#= @firm.client_request %>
 <!--</p>-->
-
+<main>
 <dl class="row">
   <dt class="col-sm-3">Name:</dt>
   <dd class="col-sm-9"><%= @firm.first_name %> <%= @firm.last_name %></dd>
@@ -73,6 +73,7 @@
   <dt class="col-sm-3">Client Request:</dt>
   <dd class="col-sm-9"><%= @firm.client_request %></dd>
 </dl>
+</main>
 
 <%= link_to 'Edit', edit_firm_path(@firm), class:"btn btn-dark" %> |
 <%= link_to 'Back', firms_path, class:"btn btn-dark" %>

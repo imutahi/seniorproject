@@ -2,10 +2,15 @@
 
 <div class="jumbotron bg-light", style="border-radius:30px">
   <br />
+  
+  <header>
   <h1 class="display-4", style="padding:10px">
       <strong>Service type:</strong>
       <%= @service.service_type %>
   </h1>
+  </header>
+
+  <main>
   <p class="lead", style="padding:10px">
     <strong>Description:</strong>
     <%= @service.description %> |
@@ -13,12 +18,15 @@
     <%= @service.price %>
     <hr />
   </p>
+</main>
+
   <p class="my-4", style="padding:10px">
     <%= link_to 'Edit', edit_service_path(@service), class:"btn btn-secondary" %> |
     <%= link_to 'Back', services_path, class:"btn btn-dark" %>
   </p>
   <br />
 </div>
+
 
 <!--
 <p>

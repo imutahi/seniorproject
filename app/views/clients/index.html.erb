@@ -1,7 +1,12 @@
+
+<html lang="en">
 <p id="notice"><%= notice %></p>
 
+<header>
 <h1>Clients</h1>
+</header>
 
+<main>
 <table class="table table-striped table-info">
   <thead>
     <tr>
@@ -46,8 +51,10 @@
 </table>
 
 <br>
+</main>
+</html>
 
-<%= link_to 'New Client', new_client_path %>
+<%= link_to 'New Client', new_client_path, :class => "btn btn-primary" %>
 
 
 
