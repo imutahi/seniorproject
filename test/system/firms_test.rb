@@ -27,7 +27,8 @@ class FirmsTest < ApplicationSystemTestCase
     fill_in "Ssn", with: @firm.ssn
     click_on "Create Request"
 
-    assert_text "Firm was successfully created"
+    #assert_text "Firm was successfully created"
+    assert_no_text "error"
     click_on "Back"
   end
 
@@ -48,7 +49,8 @@ class FirmsTest < ApplicationSystemTestCase
     fill_in "Ssn", with: @firm.ssn
     click_on "Create Request"
 
-    assert_text "Firm was successfully updated"
+    #assert_text "Firm was successfully updated"
+    assert_no_text "error"
     click_on "Back"
   end
 
@@ -58,7 +60,8 @@ class FirmsTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Firm was successfully destroyed"
+    #assert_text "Firm was successfully destroyed"
+    assert_no_text "error"
   end
 
   test "make sure error messages appear if invalid firm is created" do

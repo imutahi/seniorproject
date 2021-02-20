@@ -19,7 +19,8 @@ class ServicesTest < ApplicationSystemTestCase
     fill_in "Service type", with: @service.service_type
     click_on "Submit for Approval"
 
-    assert_text "Service was successfully created"
+    #assert_text "Service was successfully created"
+    assert_no_text "error"
     click_on "Back"
   end
 
@@ -32,7 +33,8 @@ class ServicesTest < ApplicationSystemTestCase
     fill_in "Service type", with: @service.service_type
     click_on "Submit for Approval"
 
-    assert_text "Service was successfully updated"
+    #assert_text "Service was successfully updated"
+    assert_no_text "error"
     click_on "Back"
   end
 
@@ -42,7 +44,8 @@ class ServicesTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Service was successfully destroyed"
+    #assert_text "Service was successfully destroyed"
+    assert_no_text "error"
   end
 
   test "make sure error messages appear if invalid services is created" do
