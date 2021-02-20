@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<header>
 <h1>Services</h1>
+</header>
 
 <!-- https://getbootstrap.com/docs/5.0/content/tables/ -->
+<main>
 <table class="table table-striped table-info">
   <thead>
     <tr>
@@ -25,5 +28,6 @@
     <% end %>
   </tbody>
 </table>
+</main>
 
 <%= link_to 'New Service', new_service_path, class:"btn btn-primary" %>
