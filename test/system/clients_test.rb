@@ -34,6 +34,12 @@ class ClientsTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
+  test "should give an error if creating a blank client" do
+    visit new_client_url
+    click_on "Save Client"
+    assert_text /error/
+  end
+
   test "updating a Client" do
     visit clients_url
     click_on "Edit", match: :first
@@ -56,6 +62,15 @@ class ClientsTest < ApplicationSystemTestCase
     #assert_text "Client was successfully updated"
     assert_no_text "error"
     click_on "Back"
+  end
+
+  test "should give an error if name and email are blank when updating a client" do
+    visit clients_url
+    click_on "Edit", match: :first
+    fill_in "Client name", with: ""
+    fill_in "Email", with: ""
+    click_on "Save Client"
+    assert_text /error/
   end
 
   test "destroying a Client" do
