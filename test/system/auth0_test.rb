@@ -29,6 +29,9 @@ class Auth0Test < ApplicationSystemTestCase
   test "login failure" do
     visit root_url
     OmniAuth.config.test_mode = true
+    OmniAuth.config.on_failure = Proc.new { |env|
+      OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+    }
     OmniAuth.config.mock_auth[:auth0] = :invalid_credentials
     click_on "My Login"
   end
