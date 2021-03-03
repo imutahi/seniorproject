@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @client = clients(:one)
+    @clientone = clients(:one)
     @update = {
         client_name: 'Test Testing',
         address: '1000 Test Ave.',
@@ -13,7 +13,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
         company: 'Test Inc.',
         notes: 'test test test',
         phone: '111-222-3333',
-        fax: '111-222-3333'
+        fax: '111-222-3333',
     }
     @invalidClient = {
       address: 123,
@@ -28,7 +28,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
       state: "CO",
       status: 1,
       total_requests: 2,
-      zip: "90210"
+      zip: "90210",
     }
   end
 
@@ -45,7 +45,22 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should create client" do
     assert_difference('Client.count') do
       #post clients_url, params: { client: { address: @client.address, city: @client.city, client_id: @client.client_id, client_name: @client.client_name, company: @client.company, email: @client.email, fax: @client.fax, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, total_requests: @client.total_requests, zip: @client.zip } }
-      post clients_url, params: { client: @update }
+      post clients_url, params: { client: {   
+        client_name: "MyString",
+        status: false,
+        total_requests: 1,
+        company: "MyString",
+        email: "MyString@mystring.com",
+        address: "MyString",
+        city: "MyString",
+        state: "CO",
+        zip: "11111",
+        phone: "504-504-5045",
+        fax: "504-504-5045",
+        notes: "MyString",
+        client_id: 1
+        }
+      }
     end
 
     assert_redirected_to client_url(Client.last)
@@ -62,23 +77,23 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show client" do
-    get client_url(@client)
+    get client_url(@clientone)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_client_url(@client)
+    get edit_client_url(@clientone)
     assert_response :success
   end
 
   test "should update client" do
-    patch client_url(@client), params: { client: @update }
-    assert_redirected_to client_url(@client)
+    patch client_url(@clientone), params: { client: @update }
+    assert_redirected_to client_url(@clientone)
   end
 
   test "should stay on same page if update client is invalid" do
-    assert_no_changes(@client) do
-      patch client_url(@client), params: {
+    assert_no_changes(@clientone) do
+      patch client_url(@clientone), params: {
         client: {
           address: 123,
           city: "Nowhere City",
@@ -102,7 +117,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy client" do
     assert_difference('Client.count', -1) do
-      delete client_url(@client)
+      delete client_url(@clientone)
     end
 
     assert_redirected_to clients_url

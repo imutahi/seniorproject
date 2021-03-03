@@ -1,4 +1,5 @@
 class Client < ApplicationRecord
+  has_many :firms
 
   validates :client_name, length: { maximum: 40 }, presence: true
   validates :company, length: { maximum: 60 }
