@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_163048) do
     t.integer "client_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "firm_id", null: false
+    t.integer "firm_id", null: true
     t.index ["firm_id"], name: "index_clients_on_firm_id"
   end
 

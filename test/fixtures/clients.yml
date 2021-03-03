@@ -14,6 +14,7 @@ one:
   fax: 504-504-5045
   notes: MyString
   client_id: 1
+  firm_id: 1
 
 two:
   client_name: "Jeff Hostetler"
@@ -29,3 +30,4 @@ two:
   fax: 504-504-
   notes: MyString
   client_id: 1
+  firm_id: 4

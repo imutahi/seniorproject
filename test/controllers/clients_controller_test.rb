@@ -13,7 +13,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
         company: 'Test Inc.',
         notes: 'test test test',
         phone: '111-222-3333',
-        fax: '111-222-3333'
+        fax: '111-222-3333',
     }
     @invalidClient = {
       address: 123,
@@ -28,7 +28,8 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
       state: "CO",
       status: 1,
       total_requests: 2,
-      zip: "90210"
+      zip: "90210",
+      firm_id: 3
     }
   end
 
@@ -45,7 +46,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should create client" do
     assert_difference('Client.count') do
       #post clients_url, params: { client: { address: @client.address, city: @client.city, client_id: @client.client_id, client_name: @client.client_name, company: @client.company, email: @client.email, fax: @client.fax, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, total_requests: @client.total_requests, zip: @client.zip } }
-      post clients_url, params: { client: @update }
+      post clients_url, params: { client: @client }
     end
 
     assert_redirected_to client_url(Client.last)
