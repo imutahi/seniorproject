@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_215627) do
     t.integer "client_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "firm_id", null: false
+    t.integer "firm_id", null: true
     t.index ["firm_id"], name: "index_clients_on_firm_id"
   end
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_215627) do
     t.string "client_request"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "service_id", null: false
+    t.integer "service_id", null: true
     t.index ["service_id"], name: "index_firms_on_service_id"
   end
 
