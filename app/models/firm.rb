@@ -1,6 +1,7 @@
 class Firm < ApplicationRecord
   belongs_to :client, optional: true
-  
+  has_many :services
+
   validates :first_name, presence: true, length: { maximum: 60 }
   validates :middle_name, length: { maximum: 60 }
   validates :last_name, presence: true, length: { maximum: 60 }
