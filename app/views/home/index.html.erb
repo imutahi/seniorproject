@@ -1,39 +1,20 @@
-
-<html lang="en">
 <div class="container-fluid center">
   <main>
-  <!--<section class="  image_insert">-->
-  <%= link_to 'My Login', 'auth/auth0', method: :post, class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
-  <%= link_to 'Logout', '/logout',  class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
-  <%= session[:userinfo].inspect %>
-  <br>
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="h2 text-center">Welcome to Talon Agency | 800-501-3256</h1>
+    <!--<section class="  image_insert">-->
+    <%= link_to 'My Login', 'auth/auth0', method: :post, class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+    <%= link_to 'Logout', '/logout',  class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+    <%= link_to 'User profile', '/home/show', class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page"%>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h2 text-center">Welcome to Talon Agency | 800-501-3256</h1>
+      </div>
     </div>
-  </div>
-  <hr style="border: 2px outset #595955;">
-  <div class="text-center">
-    <img width="30%" height="30%" src="/american-eagle.jpg" alt="American Eagle Image">
-  </div>
-  <br />
-  <h3 class="text-center lead" >We provide the most comprehensive background checks in the US.</h3><br>
-</main>
-</div>
-</html>
-<style>
-  .footer {
-    height: 25px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #999999;
-    color: white;
-    text-align: center;
-  }
-</style>
-
-<div class="footer">
-  <p>© Talon Agency, LLC | P.O. Box 73502 | Metairie, LA 70033-3502 | 1-800-501-3256 | info@talonagency.com</p>
+    <hr style="border: 2px outset #595955;">
+    <div class="text-center">
+      <img width="30%" height="30%" src="/american-eagle.jpg" alt="American Eagle Image">
+    </div>
+    <br />
+    <h3 class="text-center lead" >We provide the most comprehensive background checks in the US.</h3><br>
+  </main>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Talon Agency</title>
     <%= csrf_meta_tags %>
@@ -17,6 +17,10 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Auth0 InvalidAuthenticityToken fix -->
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="UY2XpKwxzwBWalxFVJ8yKsao/33it7If09BnZewpHifVPSpFJd2LrA7xgQn6VQrhZNGjgZoLI3kV+bkQHtr+Rw==">
   </head>
 
   <body>
@@ -26,5 +30,6 @@
     <div>
     <!-- Required JavaScript plugins and Popper for Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <%= render 'home/footer' %>
   </body>
 </html>
