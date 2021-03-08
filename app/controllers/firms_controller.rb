@@ -4,6 +4,7 @@ class FirmsController < ApplicationController
   # GET /firms or /firms.json
   def index
     @firms = Firm.all
+    @services = Service.all
   end
 
   # GET /firms/1 or /firms/1.json
@@ -17,6 +18,7 @@ class FirmsController < ApplicationController
 
   # GET /firms/1/edit
   def edit
+    @services = Service.all
   end
 
   # POST /firms or /firms.json
@@ -64,6 +66,6 @@ class FirmsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def firm_params
-      params.require(:firm).permit(:invoice_data, :first_name, :middle_name, :last_name, :maiden_name, :dob, :ssn, :dl_state, :dl_number, :notes, :client_request)
+      params.require(:firm).permit(:invoice_data, :first_name, :middle_name, :last_name, :maiden_name, :dob, :ssn, :dl_state, :dl_number, :notes, :client_request, service_ids:[])
     end
 end
