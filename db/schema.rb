@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_215627) do
+ActiveRecord::Schema.define(version: 2021_03_08_013418) do
 
   create_table "clients", force: :cascade do |t|
     t.string "client_name"
@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(version: 2021_03_03_215627) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "service_id"
     t.index ["service_id"], name: "index_firms_on_service_id"
+  end
+
+  create_table "firms_services", id: false, force: :cascade do |t|
+    t.integer "firm_id"
+    t.integer "service_id"
+    t.index ["firm_id"], name: "index_firms_services_on_firm_id"
+    t.index ["service_id"], name: "index_firms_services_on_service_id"
   end
 
   create_table "services", force: :cascade do |t|
