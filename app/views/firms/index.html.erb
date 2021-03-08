@@ -19,6 +19,7 @@
       <th>Dl number</th>
       <th>Notes</th>
       <th>Client request</th>
+      <th>Services</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -37,6 +38,9 @@
         <td><%= firm.dl_number %></td>
         <td><%= firm.notes %></td>
         <td><%= firm.client_request %></td>
+        <%= firm.services.each do |service| %>
+          <td><%= service.service_type %></td>
+        <% end %>
         <td><%= link_to 'Show', firm %></td>
         <td><%= link_to 'Edit', edit_firm_path(firm) %></td>
         <td><%= link_to 'Destroy', firm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
