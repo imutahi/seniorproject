@@ -38,7 +38,7 @@
         <td><%= firm.dl_number %></td>
         <td><%= firm.notes %></td>
         <td><%= firm.client_request %></td>
-        <%= firm.services.each do |service| %>
+        <% firm.services.each do |service| %>
           <td><%= service.service_type %></td>
         <% end %>
         <td><%= link_to 'Show', firm %></td>
