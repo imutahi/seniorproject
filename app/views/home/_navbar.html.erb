@@ -17,27 +17,30 @@
 <!--  </ul>-->
 
 <!--</div>-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-<!--     <a class="navbar-brand" href="#">Friend App</a>-->
-    <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
-    <%= link_to 'Talon_Agency', root_path, class:"flex-sm-fill text-sm-left nav-link active", 'aria-current' => "page" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <!-- <a class="nav-link" href="#">Link</a> -->
-          <%= link_to 'Services', services_path, class:"flex-sm-fill text-sm-center nav-link active"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Clients', clients_path, class:"flex-sm-fill text-sm-center nav-link active"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Requests', firms_path, class:"flex-sm-fill text-sm-center nav-link active"%>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-custom shadow ">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav me-auto">
+      <a class="nav-item navbar-element" href="#">Clients</a>
+      <a class="nav-item navbar-element" href="#">Firms</a>
+      <a class="nav-item navbar-element mr-auto" href="#">Services</a>
+    </div>
+
+    <div class="navbar-nav ms-auto">
+
+      <a class="nav-item navbar-signup" href="#"> Sign Up</a>
+      <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
+    </div>
+
+  </div>
+   
+  </div>
+  <hr class="mb-4">
+</nav>
+
 
 
         <%# if user_signed_in? %>
@@ -58,11 +61,7 @@
             <%#= link_to "Sign In", new_user_session_path, class:"nav-link" %>
 <!--          </li>-->
         <%# end %>
-      </ul>
 
-      <div class="text-right">
-        <%= link_to 'User profile', '/home/show', class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page"%>
-      </div>
 <!--      <div class="text-right">-->
         <%#= link_to 'My Login', '/home/auth/auth0', method: :post, class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
 
@@ -80,6 +79,3 @@
         <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
 <!--        <button class="btn btn-outline-success" type="submit">Search</button>-->
 <!--      </form>-->
-    </div>
-  </div>
-</nav>
