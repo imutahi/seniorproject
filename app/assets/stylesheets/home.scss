@@ -36,7 +36,8 @@
 	background:#49b5fd;
 	padding:10px;
 	text-decoration:none;
-	margin-top:80px;
+	margin-top:40px;
+	margin-left:10px;
 	border-radius:20px;
 	text-align:center;
 	color: #FFFFFF;
@@ -51,7 +52,8 @@
 	padding:8px;
 	background:none;
 	text-decoration:none;
-	margin-top:80px;
+	margin-top:40px;
+	margin-right:10px;
 	border-radius:20px;
 	text-align:center;
 	color: #49b5fd;
@@ -105,12 +107,18 @@
 
 }
 
+
+
 .fade-in {
 	opacity: 1;
-	animation-name: fadeInOpacity;
+	animation: fadeInOpacity ease 4s;
 	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
+}
+
+.fade-in-slow{
+	opacity: 1;
+	animation: fadeInOpacity ease 8s;
+	animation-iteration-count: 1;
 }
 
 @keyframes fadeInOpacity {
