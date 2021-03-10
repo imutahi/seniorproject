@@ -103,29 +103,33 @@
 
 .talon-landing-header{
 	font-size:80px;
-	margin-top:80px;
+	margin-top:60px;
 
 }
 
 
 
 .fade-in {
-	opacity: 1;
-	animation: fadeInOpacity ease 4s;
+	opacity: 0;
+	animation: fadeInOpacity ease 5s;
 	animation-iteration-count: 1;
+	animation-delay: 1s;
+	animation-fill-mode: both;
 }
 
 .fade-in-slow{
-	opacity: 1;
-	animation: fadeInOpacity ease 8s;
+	opacity: 0;
+	animation: fadeInOpacity ease 5s;
 	animation-iteration-count: 1;
+	animation-delay: 2s;
+	animation-fill-mode: both;
 }
 
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
 	}
-	50% {
+	100% {
 		opacity: 1;
 	}
 }
