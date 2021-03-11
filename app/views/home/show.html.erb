@@ -1,10 +1,11 @@
-<<% if !@user.nil? %>>
+<h1>User Profile</h1>
+<% if !@user.nil? %>
     <!-- Auth0 token-->
     <%= session[:userinfo].inspect %>
     <!-- AUTH0 User Profile -->
     <section class="jumbotron  text-center">
       <h2><img class="jumbo-thumbnail img-circle" src="<%= @user[:info][:image] %>"/></h2>
-      <h1>Welcome, <%= @user[:info][:name] %></h1>
+      <h2>Welcome, <%= @user[:info][:name] %></h2>
     </section>
     <section class="container">
       <div class="panel panel-default">

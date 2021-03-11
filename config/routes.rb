@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   get 'home/index'
   get 'home/show'
+  get 'home/about'
   resources :firms
   resources :services
   resources :clients
