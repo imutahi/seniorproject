@@ -27,9 +27,9 @@
   <tbody>
     <% @firms.each do |firm| %>
       <tr>
-        <td style="padding: 10px; font-size: 12px">
+        <td style="padding: 10px; font-size: 12px; white-space: nowrap">
           <%= link_to firm do %>
-          View_Invoice:_<%= firm.id %><br>
+          View Invoice: <%= firm.id %><br>
           <% end %>
           <%=firm.created_at.strftime("%-m/%d/%y %-I:%M ET")%><br>
           Updated: <%=time_ago_in_words(firm.updated_at)%> ago</td>
@@ -37,8 +37,8 @@
         <td><%= firm.middle_name %></td>
         <td><%= firm.last_name %></td>
         <td><%= firm.maiden_name %></td>
-        <td ><%= firm.dob %></td>
-        <td><%= firm.ssn %></td>
+        <td style="white-space: nowrap"><%= firm.dob %></td>
+        <td style="white-space: nowrap"><%= firm.ssn %></td>
         <td><%= firm.dl_state %></td>
         <td><%= firm.dl_number %></td>
         <td><%= firm.notes %></td>
