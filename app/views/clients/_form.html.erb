@@ -26,22 +26,20 @@
     <br>
     <h4 class="mb-3">New Client Form | Contact Information</h4>
     <hr class="mb-4">
+
     <div class="row">
       <div class="col-md-3 mb-3">
         <%= form.label :client_name, class:"form-label" %>
         <%= form.text_field :client_name, type: 'text', class: 'form-control'%>
       </div>
-
       <div class="col-md-3 mb-3">
         <%= form.label :email, class:"form-label" %>
         <%= form.text_field :email, type: 'text', class: 'form-control'%>
       </div>
-
       <div class="col-md-3 mb-3">
         <%= form.label :company, class:"form-label" %>
         <%= form.text_field :company, type: 'text', class: 'form-control'%>
       </div>
-
     </div>
 
     <div class="row">
@@ -73,32 +71,31 @@
         <%= form.text_field :zip, type: 'text', class: 'form-control'%>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-1 mb-3" style="white-space: nowrap">
-        <%= form.label :client_id, class:"form-label" %> ID
-        <%= form.number_field :client_id, class: 'form-control'%>
-      </div>
-      <div class="col-md-1 mb-3" style="white-space: nowrap">
-        <%= form.label :total_requests, class:"form-label" %>
-        <%= form.number_field :total_requests, class: 'form-control' %>
-      </div>
-    </div>
+
+<!--    <div class="row">-->
+<!--      <div class="col-md-1 mb-3" style="white-space: nowrap">-->
+<!--        <%#= form.label :client_id, class:"form-label" %> ID-->
+        <%#= form.number_field :client_id, class: 'form-control'%>
+<!--      </div>-->
+<!--      <div class="col-md-1 mb-3" style="white-space: nowrap">-->
+        <%#= form.label :total_requests, class:"form-label" %>
+        <%#= form.number_field :total_requests, class: 'form-control' %>
+<!--      </div>-->
+<!--    </div>-->
 
 
-
-    <hr class="mb-4">
-
-    <h4 class="mb-3">Additional Information</h4>
     <div class="row">
       <div class="col-md-8 mb-3">
         <%= form.label :notes, class:"form-label" %>
         <%= form.text_field :notes, class: 'form-control' %>
       </div>
     </div>
+    <hr class="mb-4">
 
+    <h4 class="mb-3">Administrator: Check mark the Activate box to enable Client Requests.</h4>
     <div class="col-md-4 mb-3">
       <%= form.check_box :status %>
-      <%= form.label :status, class:"form-label" %>
+      <%= form.label :activate, class:"form-label" %>
     </div>
 
     <hr class="mb-4">
