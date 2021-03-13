@@ -14,12 +14,12 @@ class FirmsTest < ApplicationSystemTestCase
     visit firms_url
     click_on "New Request"
 
-    fill_in "Client request", with: @firm.client_request
+    #fill_in "Client request", with: @firm.client_request
     fill_in "Dl number", with: @firm.dl_number
     fill_in "Dl state", with: @firm.dl_state
     fill_in "Dob", with: @firm.dob
     fill_in "First name", with: @firm.first_name
-    fill_in "Invoice data", with: @firm.invoice_data
+    #fill_in "Invoice data", with: @firm.invoice_data
     fill_in "Last name", with: @firm.last_name
     fill_in "Maiden name", with: @firm.maiden_name
     fill_in "Middle name", with: @firm.middle_name
@@ -36,12 +36,12 @@ class FirmsTest < ApplicationSystemTestCase
     visit firms_url
     click_on "Edit", match: :first
 
-    fill_in "Client request", with: @firm.client_request
+    #fill_in "Client request", with: @firm.client_request
     fill_in "Dl number", with: @firm.dl_number
     fill_in "Dl state", with: @firm.dl_state
     fill_in "Dob", with: @firm.dob
     fill_in "First name", with: @firm.first_name
-    fill_in "Invoice data", with: @firm.invoice_data
+    #fill_in "Invoice data", with: @firm.invoice_data
     fill_in "Last name", with: @firm.last_name
     fill_in "Maiden name", with: @firm.maiden_name
     fill_in "Middle name", with: @firm.middle_name
@@ -73,7 +73,7 @@ class FirmsTest < ApplicationSystemTestCase
   test "make sure error messages appear if updated firm is invalid" do
     visit firms_url
     click_on "Edit", match: :first
-    fill_in "Invoice data", with: ""
+    fill_in "Ssn", with: ""
     fill_in "First name", with: ""
     fill_in "Dob", with: ""
     click_on "Create Request"
