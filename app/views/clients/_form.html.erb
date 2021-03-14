@@ -10,104 +10,104 @@
       </ul>
     </div>
   <% end %>
-<!--Form inspired by: https://getbootstrap.com/docs/4.0/examples/checkout/ -->
-<body class="bg-light">
+  <!--Form inspired by: https://getbootstrap.com/docs/4.0/examples/checkout/ -->
+  <body class="bg-light">
 
-    <header>
-    <div class="container">
-      <div class="py-5 text-center">
-        <h1>New Client</h1>
-        <p class="lead">New Client Form</p>
+  <!--    <header>-->
+  <!--    <div class="container">-->
+  <!--      <div class="py-5 text-center">-->
+  <!--        <h1>New Client</h1>-->
+  <!--        <p class="lead">New Client Form</p>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    </header>-->
+
+  <main>
+    <br>
+    <h4 class="mb-3">New Client Form | Contact Information</h4>
+    <hr class="mb-4">
+
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <%= form.label :client_name, class:"form-label" %>
+        <%= form.text_field :client_name, type: 'text', class: 'form-control'%>
       </div>
-    </header>
-
-          <main>
-          <h4 class="mb-3">Contact Information</h4>
-            <hr class="mb-4">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <%= form.label :client_name, class:"form-label" %>
-                <%= form.text_field :client_name, type: 'text', class: 'form-control'%>
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <%= form.label :company, class:"form-label" %>
-                <%= form.text_field :company, type: 'text', class: 'form-control'%>
-              </div>
-
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <%= form.label :phone, class:"form-label" %>
-                <%= form.text_field :phone, type: 'text', class: 'form-control'%>
-              </div>
-              <div class="col-md-6 mb-3">
-                <%= form.label :fax, class:"form-label" %>
-                <%= form.text_field :fax, type: 'text', class: 'form-control'%>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <%= form.label :email, class:"form-label" %>
-              <%= form.text_field :email, type: 'text', class: 'form-control'%>
-            </div>
-
-            <div class="mb-3">
-              <%= form.label :address, class:"form-label" %>
-              <%= form.text_field :address, type: 'text', class: 'form-control'%>
-            </div>
-
-            <div class="row">
-              <div class="col-md-5 mb-3">
-                <%= form.label :city, class:"form-label" %>
-                <%= form.text_field :city, type: 'text', class: 'form-control'%>
-              </div>
-              <div class="col-md-4 mb-3">
-                <%= form.label :state, class:"form-label" %>
-                <%= form.text_field :state, type: 'text', class: 'form-control'%>
-              </div>
-              <div class="col-md-3 mb-3">
-                <%= form.label :zip, class:"form-label" %>
-                <%= form.text_field :zip, type: 'text', class: 'form-control'%>
-              </div>
-            </div>
-
-               <div class="col-md-4 mb-3">
-                 <%= form.label :client_id, class:"form-label" %> ID
-                  <%= form.number_field :client_id, class: 'form-control'%>
-                </div>
-            
-           
-             
-            <hr class="mb-4">
-
-            <h4 class="mb-3">Additional Information</h4>
-            <div class="row">
-            <div class="mb-3">
-              <%= form.label :notes, class:"form-label" %>
-              <%= form.text_field :notes, class: 'form-control' %>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-              <%= form.label :total_requests, class:"form-label" %>
-              <%= form.number_field :total_requests, class: 'form-control' %>
-            </div>
-          <div class="col-md-4 mb-3">
-              <%= form.check_box :status %>
-              <%= form.label :status, class:"form-label" %>
-            </div>
-
-          <hr class="mb-4">
-
-        </main>
-</body>
-       <div class="actions mb-3">
-      <!-- https://stackoverflow.com/questions/13167535/how-to-put-icon-in-rails-submit-button -->
-      <%= button_tag( :class => "btn btn-primary") do %>
-        Save Client <i class="fas fa-paper-plane"></i>
-      <% end %>
-      <!-- <%= form.submit class:"btn btn-primary" %>
-      <i class="fas fa-paper-plane"></i> -->
+      <div class="col-md-3 mb-3">
+        <%= form.label :email, class:"form-label" %>
+        <%= form.text_field :email, type: 'text', class: 'form-control'%>
+      </div>
+      <div class="col-md-3 mb-3">
+        <%= form.label :company, class:"form-label" %>
+        <%= form.text_field :company, type: 'text', class: 'form-control'%>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <%= form.label :phone, class:"form-label" %>
+        <%= form.text_field :phone, type: 'text', class: 'form-control'%>
+      </div>
+      <div class="col-md-3 mb-3">
+        <%= form.label :fax, class:"form-label" %>
+        <%= form.text_field :fax, type: 'text', class: 'form-control'%>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <%= form.label :address, class:"form-label" %>
+        <%= form.text_field :address, type: 'text', class: 'form-control'%>
+      </div>
+      <div class="col-md-3 mb-3">
+        <%= form.label :city, class:"form-label" %>
+        <%= form.text_field :city, type: 'text', class: 'form-control'%>
+      </div>
+      <div class="col-md-1 mb-3">
+        <%= form.label :state, class:"form-label" %>
+        <%= form.text_field :state, type: 'text', class: 'form-control'%>
+      </div>
+      <div class="col-md-2 mb-3">
+        <%= form.label :zip, class:"form-label" %>
+        <%= form.text_field :zip, type: 'text', class: 'form-control'%>
+      </div>
+    </div>
+
+<!--    <div class="row">-->
+<!--      <div class="col-md-1 mb-3" style="white-space: nowrap">-->
+<!--        <%#= form.label :client_id, class:"form-label" %> ID-->
+        <%#= form.number_field :client_id, class: 'form-control'%>
+<!--      </div>-->
+<!--      <div class="col-md-1 mb-3" style="white-space: nowrap">-->
+        <%#= form.label :total_requests, class:"form-label" %>
+        <%#= form.number_field :total_requests, class: 'form-control' %>
+<!--      </div>-->
+<!--    </div>-->
+
+
+    <div class="row">
+      <div class="col-md-8 mb-3">
+        <%= form.label :notes, class:"form-label" %>
+        <%= form.text_field :notes, class: 'form-control' %>
+      </div>
+    </div>
+    <hr class="mb-4">
+
+    <h4 class="mb-3">Administrator: Check mark the Activate box to enable Client Requests.</h4>
+    <div class="col-md-4 mb-3">
+      <%= form.check_box :status %>
+      <%= form.label :activate, class:"form-label" %>
+    </div>
+
+    <hr class="mb-4">
+
+  </main>
+  </body>
+  <div class="actions mb-3">
+    <!-- https://stackoverflow.com/questions/13167535/how-to-put-icon-in-rails-submit-button -->
+    <%= button_tag( :class => "btn btn-primary") do %>
+      Save Client <i class="fas fa-paper-plane"></i>
+    <% end %>
+    <!-- <%= form.submit class:"btn btn-primary" %>
+      <i class="fas fa-paper-plane"></i> -->
+  </div>
 <% end %>

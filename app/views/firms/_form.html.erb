@@ -12,70 +12,131 @@
       </div>
     <% end %>
 
+    <div class="col-lg-6">
+      <%= form.label :name, 'Please select services: ' %>
+      <br />
+      <%= form.collection_check_boxes :service_ids, Service.all, :id, :service_type, unchecked: Service.all.map(&:id) do |b| %>
+      <span>
+       <%= b.check_box %>
+        <%= b.label %><br />
+     </span>
+      <% end %>
+    </div>
+    <br>
 
-    <html lang="en">
 
+<!--    <div class="col-md-3 mb-3">-->
+      <%#= form.label :invoice_data, class:"form-label" %>
+      <%#= form.text_field :invoice_data, class:"form-control" %>
+<!--    </div>-->
 
-    <div class="field mb-3">
-      <%= form.label :invoice_data, class:"form-label" %>
-      <%= form.text_field :invoice_data, class:"form-control" %>
+    <div class="row">
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :first_name, class:"form-label" %>
+        <%= form.text_field :first_name, class:"form-control" %>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :middle_name, class:"form-label" %>
+        <%= form.text_field :middle_name, class:"form-control" %>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :last_name, class:"form-label" %>
+        <%= form.text_field :last_name, class:"form-control" %>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :maiden_name, class:"form-label" %>
+        <%= form.text_field :maiden_name, class:"form-control" %>
+      </div>
+
     </div>
 
-    <div class="field mb-3">
-      <%= form.label :first_name, class:"form-label" %>
-      <%= form.text_field :first_name, class:"form-control" %>
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :invoice_data, class:"form-label" %>
+    <%#= form.text_field :invoice_data, class:"form-control" %>
+    <!--    </div>-->
+
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :first_name, class:"form-label" %>
+    <%#= form.text_field :first_name, class:"form-control" %>
+    <!--    </div>-->
+
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :middle_name, class:"form-label" %>
+    <%#= form.text_field :middle_name, class:"form-control" %>
+    <!--    </div>-->
+
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :last_name, class:"form-label" %>
+    <%#= form.text_field :last_name, class:"form-control" %>
+    <!--    </div>-->
+
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :maiden_name, class:"form-label" %>
+    <%#= form.text_field :maiden_name, class:"form-control" %>
+    <!--    </div>-->
+
+    <div class="row">
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :dob, class:"form-label" %>
+        <%= form.text_field :dob, class:"form-control" %>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :ssn, class:"form-label" %>
+        <%= form.text_field :ssn, class:"form-control" %>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :dl_state, class:"form-label" %>
+        <%= form.text_field :dl_state, class:"form-control" %>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <%= form.label :dl_number, class:"form-label" %>
+        <%= form.text_field :dl_number, class:"form-control" %>
+      </div>
+
     </div>
 
-    <div class="field mb-3">
-      <%= form.label :middle_name, class:"form-label" %>
-      <%= form.text_field :middle_name, class:"form-control" %>
-    </div>
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :dob, class:"form-label" %>
+    <%#= form.text_field :dob, class:"form-control" %>
+    <!--    </div>-->
 
-    <div class="field mb-3">
-      <%= form.label :last_name, class:"form-label" %>
-      <%= form.text_field :last_name, class:"form-control" %>
-    </div>
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :ssn, class:"form-label" %>
+    <%#= form.text_field :ssn, class:"form-control" %>
+    <!--    </div>-->
 
-    <div class="field mb-3">
-      <%= form.label :maiden_name, class:"form-label" %>
-      <%= form.text_field :maiden_name, class:"form-control" %>
-    </div>
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :dl_state, class:"form-label" %>
+    <%#= form.text_field :dl_state, class:"form-control" %>
+    <!--    </div>-->
 
-    <div class="field mb-3">
-      <%= form.label :dob, class:"form-label" %>
-      <%= form.text_field :dob, class:"form-control" %>
-    </div>
-
-    <div class="field mb-3">
-      <%= form.label :ssn, class:"form-label" %>
-      <%= form.text_field :ssn, class:"form-control" %>
-    </div>
-
-    <div class="field mb-3">
-      <%= form.label :dl_state, class:"form-label" %>
-      <%= form.text_field :dl_state, class:"form-control" %>
-    </div>
-
-    <div class="field mb-3">
-      <%= form.label :dl_number, class:"form-label" %>
-      <%= form.text_field :dl_number, class:"form-control" %>
-    </div>
+    <!--    <div class="field mb-3">-->
+    <%#= form.label :dl_number, class:"form-label" %>
+    <%#= form.text_field :dl_number, class:"form-control" %>
+    <!--    </div>-->
 
     <div class="field mb-3">
       <%= form.label :notes, class:"form-label" %>
       <%= form.text_field :notes, class:"form-control" %>
     </div>
 
-    <div class="field mb-3">
-      <%= form.label :client_request, class:"form-label" %>
-      <%= form.text_field :client_request, class:"form-control" %>
-    </div>
+<!--    <div class="field mb-3">-->
+      <%#= form.label :client_request, class:"form-label" %>
+      <%#= form.text_field :client_request, class:"form-control" %>
+<!--    </div>-->
 
     <div class="actions mb-3">
       <%= form.submit "Create Request", class:"btn btn-primary" %>
       <i class="fas fa-paper-plane"></i>
     </div>
 
-    </html>
   <% end %>
 </div>

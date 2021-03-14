@@ -41,4 +41,11 @@ MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App tha
 - Travis-CI (passing)
 - all hosted on Heroku.  
 
-## Sprint Deliverables - 2/24 - coming soon
+## Sprint Deliverables - 2/24 
+
+- Researched, Implemented and Tested Authentication - Auth0 add on created through Heroku 
+- Added HTML5 elements for screen readers to access the landmark features on Web Pages
+- Decided to Utilize Minitest to test Auth0
+- Designed Logo and Color Scheme for Talon Agency
+
+## Sprint Deliverables -3/10

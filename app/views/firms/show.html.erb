@@ -59,7 +59,11 @@
   <dt class="col-sm-3">Name:</dt>
   <dd class="col-sm-9"><%= @firm.first_name %> <%= @firm.last_name %></dd>
   <dt class="col-sm-3">Invoice Data:</dt>
-  <dd class="col-sm-9"><%= @firm.invoice_data %></dd>
+
+  <dd class="col-sm-9">
+    Invoice: <%= @firm.id %><br>
+    Created: <%=@firm.created_at.strftime("%-m/%d/%y, %-I:%M ET")%><br>
+    Updated: <%=time_ago_in_words(@firm.updated_at)%> ago</dd>
   <dt class="col-sm-3">DOB:</dt>
   <dd class="col-sm-9"><%= @firm.dob %></dd>
   <dt class="col-sm-3">SSN:</dt>
@@ -70,8 +74,14 @@
   <dd class="col-sm-9"><%= @firm.dl_number %></dd>
   <dt class="col-sm-3">Notes:</dt>
   <dd class="col-sm-9"><%= @firm.notes %></dd>
-  <dt class="col-sm-3">Client Request:</dt>
-  <dd class="col-sm-9"><%= @firm.client_request %></dd>
+<!--  <dt class="col-sm-3">Client Request:</dt>-->
+<!--  <dd class="col-sm-9"><%#= @firm.client_request %></dd>-->
+  <dt class="col-sm-3">Services:</dt>
+  <dd class="col-sm-9">
+    <% @firm.services.each do |service| %>
+      <li><%= service.service_type %></li>
+    <% end %>
+  </dd>
 </dl>
 </main>
 

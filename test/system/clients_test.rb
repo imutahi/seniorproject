@@ -25,7 +25,7 @@ class ClientsTest < ApplicationSystemTestCase
     fill_in "Phone", with: @client.phone
     fill_in "State", with: @client.state
     check "Status" if @client.status
-    fill_in "Total requests", with: @client.total_requests
+    #fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
     click_on "Save Client"
 
@@ -55,7 +55,7 @@ class ClientsTest < ApplicationSystemTestCase
     fill_in "Phone", with: @client.phone
     fill_in "State", with: @client.state
     check "Status" if @client.status
-    fill_in "Total requests", with: @client.total_requests
+    #fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
     click_on "Save Client"
 
