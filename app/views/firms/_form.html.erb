@@ -15,8 +15,15 @@
     <div class="col-lg-6">
       <%= form.label :name, 'Please select services: ' %>
       <br />
-      <%= form.collection_check_boxes(:service_ids, Service.all, :id, :service_type) %>
+      <%= form.collection_check_boxes :service_ids, Service.all, :id, :service_type, unchecked: Service.all.map(&:id) do |b| %>
+      <span>
+       <%= b.check_box %>
+        <%= b.label %><br />
+     </span>
+      <% end %>
     </div>
+    <br>
+
 
 <!--    <div class="col-md-3 mb-3">-->
       <%#= form.label :invoice_data, class:"form-label" %>
