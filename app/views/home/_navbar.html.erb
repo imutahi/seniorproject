@@ -33,6 +33,10 @@
 
       <a class="nav-item navbar-signup" href="#"> Sign Up</a>
       <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
+      <% if !@user.nil? %>
+        <%= link_to 'Logout', '/logout',  class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+        <%= link_to 'User profile', '/home/show', class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page"%>
+      <% end %>
     </div>
 
   </div>
