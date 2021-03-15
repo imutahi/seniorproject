@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+a:hover{
+	color:#0D9DFD;
+}
+
+.btn-primary:hover {
+    color: #0D9DFD !important;
+}

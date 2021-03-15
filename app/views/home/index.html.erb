@@ -18,8 +18,8 @@
 
     <div class="row mb-5">
       <div class="col">
-        <button type="button" class="primary-signup">Sign Up</button>
-        <button type="button" class="shadow-sm primary-login">Log In</button>
+        <%= link_to 'Sign Up', 'auth/auth0', method: :post, class: 'btn shadow-sm primary-signup', 'aria-current' => "page" %>
+        <%= link_to 'Login', 'auth/auth0', method: :post, class: 'btn shadow-sm primary-login', 'aria-current' => "page" %>
      </div>
     </div>
 
