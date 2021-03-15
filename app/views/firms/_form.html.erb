@@ -134,8 +134,9 @@
 <!--    </div>-->
 
     <div class="actions mb-3">
-      <%= form.submit "Create Request", class:"btn btn-primary" %>
-      <i class="fas fa-paper-plane"></i>
+      <%= button_tag( :class => "btn btn-primary") do %>
+        Create Request <i class="fas fa-paper-plane"></i>
+      <% end %>
     </div>
 
   <% end %>
