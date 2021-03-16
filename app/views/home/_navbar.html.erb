@@ -17,6 +17,7 @@
 <!--  </ul>-->
 
 <!--</div>-->
+
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
@@ -29,17 +30,32 @@
       <a class="nav-item navbar-element mr-auto" href="<%= services_path %>">Services</a>
     </div>
 
-    <div class="navbar-nav ms-auto">
+</div>
 
-      <a class="nav-item navbar-signup" href="#"> Sign Up</a>
-      <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
+    <div class="navbar-nav ms-auto">
       <% if !@user.nil? %>
-        <%= link_to 'Logout', '/logout',  class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
-        <%= link_to 'User profile', '/home/show', class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page"%>
+
+        <div class="dropdown show">
+         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <% if @user.info.name == nil %>
+              User Profile
+            <% else %>
+            <%= @user.info.name %> <!-- change this to be first name eventually? -->
+            <% end %>
+         </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/home/show">Account</a>
+          <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+      <% else %>
+        <a class="nav-item navbar-signup" href="#"> Sign Up</a>
+        <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
       <% end %>
     </div>
-
   </div>
+
+
    
   </div>
   <hr class="mb-4">
