@@ -36,7 +36,7 @@
       <% if !@user.nil? %>
 
         <div class="dropdown show">
-         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <a class="navbar-profile-dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if @user.info.name == nil %>
               User Profile
             <% else %>
@@ -44,7 +44,7 @@
             <% end %>
          </a>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu navbar-dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="/home/show">Account</a>
           <a class="dropdown-item" href="/logout">Logout</a>
         </div>
