@@ -18,13 +18,10 @@ class Auth0Test < ApplicationSystemTestCase
         "expires_at" => 1613871385
       },
     }
-    click_on "My Login"
+    click_on("Login", match: :first)
+
   end
 
-  test "logout" do
-    visit home_index_url
-    click_on "Logout"
-  end
 
   test "login failure" do
     visit root_url
@@ -33,12 +30,12 @@ class Auth0Test < ApplicationSystemTestCase
       OmniAuth::FailureEndpoint.new(env).redirect_to_failure
     }
     OmniAuth.config.mock_auth[:auth0] = :invalid_credentials
-    click_on "My Login"
+    click_on("Login", match: :first)
   end
 
   test "should visit auth_failure redirect and find Welcome text" do
     visit auth_failure_url
-    assert_text /Welcome/
+    assert_text /Talon Agency/
   end
 
 end
