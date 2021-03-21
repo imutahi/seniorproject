@@ -1,6 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
 .footer {
     height: 25px;
     position: fixed;
@@ -11,3 +12,156 @@
     color: white;
     text-align: center;
   }
+
+  .navbar-custom { 
+    min-height:50px;
+    border-radius:0px 0px 10px 10px;
+
+} 
+
+.navbar-element{
+	padding:10px;
+	text-decoration:none;
+	margin:5px;
+	border-radius:20px;
+	min-width: 100px;
+	text-align:center;
+	color: #9c9c9c;
+	border: 2px solid #dedede;
+	font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+.primary-login{
+	background:#49b5fd;
+	padding:10px;
+	text-decoration:none;
+	margin-top:40px;
+	margin-left:10px;
+	border-radius:20px;
+	text-align:center;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	min-width:200px;
+	border:none;
+}
+
+.primary-signup{
+	padding:8px;
+	background:none;
+	text-decoration:none;
+	margin-top:40px;
+	margin-right:10px;
+	border-radius:20px;
+	text-align:center;
+	color: #49b5fd;
+	border: 2px solid #49b5fd;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	min-width:200px;
+}
+
+
+.navbar-signup{
+	padding:10px;
+	text-decoration:none;
+	margin:5px;
+	border-radius:20px;
+	min-width: 100px;
+	text-align:center;
+	color: #49b5fd;
+	border: 2px solid #49b5fd;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+	vertical-align:center;
+}
+
+.navbar-login{
+	
+	background:#49b5fd;
+	padding:10px;
+	text-decoration:none;
+	margin:5px;
+	border-radius:20px;
+	text-align:center;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	min-width:200px;
+}
+
+.navbar-logout{
+	background:#E63946;
+	padding:10px;
+	text-decoration:none;
+	margin:5px;
+	border-radius:20px;
+	text-align:center;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	min-width:200px;
+}
+
+.navbar-profile-dropdown-btn{
+	background:#49b5fd;
+	padding:10px;
+	text-decoration:none;
+	margin:5px;
+	border-radius:10px;
+	text-align:center;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	min-width:200px;
+}
+
+.navbar-dropdown-menu{
+	margin-top: 10px;
+	min-width:210px;
+}
+.talon-brand{
+	font-size: 40px;
+	text-decoration:none;
+	font-family: 'Fjalla One', sans-serif;
+	color: #000000;
+}
+
+.talon-landing-header{
+	font-size:80px;
+	margin-top:60px;
+
+}
+
+
+
+.fade-in {
+	opacity: 0;
+	animation: fadeInOpacity ease 5s;
+	animation-iteration-count: 1;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+
+.fade-in-slow{
+	opacity: 0;
+	animation: fadeInOpacity ease 5s;
+	animation-iteration-count: 1;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
