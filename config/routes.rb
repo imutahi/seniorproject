@@ -7,6 +7,14 @@ Rails.application.routes.draw do
   resources :firms
   resources :services
   resources :clients
+
+  resources :pages do 
+    collection do
+      get :clients
+      get :services
+      get :firms
+    end
+  end
   
   get 'auth/auth0/callback' => 'auth0#callback'
   get 'auth/failure' => 'auth0#failure'

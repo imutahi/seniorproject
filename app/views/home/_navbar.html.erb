@@ -1,11 +1,103 @@
 <!-- https://getbootstrap.com/docs/5.0/components/navs-tabs/ -->
-<nav class="nav nav-pills flex-column flex-sm-row">
+<!--<nav class="nav nav-pills flex-column flex-sm-row">-->
   <!-- <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Home</a> -->
-  <%= link_to 'Talon Agency', root_path, class:"flex-sm-fill text-sm-center nav-link active", 'aria-current' => "page" %>
+  <%#= link_to 'Talon Agency', root_path, class:"flex-sm-fill text-sm-center nav-link active", 'aria-current' => "page" %>
   <!-- <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a> -->
-  <%= link_to 'Services', services_path, class:"flex-sm-fill text-sm-center nav-link active"%>
+  <%#= link_to 'Services', services_path, class:"flex-sm-fill text-sm-center nav-link active"%>
   <!-- <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a> -->
-  <%= link_to 'Clients', clients_path, class:"flex-sm-fill text-sm-center nav-link active"%>
-  <%= link_to 'Requests', firms_path, class:"flex-sm-fill text-sm-center nav-link active"%>
+  <%#= link_to 'Clients', clients_path, class:"flex-sm-fill text-sm-center nav-link active"%>
+  <%#= link_to 'Requests', firms_path, class:"flex-sm-fill text-sm-center nav-link active"%>
   <!-- <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+<!--</nav>-->
+
+<!--<div class="banner">-->
+<!--  <ul id="nav_banner">-->
+<!--    <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">-->
+<!--    <li class="nav_button"> <%#= link_to 'Talon Agency', root_path, class:"flex-sm-fill text-sm-left nav-link active", 'aria-current' => "page" %> </li>-->
+<!--  </ul>-->
+
+<!--</div>-->
+
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg navbar-custom shadow">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav me-auto">
+      <a class="nav-item navbar-element" href="<%= clients_path %>">Clients</a>
+      <a class="nav-item navbar-element" href="<%= firms_path %>"">Firms</a>
+      <a class="nav-item navbar-element mr-auto" href="<%= services_path %>">Services</a>
+    </div>
+
+</div>
+
+    <div class="navbar-nav ms-auto">
+      <% if !@user.nil? %>
+
+        <div class="dropdown show">
+         <a class="navbar-profile-dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle"></i>
+
+            <% if @user.info.name == nil %>
+              User Profile
+            <% else %>
+            <%= @user.info.name %> <!-- change this to be first name eventually? -->
+            <% end %>
+         </a>
+
+        <div class="dropdown-menu navbar-dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="/home/show">Account</a>
+          <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+      <% else %>
+        <a class="nav-item navbar-signup" href="#"> Sign Up</a>
+        <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
+      <% end %>
+    </div>
+  </div>
+
+
+   
+  </div>
+  <hr class="mb-4">
 </nav>
+
+
+
+        <%# if user_signed_in? %>
+<!--          <li class="nav-item">-->
+            <%#= link_to "Add Friend", new_friend_path, class:"nav-link" %>
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+            <%#= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+            <%#= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
+<!--          </li>-->
+        <%# else %>
+<!--          <li class="nav-item">-->
+            <%#= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+            <%#= link_to "Sign In", new_user_session_path, class:"nav-link" %>
+<!--          </li>-->
+        <%# end %>
+
+<!--      <div class="text-right">-->
+        <%#= link_to 'My Login', '/home/auth/auth0', method: :post, class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+
+        <%# if session[:userinfo] %>
+          <%#= link_to 'Auth0 Logout', '/logout',  class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+        <%# else %>
+          <%#= link_to 'Auth0 Login', 'auth/auth0', method: :post, class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+        <%# end %>
+<!--      </div>-->
+<!--      <div class="text-right">-->
+        <%#= link_to 'Logout', '/logout',  class: 'flex-sm-fill text-sm-center nav-link', 'aria-current' => "page" %>
+<!--      </div>-->
+
+<!--      <form class="d-flex">-->
+        <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--        <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--      </form>-->
