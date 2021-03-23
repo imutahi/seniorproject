@@ -39,25 +39,24 @@
           <a class="navbar-profile-dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle">
 
+              <% if @user.info.name == nil %>
+                User Profile
+              <% else %>
+                <%= @user.info.name %> <!-- change this to be first name eventually? -->
+              <% end %>
             </i>
-
-            <% if @user.info.name == nil %>
-              User Profile
-            <% else %>
-              <%= @user.info.name %> <!-- change this to be first name eventually? -->
-            <% end %>
           </a>
 
           <div class="dropdown-menu navbar-dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="/home/show">Account</a>
             <a class="dropdown-item" href="/logout">Logout</a>
           </div>
-      <% else %>
+        </div>
+    <% else %>
         <a class="nav-item navbar-signup" href="#"> Sign Up</a>
         <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
       <% end %>
-      </div>
-    </div>
+  </div>
 
 
 
