@@ -19,13 +19,14 @@
           <a class="navbar-profile-dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle">
 
-            </i>
 
-            <% if @user.info.name == nil %>
-              User Profile
-            <% else %>
-            <%= @user.info.name %> <!-- change this to be first name eventually? -->
-            <% end %>
+
+              <% if @user.info.name == nil %>
+                User Profile
+              <% else %>
+              <%= @user.info.name %> <!-- change this to be first name eventually? -->
+              <% end %>
+            </i>
           </a>
         </div>
 
