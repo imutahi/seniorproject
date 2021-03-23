@@ -14,4 +14,45 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  OmniAuth.config.test_mode = true
+
+  def sign_in_user_firms
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "W Remos",
+        :nickname => "wizard239",
+        :email => "wizard239@gmail.com"
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    #puts(Rails.application.env_config["omniauth.auth"])
+    get auth_auth0_callback_path
+    #puts(session[:userinfo])
+    #puts(session[:userinfo].present?)
+  end
+
+  def sign_out_user
+    
+  end
+
+  def sign_in_system
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "W Remos",
+        :nickname => "wizard239",
+        :email => "wizard239@gmail.com"
+      }
+    })
+    Rails.application.env_config["omniauth.auth"]  = OmniAuth.config.mock_auth[:auth0]
+    visit root_url
+    click_on("Login", match: :first)
+    get auth_auth0_callback_path
+    puts(session[:userinfo])
+    puts(session[:userinfo].present?)
+  end
 end
