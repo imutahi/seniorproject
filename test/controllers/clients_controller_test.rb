@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in_user_firms
     @clientone = clients(:one)
     @update = {
         client_name: 'Test Testing',
