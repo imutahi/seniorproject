@@ -4,6 +4,8 @@ class ServicesController < ApplicationController
   # GET /services or /services.json
   def index
     @services = Service.all
+    @user = session[:userinfo]
+
   end
 
   # GET /services/1 or /services/1.json

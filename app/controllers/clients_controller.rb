@@ -5,6 +5,7 @@ class ClientsController < ApplicationController
   # GET /clients or /clients.json
   def index
     @clients = Client.all
+    @user = session[:userinfo]
   end
 
   # GET /clients/1 or /clients/1.json
