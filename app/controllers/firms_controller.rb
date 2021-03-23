@@ -6,6 +6,7 @@ class FirmsController < ApplicationController
   def index
     @firms = Firm.all
     @services = Service.all
+    @user = session[:userinfo]
   end
 
   # GET /firms/1 or /firms/1.json
