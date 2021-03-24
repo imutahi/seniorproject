@@ -12,6 +12,7 @@
 
       </div>
     </div>
+    <a class="nav-item navbar-signup" href="<%= home_about_path %>">About</a>
 
     <div class="navbar-nav ms-auto">
       <% if !@user.nil? %>
@@ -31,7 +32,7 @@
           </div>
         </div>
       <% else %>
-        <a class="nav-item navbar-signup" href="#"> Sign Up</a>
+<!--        <a class="nav-item navbar-signup" href="#"> Sign Up</a>-->
         <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
       <% end %>
     </div>

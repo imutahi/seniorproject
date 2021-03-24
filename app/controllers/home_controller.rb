@@ -8,5 +8,6 @@ class HomeController < ApplicationController
   end
 
   def about
+    @user = session[:userinfo]
   end
 end
