@@ -22,8 +22,14 @@ class ActiveSupport::TestCase
       :uid => 'google-oauth2|113828971320495757925',
       :info => {
         :name => "W Remos",
+        :first_name => "Warren",
         :nickname => "wizard239",
         :email => "wizard239@gmail.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "Warren"
+        }
       }
     })
     Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
@@ -41,8 +47,14 @@ class ActiveSupport::TestCase
       :uid => 'google-oauth2|113828971320495757925',
       :info => {
         :name => "W Remos",
+        :first_name => "Warren",
         :nickname => "wizard239",
         :email => "wizard239@gmail.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "Warren"
+        }
       }
     })
     Rails.application.env_config["omniauth.auth"]  = OmniAuth.config.mock_auth[:auth0]

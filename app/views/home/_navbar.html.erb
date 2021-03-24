@@ -15,14 +15,14 @@
     <a class="nav-item navbar-signup" href="<%= home_about_path %>">About</a>
 
     <div class="navbar-nav ms-auto">
-      <% if !@user.nil? %>
+      <% if !session[:userinfo].nil? %>
         <div class="dropdown show">
           <a class="navbar-profile-dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle"></i>
-            <% if @user.info.name == nil %>
+            <% if session[:userinfo].extra.raw_info.given_name == nil %>
                 User Profile
               <% else %>
-                <%= @user.info.name %> <!-- change this to be first name eventually? -->
+                <%= session[:userinfo].extra.raw_info.given_name %> <!-- change this to be first name eventually? -->
               <% end %>
           </a>
 
