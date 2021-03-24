@@ -4,7 +4,7 @@ class ServicesController < ApplicationController
   # GET /services or /services.json
   def index
     @services = Service.all
-    @user = session[:userinfo]
+    #@user = session[:userinfo]
 
   end
 

@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @user = session[:userinfo]
+    #@user = session[:userinfo]
   end
 
   def show
-    @user = session[:userinfo]
+    #@user = session[:userinfo]
   end
 
   def about
