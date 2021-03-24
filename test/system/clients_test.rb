@@ -2,6 +2,7 @@ require "application_system_test_case"
 
 class ClientsTest < ApplicationSystemTestCase
   setup do
+    sign_in_system
     @client = clients(:one)
   end
 
