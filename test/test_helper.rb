@@ -33,11 +33,8 @@ class ActiveSupport::TestCase
     #puts(session[:userinfo].present?)
   end
 
-  def sign_out_user
-    
-  end
-
   def sign_in_system
+    visit root_url
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
       :provider => 'auth0',
@@ -49,10 +46,8 @@ class ActiveSupport::TestCase
       }
     })
     Rails.application.env_config["omniauth.auth"]  = OmniAuth.config.mock_auth[:auth0]
-    visit root_url
     click_on("Login", match: :first)
-    get auth_auth0_callback_path
-    puts(session[:userinfo])
-    puts(session[:userinfo].present?)
+    #puts(session[:userinfo])
+    #puts(session[:userinfo].present?)
   end
 end
