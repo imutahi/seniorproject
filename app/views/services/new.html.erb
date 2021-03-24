@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<header>
-<h1 class="text-dark">New Service</h1>
-</header>
+<div class="header">
+  <h1><a href=<%home_index_path%>><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top" alt=""></a>
+    New Service</h1>
+</div>
+<hr class="mb-2">
 
 <%= render 'form', service: @service %>
 
-<%= link_to 'Back', services_path, class:"btn btn-dark" %>
+<%= link_to 'Back', services_path, class:"misc-button" %>

@@ -87,7 +87,6 @@
         <%= form.text_field :notes, class: 'form-control' %>
       </div>
     </div>
-    <hr class="mb-3">
 
     <h4 class="mb-3">Administrator: Check mark the Activate box to enable Client Requests.</h4>
     <div class="col-md-4 mb-3">
@@ -101,7 +100,7 @@
   </body>
   <div class="actions mb-3">
     <!-- https://stackoverflow.com/questions/13167535/how-to-put-icon-in-rails-submit-button -->
-    <%= button_tag( :class => "btn btn-primary") do %>
+    <%= button_tag( :class => "bottom-button") do %>
       Save Client <i class="fas fa-paper-plane"></i>
     <% end %>
     <!-- <%= form.submit class:"btn btn-primary" %>
