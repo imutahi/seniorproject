@@ -16,7 +16,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   OmniAuth.config.test_mode = true
 
-  def sign_in_user_firms
+  def sign_in_user
     OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
       :provider => 'auth0',
       :uid => 'google-oauth2|113828971320495757925',
