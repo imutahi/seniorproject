@@ -1,10 +1,12 @@
 class FirmsController < ApplicationController
   before_action :set_firm, only: %i[ show edit update destroy ]
+  include Secured
 
   # GET /firms or /firms.json
   def index
     @firms = Firm.all
     @services = Service.all
+    @user = session[:userinfo]
   end
 
   # GET /firms/1 or /firms/1.json
