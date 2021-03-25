@@ -47,9 +47,9 @@
         <td style="padding: 10px; font-size: 13px"><% firm.services.each do |service| %>
             <li><%= service.service_type %></li>
           <% end %></td>
-        <td><%= link_to 'Show', firm %></td>
-        <td><%= link_to 'Edit', edit_firm_path(firm) %></td>
-        <td><%= link_to 'Destroy', firm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', firm, style: "color: #457B9D" %></td>
+        <td><%= link_to 'Edit', edit_firm_path(firm), style: "color: #457B9D" %></td>
+        <td><%= link_to 'Destroy', firm, style: "color: #E63746", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

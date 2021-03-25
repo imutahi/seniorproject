@@ -22,9 +22,9 @@
         <td><%= service.service_type %></td>
         <td><%= service.description %></td>
         <td><%= service.price %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', service, style: "color: #457B9D" %></td>
+        <td><%= link_to 'Edit', edit_service_path(service), style: "color: #457B9D" %></td>
+        <td><%= link_to 'Destroy', service, style: "color: #E63746", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
