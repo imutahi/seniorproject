@@ -42,9 +42,9 @@
         <td><%= client.status%></td>
         <!--        <td><%#= client.status ? "active" : "inactive"%></td>-->
 <!--        <td><%#= client.total_requests %></td>-->
-        <td><%= link_to 'Show', client, style: "color: #457B9D" %></td>
-        <td><%= link_to 'Edit', edit_client_path(client), style: "color: #457B9D" %></td>
-        <td><%= link_to 'Destroy', client, style: "color: #E63746", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', client, style: "color: #457B9D; text-decoration: none" %></td>
+        <td><%= link_to 'Edit', edit_client_path(client), style: "color: #457B9D; text-decoration: none" %></td>
+        <td><%= link_to 'Destroy', client, style: "color: #E63746; text-decoration: none", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
