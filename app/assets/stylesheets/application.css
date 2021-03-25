@@ -14,10 +14,16 @@
  *= require_self
  */
 
-a:hover{
-	color:#0D9DFD;
+a:hover {
+  color: #0d9dfd;
 }
 
 .btn-primary:hover {
-    color: #0D9DFD !important;
+  color: #0d9dfd !important;
+}
+
+.navbar-toggler .bi-justify,
+.navbar-toggler:focus {
+  box-shadow: none;
+  font-size: 40px !important;
 }
