@@ -13,6 +13,8 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
+  Capybara.server_port = 33913
+
   # Add more helper methods to be used by all tests here...
   OmniAuth.config.test_mode = true
 

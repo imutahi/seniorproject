@@ -25,9 +25,8 @@ class Auth0Test < ApplicationSystemTestCase
   test "logout" do
     sign_in_system
     visit logout_url
-    assert_response :redirect
-    follow_redirect!
-    assert_response :success
+    assert_text /Talon Agency/
+    #assert_response 302
   end
 
 end
