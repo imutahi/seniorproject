@@ -28,8 +28,8 @@ a:hover {
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 20px 20px 20px;
   overflow: hidden;
 }
 
@@ -52,9 +52,6 @@ a:hover {
   background-color: #f3f3f3;
 }
 
-.table tbody tr:last-of-type {
-  border-bottom: 2px solid #1d3557;
-}
 /* color: #0d9dfd !important;
 } */
 
