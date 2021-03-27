@@ -17,7 +17,7 @@ class ServicesTest < ApplicationSystemTestCase
     fill_in "Description", with: @service.description
     fill_in "Price", with: @service.price
     fill_in "Service type", with: @service.service_type
-    click_on "Submit for Approval"
+    click_on "Save Service"
 
     #assert_text "Service was successfully created"
     assert_no_text "error"
@@ -31,7 +31,7 @@ class ServicesTest < ApplicationSystemTestCase
     fill_in "Description", with: @service.description
     fill_in "Price", with: @service.price
     fill_in "Service type", with: @service.service_type
-    click_on "Submit for Approval"
+    click_on "Save Service"
 
     #assert_text "Service was successfully updated"
     assert_no_text "error"
@@ -50,7 +50,7 @@ class ServicesTest < ApplicationSystemTestCase
 
   test "make sure error messages appear if invalid services is created" do
     visit new_service_url
-    click_on "Submit for Approval"
+    click_on "Save Service"
     assert_selector "h2", text: /\A*errors*/
   end
 
@@ -59,7 +59,7 @@ class ServicesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
     fill_in "Service type", with: ""
     fill_in "Price", with: ""
-    click_on "Submit for Approval"
+    click_on "Save Service"
     assert_selector "h2", text: /\A*errors*/
   end
 

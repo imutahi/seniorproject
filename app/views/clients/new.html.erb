@@ -1,5 +1,13 @@
+<p id="notice"><%= notice %></p>
 
+<div class="header">
+  <h1><a href=<%home_index_path%>><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top" alt=""></a>
+    New Client</h1>
+</div>
+<hr class="mb-2">
 
 <%= render 'form', client: @client %>
 
-<%= link_to 'Back', clients_path, class:"btn btn-secondary" %>
+<%= link_to 'Back', clients_path, class:"misc-button" %>
+<!--Need space for ipad to see the button-->
+<br><br><br><br><br>

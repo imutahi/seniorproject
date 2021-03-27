@@ -1,4 +1,3 @@
-<div class="container-fluid">
   <%= form_with(model: firm, local: true) do |form| %>
     <% if firm.errors.any? %>
       <div id="error_explanation">
@@ -11,6 +10,7 @@
         </ul>
       </div>
     <% end %>
+  <body class="bg-light">
 
     <div class="col-lg-6">
       <%= form.label :name, 'Please select services: ' %>
@@ -24,7 +24,6 @@
     </div>
     <br>
 
-
 <!--    <div class="col-md-3 mb-3">-->
       <%#= form.label :invoice_data, class:"form-label" %>
       <%#= form.text_field :invoice_data, class:"form-control" %>
@@ -34,22 +33,22 @@
 
       <div class="col-md-3 mb-3">
         <%= form.label :first_name, class:"form-label" %>
-        <%= form.text_field :first_name, class:"form-control" %>
+        <%= form.text_field :first_name, class:"form-control", placeholder:"e.g. Robert, Jose, Mohammad" %>
       </div>
 
       <div class="col-md-3 mb-3">
         <%= form.label :middle_name, class:"form-label" %>
-        <%= form.text_field :middle_name, class:"form-control" %>
+        <%= form.text_field :middle_name, class:"form-control", placeholder:"e.g. enter middle name" %>
       </div>
 
       <div class="col-md-3 mb-3">
         <%= form.label :last_name, class:"form-label" %>
-        <%= form.text_field :last_name, class:"form-control" %>
+        <%= form.text_field :last_name, class:"form-control", placeholder:"e.g. enter last name" %>
       </div>
 
       <div class="col-md-3 mb-3">
         <%= form.label :maiden_name, class:"form-label" %>
-        <%= form.text_field :maiden_name, class:"form-control" %>
+        <%= form.text_field :maiden_name, class:"form-control", placeholder:"e.g. enter maiden name" %>
       </div>
 
     </div>
@@ -83,22 +82,22 @@
 
       <div class="col-md-3 mb-3">
         <%= form.label :dob, class:"form-label" %>
-        <%= form.text_field :dob, class:"form-control" %>
+        <%= form.text_field :dob, class:"form-control", placeholder:"e.g. 03-16-2001" %>
       </div>
 
       <div class="col-md-3 mb-3">
         <%= form.label :ssn, class:"form-label" %>
-        <%= form.text_field :ssn, class:"form-control" %>
+        <%= form.text_field :ssn, class:"form-control", placeholder:"e.g. 334-54-4432" %>
       </div>
 
       <div class="col-md-3 mb-3">
         <%= form.label :dl_state, class:"form-label" %>
-        <%= form.text_field :dl_state, class:"form-control" %>
+        <%= form.text_field :dl_state, class:"form-control", placeholder:"e.g. CO" %>
       </div>
 
       <div class="col-md-3 mb-3">
         <%= form.label :dl_number, class:"form-label" %>
-        <%= form.text_field :dl_number, class:"form-control" %>
+        <%= form.text_field :dl_number, class:"form-control", placeholder:"e.g. 65456765" %>
       </div>
 
     </div>
@@ -125,19 +124,20 @@
 
     <div class="field mb-3">
       <%= form.label :notes, class:"form-label" %>
-      <%= form.text_field :notes, class:"form-control" %>
+      <%= form.text_field :notes, class:"form-control", placeholder:"e.g. Provide any additional helpful information." %>
     </div>
 
 <!--    <div class="field mb-3">-->
       <%#= form.label :client_request, class:"form-label" %>
       <%#= form.text_field :client_request, class:"form-control" %>
 <!--    </div>-->
+    <hr class="mb-3">
 
+  </body>
     <div class="actions mb-3">
-      <%= button_tag( :class => "btn btn-primary") do %>
-        Create Request <i class="fas fa-paper-plane"></i>
+      <%= button_tag( :class => "bottom-button") do %>
+        Create Request <i class="fas fa-paper-plane "></i>
       <% end %>
     </div>
+ <% end %>
 
-  <% end %>
-</div>

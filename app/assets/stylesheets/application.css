@@ -14,44 +14,52 @@
  *= require_self
  */
 
-a:hover{
-	color:#0D9DFD;
+a:hover {
+  color: #0d9dfd;
 }
 
 .btn-primary:hover {
-    color: #0D9DFD !important;
+  color: #0d9dfd !important;
 }
 
 .table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border-radius: 20px 20px 0 0;
-    overflow: hidden;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
 }
 
 .table thead tr {
-    background-color: #457B9D;
-    color: #F1FAEE;
-    text-align: left;
+  background-color: #457b9d;
+  color: #f1faee;
+  text-align: left;
 }
 
 .table th,
 .table td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 
 .table tbody tr {
-    border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 .table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .table tbody tr:last-of-type {
-    border-bottom: 2px solid #1D3557;
+  border-bottom: 2px solid #1d3557;
+}
+/* color: #0d9dfd !important;
+} */
+
+.navbar-toggler .bi-justify,
+.navbar-toggler:focus {
+  box-shadow: none;
+  font-size: 40px !important;
 }

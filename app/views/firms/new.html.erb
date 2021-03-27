@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<header>
-<h1>New Request</h1>
-</header>
+<div class="header">
+  <h1><a href=<%home_index_path%>><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top" alt=""></a>
+    New Request</h1>
+</div>
+<hr class="mb-2">
+
 <%= render 'form', firm: @firm %>
 
-<%= link_to 'Back', firms_path, class:"btn btn-dark" %>
+<%= link_to 'Back', firms_path, class:"misc-button" %>
+<!--Need space for ipad to see the button-->
+<br><br><br><br><br>
