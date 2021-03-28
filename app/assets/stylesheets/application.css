@@ -26,7 +26,7 @@ a:hover {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   min-width: 400px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 20px 20px 20px 20px;
@@ -60,7 +60,28 @@ a:hover {
   box-shadow: none;
   font-size: 40px !important;
 }
+.table thead {
+  font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+}
 
+.table tbody {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.talon-input-field {
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: #a8dadc;
+  display: block;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #1d3557;
+}
 /* table {
   display: flex;
   flex-flow: column;
