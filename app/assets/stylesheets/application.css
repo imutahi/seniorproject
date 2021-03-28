@@ -82,6 +82,10 @@ a:hover {
 .footer {
   background-color: #1d3557;
 }
+
+.form-control {
+  border-radius: 20px;
+}
 /* table {
   display: flex;
   flex-flow: column;
