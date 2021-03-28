@@ -30,12 +30,14 @@
     <meta name="csrf-token" content="UY2XpKwxzwBWalxFVJ8yKsao/33it7If09BnZewpHifVPSpFJd2LrA7xgQn6VQrhZNGjgZoLI3kV+bkQHtr+Rw==">
   </head>
 
-  <body style="margin-left: 25px; margin-right: 25px;">
+  <body style="background: url(/background_shape.png) no-repeat center right fixed; background-size: cover; top:0; bottom:0;">
+    <div style="margin-right: 50px; margin-left: 50px;">
     <%= render 'home/navbar' %>
-    <div class="container-fluid">
-      <%= yield %>
-    </div>
+        <div class="container-fluid">
 
+             <%= yield %>
+        </div>
+    </div>
     <%= render 'home/footer' %>
 
     <!-- Bootstrap Hamburger Menu -->
