@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="header">
-  <h1><a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top" alt=""></a>
-    Clients</h1>
+<div class="header"><h1>Clients</h1>
 </div>
 
 <main>
@@ -42,9 +40,9 @@
         <td><%= client.status%></td>
         <!--        <td><%#= client.status ? "active" : "inactive"%></td>-->
 <!--        <td><%#= client.total_requests %></td>-->
-        <td><%= link_to 'Show', client, style: "color: #457B9D; text-decoration: none" %></td>
-        <td><%= link_to 'Edit', edit_client_path(client), style: "color: #457B9D; text-decoration: none" %></td>
-        <td><%= link_to 'Destroy', client, style: "color: #E63746; text-decoration: none", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', client, style: "color: #457B9D; text-decoration: none; font-family: Arial, Helvetica, sans-serif" %></td>
+        <td><%= link_to 'Edit', edit_client_path(client), style: "color: #457B9D; font-family: Arial, Helvetica, sans-serif; text-decoration: none" %></td>
+        <td><%= link_to 'Destroy', client, style: "color: #E63746; text-decoration: none; font-family: Arial, Helvetica, sans-serif", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

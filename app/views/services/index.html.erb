@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="header">
-  <h1><a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  alt=""></a>
-    Services</h1>
+  <h1>Services</h1>
 </div>
 
 <!-- https://getbootstrap.com/docs/5.0/content/tables/ -->
@@ -22,9 +21,9 @@
         <td><%= service.service_type %></td>
         <td><%= service.description %></td>
         <td><%= service.price %></td>
-        <td><%= link_to 'Show', service, style: "color: #457B9D; text-decoration: none"  %></td>
-        <td><%= link_to 'Edit', edit_service_path(service), style: "color: #457B9D; text-decoration: none" %></td>
-        <td><%= link_to 'Destroy', service, style: "color: #E63746; text-decoration: none", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', service, style: "color: #457B9D; text-decoration: none; font-family: Arial, Helvetica, sans-serif"  %></td>
+        <td><%= link_to 'Edit', edit_service_path(service), style: "color: #457B9D; text-decoration: none; font-family: Arial, Helvetica, sans-serif" %></td>
+        <td><%= link_to 'Destroy', service, style: "color: #E63746; text-decoration: none; font-family: Arial, Helvetica, sans-serif", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

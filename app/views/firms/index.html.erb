@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="header">
-  <h1><a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top" alt=""></a>
-    Requests</h1>
+<div class="header"><h1>Requests</h1>
 </div>
 
 <main>
@@ -48,8 +46,8 @@
               <li><%= service.service_type %></li>
             <% end %></td>
           <td><%= link_to 'Show', firm, style: "color: #457B9D; text-decoration: none" %></td>
-          <td><%= link_to 'Edit', edit_firm_path(firm), style: "color: #457B9D; text-decoration: none" %></td>
-          <td><%= link_to 'Destroy', firm, style: "color: #E63746; text-decoration: none", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_firm_path(firm), style: "color: #457B9D; text-decoration: none; font-family: Arial, Helvetica, sans-serif" %></td>
+          <td><%= link_to 'Destroy', firm, style: "color: #E63746; text-decoration: none; font-family: Arial, Helvetica, sans-serif", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
