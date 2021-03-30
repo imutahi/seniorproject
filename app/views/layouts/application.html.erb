@@ -31,13 +31,15 @@
 
     <%= favicon_link_tag asset_path('TalonAgencyLogo.png') %>
   </head>
-
-  <body style="margin-left: 25px; margin-right: 25px;">
+  <!-- style="background: url(/background_shape.png) no-repeat center right fixed; background-size: cover; top:0; bottom:0;" -->
+  <body style="overflow: scroll;">
+    <div style="margin-right: 50px; margin-left: 50px;">
     <%= render 'home/navbar' %>
-    <div class="container-fluid">
-      <%= yield %>
-    </div>
+        <div class="container-fluid">
 
+             <%= yield %>
+        </div>
+    </div>
     <%= render 'home/footer' %>
 
     <!-- Bootstrap Hamburger Menu -->

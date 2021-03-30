@@ -1,12 +1,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
-<p id="notice"><%= notice %></p>
 
-<div class="header">
-  <h1><a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  alt=""></a>
-    Talon Agency</h1>
+<div>
+  <img style="z-index: -1; margin-top: -200px; margin-right: -500px; margin-bottom: -80px; position: absolute;" class=" align-middle w-100" src="/background_shape.png" alt="Background Shape Image">
 </div>
-<hr style="border: 1px outset #595955;">
+
+<p id="notice"><%= notice %></p>
+<div class="header" style="margin-left: 45px; margin-right: 45px; margin-top: 45px;">
+  <h1><a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top" "  alt=""></a>
+    Talon Agency</h1>
+    <hr style="border: 1px outset #595955;">
+</div>
 
 <div class="container-fluid center">
   <main>
@@ -21,29 +25,66 @@
 
     <div class="container-fluid">
       <div class="row">
-        <h2 class="talon-landing-header"> The most comprehensive background checks in the US. </h2>
+        <h1 class="talon-landing-header"> The most comprehensive background checks in the US. </h1>
       </div>
     </div>
 
-    <div class="container-fluid" style="margin-top:30px;">
-      <div class="row">
-        <div class="col-5">
-          <div class="media">
-            <img width="50%" height="50%" style="border-radius:20px;" class=" align-middle w-100" src="/american-eagle.jpg" alt="American Eagle Image">
+
+    
+      <div class="container-fluid" style="margin-bottom: 80px; margin-top: 150px; position: relative;">
+        <div class="row" style="background: #49b5fd; border-radius: 10px; padding: 20px; position: absolute;">
+          <div class="col-5">
+            <div class="media">
+              <img style="border-radius:20px;" class=" align-middle w-100" src="/american-eagle.jpg" alt="American Eagle Image">
+            </div>  
+          </div>
+          <div class="col-1"> </div>
+      </div>
+      </div>
+
+    </div>
+
+      <div class="container-fluid" style="position: relative; margin-top: -60px;">
+        <div class="row">
+        <div class="col-6"></div>
+
+        <div class="col-6">
+          <div class="shadow-lg" style="background: #1D3557; padding: 20px; border-radius: 10px;  min-height: 40vw; width: 90%;"> 
+            <div style="margin:10px;">
+              <h2 class="text-left " style=" color: #F1FAEE; font-weight: bold; font-size: 3vw;">
+                Getting Started:</h2>
+              <h4 class="text-justify " style="margin-top:30px; margin-bottom: 30px; color: #F1FAEE; font-size: 2vw; font-family: Arial, Helvetica, sans-serif;">
+                To begin the encryped request first Login or Signup. From there you can go to the clients page and create a new client profile. Once approved by a an investigator, you can create new requests on the Requests page. You will be notified once your request is ready for download.
+              </h4>
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="d-flex justify-content-center"><button class="btn action-button " style="max-width: 80%;"> Get Started </button> </div>
+              </div>
+            </div>
+            
           </div>
         </div>
-        <div class="col-6">
-          <h2 class="text-left " style=" color: #49b5fd; white-space: nowrap">
-            To access the TalonAgency.com <br> encrypted request manager: </h2>
-          <h4 class="text-left " style="margin-top:30px; margin-bottom: 30px; color: #9c9c9c; white-space: nowrap">
-            1) Click Login to Sign Up for the 1st time. <br>
-            2) From the Clients page, create a New Client Profile. <br>
-            3) Once approved by an Investigator, you can make <br> &nbsp&nbsp&nbsp&nbsp New Requests from the Requests page. <br>
-            4) You will be notified when your Request is <br> &nbsp&nbsp&nbsp&nbsp ready for download.
-          </h4>
-        </div>
       </div>
-    </div>
+     
+
+        <!--
+      <div class="container-fluid" style=" margin-top:80px; margin-bottom:80px; z-index: 1; position: relative;">
+      <div class="row" style="">
+        <div class="col-6""> </div>
+        <div class="col-5" style="background: #1D3557; padding: 50px; border-radius: 30px; ">
+            <h2 class="text-left " style=" color: #49b5fd; white-space: nowrap">
+              To access the TalonAgency.com <br> encrypted request manager: </h2>
+            <h4 class="text-left " style="margin-top:30px; margin-bottom: 30px; color: #FFFFFF; white-space: nowrap">
+              1) Click Login to Sign Up for the 1st time. <br>
+              2) From the Clients page, create a New Client Profile. <br>
+              3) Once approved by an Investigator, you can make <br> &nbsp&nbsp&nbsp&nbsp New Requests from the Requests page. <br>
+              4) You will be notified when your Request is <br> &nbsp&nbsp&nbsp&nbsp ready for download.
+            </h4>
+        </div>
+      </div> -->
+
+    
 
 <!--    <div class="row">-->
 <!--      <div class="col-4"> I'm column width 4</div>-->
@@ -60,4 +101,5 @@
 <!--    </div>-->
 
   </main>
+
 </div>
