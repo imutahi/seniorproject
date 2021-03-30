@@ -3,227 +3,229 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .footer {
-    height: 25px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #999999;
-    color: white;
-    text-align: center;
-  }
+  height: 25px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #999999;
+  color: white;
+  text-align: center;
+}
 
 .header {
   color: black;
   font-size: 30px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
 }
 
-  .navbar-custom { 
-    min-height:50px;
-    border-radius:0px 0px 10px 10px;
-
-} 
-
-.navbar-element{
-	padding:6px;
-	text-decoration:none;
-	margin:5px;
-	border-radius:20px;
-	min-width: 90px;
-	text-align:center;
-	color: #9c9c9c;
-	border: 2px solid #b5b5b5;
-	font-family: Arial, Helvetica, sans-serif; 
-
+.navbar-custom {
+  min-height: 50px;
+  border-radius: 0px 0px 10px 10px;
 }
 
-.primary-login{
-	background:#49b5fd;
-	padding:10px;
-	text-decoration:none;
-	margin-top:40px;
-	margin-left:10px;
-	border-radius:20px;
-	text-align:center;
-	color: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	min-width:200px;
-	border:none;
+.navbar-element {
+  padding: 6px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 20px;
+  min-width: 90px;
+  text-align: center;
+  color: #9c9c9c;
+  border: 2px solid #b5b5b5;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.primary-signup{
-	padding:8px;
-	background:none;
-	text-decoration:none;
-	margin-top:40px;
-	margin-right:10px;
-	border-radius:20px;
-	text-align:center;
-	color: #49b5fd;
-	border: 2px solid #49b5fd;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	min-width:200px;
-}
-
-
-.navbar-signup{
-	padding:10px;
-	text-decoration:none;
-	margin:5px;
-	border-radius:20px;
-	min-width: 100px;
-	text-align:center;
-	color: #49b5fd;
-	border: 2px solid #49b5fd;
-	font-family: Arial, Helvetica, sans-serif; 
-	font-weight: bold;
-	vertical-align:center;
-}
-
-.navbar-login{
-	
-	background:#49b5fd;
-	padding:10px;
-	text-decoration:none;
-	margin:5px;
-	border-radius:20px;
-	text-align:center;
-	color: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	min-width:200px;
-}
-
-.talon-button{
-
-  background:#1D3557;
-  padding:10px;
-  text-decoration:none;
-  margin:0px;
-  border-radius:20px;
-  text-align:center;
-  color: #FFFFFF;
+.primary-login {
+  background: #49b5fd;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 10px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
-  min-width:200px;
+  min-width: 200px;
+  border: none;
 }
 
-.misc-button{
-
-  background:#9e9e9e;
-  padding:10px;
-  text-decoration:none;
-  margin:0px;
-  border-radius:20px;
-  text-align:center;
-  color: #FFFFFF;
+.primary-signup {
+  padding: 8px;
+  background: none;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: center;
+  color: #49b5fd;
+  border: 2px solid #49b5fd;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 20px;
-  min-width:200px;
+  min-width: 200px;
 }
 
-.action-button{
-	background:#49b5fd;
-	padding:10px;
-	text-decoration:none;
-	margin-top:40px;
-	margin-left:10px;
-	border-radius:20px;
-	text-align:center;
-	color: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	border:none;
+.navbar-signup {
+  padding: 10px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 20px;
+  min-width: 100px;
+  text-align: center;
+  color: #49b5fd;
+  border: 2px solid #49b5fd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  vertical-align: center;
 }
 
-.navbar-logout{
-	background:#E63946;
-	padding:10px;
-	text-decoration:none;
-	margin:5px;
-	border-radius:20px;
-	text-align:center;
-	color: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	min-width:200px;
+.navbar-login {
+  background: #49b5fd;
+  padding: 10px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 200px;
 }
 
-.navbar-profile-dropdown-btn{
-	background:#49b5fd;
-	padding:10px;
-	text-decoration:none;
-	margin:5px;
-	border-radius:10px;
-	text-align:center;
-	color: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-	min-width:200px;
+.bottom-button {
+  background: #1d3557;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 200px;
 }
 
-.navbar-dropdown-menu{
-	margin-top: 10px;
-	min-width:210px;
-}
-.talon-brand{
-	font-size: 40px;
-	text-decoration:none;
-	font-family: 'Fjalla One', sans-serif;
-	color: #000000;
-}
-
-.talon-landing-header{
-	font-size:5vw; 
-	margin-top:60px;
-	font-weight:bold;
+.misc-button {
+  background: #9e9e9e;
+  padding: 10px;
+  text-decoration: none;
+  margin: 0px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 200px;
 }
 
-.talon-req-man-dir{
-	margin-top:30px; 
-	margin-bottom: 30px; 
-	color: #9c9c9c; 
-	white-space: nowrap;
+.action-button {
+  background: #49b5fd;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 10px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
 }
 
+.navbar-logout {
+  background: #e63946;
+  padding: 10px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 200px;
+}
 
+.navbar-profile-dropdown-btn {
+  background: #49b5fd;
+  padding: 10px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 200px;
+}
 
+.navbar-dropdown-menu {
+  margin-top: 10px;
+  min-width: 210px;
+}
+.talon-brand {
+  font-size: 40px;
+  text-decoration: none;
+  font-family: "Fjalla One", sans-serif;
+  color: #000000;
+}
 
+.talon-landing-header {
+  font-size: 5vw;
+  margin-top: 60px;
+  font-weight: bold;
+}
 
-
+.talon-req-man-dir {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #9c9c9c;
+  white-space: nowrap;
+}
 
 .fade-in {
-	opacity: 0;
-	animation: fadeInOpacity ease 5s;
-	animation-iteration-count: 1;
-	animation-delay: 1s;
-	animation-fill-mode: both;
+  opacity: 0;
+  animation: fadeInOpacity ease 5s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
-.fade-in-slow{
-	opacity: 0;
-	animation: fadeInOpacity ease 5s;
-	animation-iteration-count: 1;
-	animation-delay: 2s;
-	animation-fill-mode: both;
+.fade-in-slow {
+  opacity: 0;
+  animation: fadeInOpacity ease 5s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+.bg-image {
+	z-index: -1; 
+	position: absolute; 
+	height: 150vh; 
+	width: 150vw; 
+	top:0;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  #bg-id {
+    height: 80vh;
+    width: 80vw;
+  }
 }

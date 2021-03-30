@@ -24,13 +24,14 @@ a:hover {
 
 .table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 20px 0;
   font-size: 0.9em;
   /* font-family: sans-serif; */
   min-width: 400px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
+
 }
 
 .table thead tr {

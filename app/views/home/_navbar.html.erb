@@ -21,13 +21,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
+<div>
 <nav class="navbar navbar-expand-lg navbar-custom shadow" style="background: #FFFFFF;">
-  <div class="container-fluid">
+  <div class="container-fluid" >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+       <i class="bi bi-justify"></i>
+     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
-        <% if request.env['PATH_INFO'] != root_path %>
-          <a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  alt=""></a>
-        <% end %>
+        <a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  style="margin-top: 3px; margin-right: 10px; margin-left: 10px;"  alt=""></a>
         <a class="nav-item navbar-element mr-auto" href="<%= services_path %>">Services</a>
         <a class="nav-item navbar-element" href="<%= firms_path %>">Requests</a>
         <a class="nav-item navbar-element" href="<%= clients_path %>">Clients</a>
@@ -36,19 +38,19 @@
       </div>
     </div>
 
-</div>
-
+  </div>
+  <a class="nav-item navbar-signup" href="/home/about">About</a>
     <div class="navbar-nav ms-auto">
-      <% if !@user.nil? %>
+      <% if !session[:userinfo].nil? %>
 
         <div class="dropdown show">
          <a class="navbar-profile-dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user-circle"></i>
 
-            <% if @user.info.name == nil %>
-              User Profile
+            <% if session[:userinfo].extra.raw_info.given_name == nil %>
+              Account
             <% else %>
-            <%= @user.info.name %> <!-- change this to be first name eventually? -->
+              <%= session[:userinfo].extra.raw_info.given_name %> <!-- change this to be first name eventually? -->
             <% end %>
          </a>
 
@@ -57,7 +59,7 @@
           <a class="dropdown-item" href="/logout">Logout</a>
         </div>
       <% else %>
-        <a class="nav-item navbar-signup" href="#"> Sign Up</a>
+        
         <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
       <% end %>
     </div>
@@ -67,6 +69,7 @@
    
   </div>
 </nav>
+</div>
 
 
 
