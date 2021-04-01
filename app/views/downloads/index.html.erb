@@ -1,0 +1,35 @@
+<p id="notice"><%= @notice %></p>
+<header>
+<h1>Download Request</h1>
+</header>
+
+<main>
+<table class="table table-primary table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Download Request</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @downloads.each do |download| %>
+      <tr>
+        <td><%= download.id %></td>
+        <td><%= download.title %></td>
+        <%if download.file.url.present? %>
+          <td><%= link_to "Download", download.file.url, target: "_blank" %></td>
+        <% else %>
+          <td>Not exist</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</main>
+
+<br>
+<% if @admin %> 
+  <%= link_to 'Create Download Request', new_download_path, class:"btn btn-primary" %>
+<% end %>
