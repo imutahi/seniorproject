@@ -68,6 +68,6 @@ class FirmsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def firm_params
-      params.require(:firm).permit(:invoice_data, :first_name, :middle_name, :last_name, :maiden_name, :dob, :ssn, :dl_state, :dl_number, :notes, :client_request, service_ids:[])
+      params.require(:firm).permit(:invoice_data, :first_name, :middle_name, :last_name, :maiden_name, :dob, :ssn, :dl_state, :dl_number, :notes, :client_request, :file, service_ids:[])
     end
 end
