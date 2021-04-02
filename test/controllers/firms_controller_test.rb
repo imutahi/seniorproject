@@ -2,7 +2,7 @@ require 'test_helper'
 
 class FirmsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    sign_in_user
+    sign_in_user_admin
     @firm = firms(:one)
     @update = {
         first_name: 'Michael',

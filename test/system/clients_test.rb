@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class ClientsTest < ApplicationSystemTestCase
   setup do
-    sign_in_system
+    sign_in_system_admin
     @client = clients(:one)
   end
 
@@ -26,6 +26,31 @@ class ClientsTest < ApplicationSystemTestCase
     fill_in "Phone", with: @client.phone
     fill_in "State", with: @client.state
     check "Status" if @client.status
+    #fill_in "Total requests", with: @client.total_requests
+    fill_in "Zip", with: @client.zip
+    click_on "Save Client"
+
+    #assert_text "Client was successfully created"
+    assert_no_text "error"
+    click_on "Back"
+  end
+
+  test "normal user creating a Client" do
+    visit logout_url
+    sign_in_system_normal
+    visit clients_url
+    click_on "New Client"
+
+    fill_in "Address", with: @client.address
+    fill_in "City", with: @client.city
+    fill_in "Client", with: @client.client_id
+    fill_in "Client name", with: "Sara Brilliance"
+    fill_in "Company", with: @client.company
+    fill_in "Email", with: @client.email
+    fill_in "Fax", with: @client.fax
+    fill_in "Notes", with: @client.notes
+    fill_in "Phone", with: @client.phone
+    fill_in "State", with: @client.state
     #fill_in "Total requests", with: @client.total_requests
     fill_in "Zip", with: @client.zip
     click_on "Save Client"

@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class FirmsTest < ApplicationSystemTestCase
   setup do
-    sign_in_system
+    sign_in_system_admin
     @firm = firms(:one)
   end
 

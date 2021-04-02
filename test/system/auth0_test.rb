@@ -3,7 +3,7 @@ require "application_system_test_case"
 class Auth0Test < ApplicationSystemTestCase
 
   test "login" do
-    sign_in_system
+    sign_in_system_admin
   end
 
 
@@ -23,7 +23,7 @@ class Auth0Test < ApplicationSystemTestCase
   end
 
   test "logout" do
-    sign_in_system
+    sign_in_system_admin
     visit logout_url
     assert_text /Talon Agency/
     #assert_response 302
