@@ -2,23 +2,31 @@ class ClientsController < ApplicationController
   before_action :set_client, only: %i[ show edit update destroy ]
   include Secured
 
+  # NOTE
+  # FIXME: Find a different way to keep track of admin (maybe via an admin table so the
+  # current admin can add more on the view)
+
   # GET /clients or /clients.json
   def index
     @clients = Client.all
     #@user = session[:userinfo]
+    @admin = "wizard239@gmail.com"
   end
 
   # GET /clients/1 or /clients/1.json
   def show
+    @admin = "wizard239@gmail.com"
   end
 
   # GET /clients/new
   def new
     @client = Client.new
+    @admin = "wizard239@gmail.com"
   end
 
   # GET /clients/1/edit
   def edit
+    @admin = "wizard239@gmail.com"
   end
 
   # POST /clients or /clients.json
