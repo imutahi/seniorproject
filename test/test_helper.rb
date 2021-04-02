@@ -18,7 +18,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   OmniAuth.config.test_mode = true
 
-  def sign_in_user
+  def sign_in_user_admin
     OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
       :provider => 'auth0',
       :uid => 'google-oauth2|113828971320495757925',
@@ -41,7 +41,27 @@ class ActiveSupport::TestCase
     #puts(session[:userinfo].present?)
   end
 
-  def sign_in_system
+  def sign_in_normal_user
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "test",
+        :first_name => "test",
+        :nickname => "test",
+        :email => "test@gmail.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "test"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    get auth_auth0_callback_path
+  end
+
+  def sign_in_system_admin
     visit root_url
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
@@ -56,6 +76,30 @@ class ActiveSupport::TestCase
       :extra => {
         :raw_info => {
           :given_name => "Warren"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"]  = OmniAuth.config.mock_auth[:auth0]
+    click_on("Login", match: :first)
+    #puts(session[:userinfo])
+    #puts(session[:userinfo].present?)
+  end
+
+  def sign_in_system_normal
+    visit root_url
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "test testing",
+        :first_name => "test",
+        :nickname => "test",
+        :email => "test@gmail.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "test"
         }
       }
     })
