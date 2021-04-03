@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :firms
   resources :services
   resources :clients
-
+  resources :downloads
+  
   resources :pages do 
     collection do
       get :clients

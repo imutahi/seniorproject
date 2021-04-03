@@ -16,4 +16,5 @@ class Firm < ApplicationRecord
   validates :dl_state,
             format: {with: %r{\A\w{2}\Z}}
   validates :notes, length: { maximum: 100 }
+  mount_uploader :file, PdfUploader
 end
