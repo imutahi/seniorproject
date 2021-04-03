@@ -14,7 +14,7 @@ MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App tha
 
 - Stuart Griffin (Development Team)
 
-- Muhammad Monsoor (Development Team)
+- Muhammad Mansoor (Development Team)
 
 - Grant Schumacher (Development Team)
 
@@ -34,16 +34,16 @@ MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App tha
 
 ## Sprint Deliverables - 2/10
 
-- Basic app working with minimal features (3 scaffolds/pages) 
+- Basic app working with minimal features (3 scaffolds/pages)
 - basic front-end features (bootstrap, HTML)
 - Unit Testing (passing) and Field Validations (bin/rails test:system)
 - SimpleCov (passing)
 - Travis-CI (passing)
-- all hosted on Heroku.  
+- all hosted on Heroku.
 
-## Sprint Deliverables - 2/24 
+## Sprint Deliverables - 2/24
 
-- Researched, Implemented and Tested Authentication - Auth0 add on created through Heroku 
+- Researched, Implemented and Tested Authentication - Auth0 add on created through Heroku
 - Added HTML5 elements for screen readers to access the landmark features on Web Pages
 - Decided to Utilize Minitest to test Auth0
 - Designed Logo and Color Scheme for Talon Agency
