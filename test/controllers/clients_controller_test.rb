@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    sign_in_user
+    sign_in_user_admin
     @clientone = clients(:one)
     @update = {
         client_name: 'Test Testing',
@@ -41,6 +41,29 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_client_url
     assert_response :success
+  end
+
+  # new test for normal users (the set up method logs in as admin)
+  test "normal user can create client without status" do
+    get logout_url
+    sign_in_normal_user
+    assert_difference('Client.count') do
+      post clients_url, params: { client: {   
+        client_name: "MyString",
+        total_requests: 1,
+        company: "MyString",
+        email: "MyString@mystring.com",
+        address: "MyString",
+        city: "MyString",
+        state: "CO",
+        zip: "11111",
+        phone: "504-504-5045",
+        fax: "504-504-5045",
+        notes: "MyString",
+        client_id: 1
+        }
+      }
+    end
   end
 
   test "should create client" do

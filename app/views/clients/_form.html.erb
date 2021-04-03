@@ -87,12 +87,13 @@
         <%= form.text_field :notes, class: 'form-control', placeholder:"e.g. Provide any important information." %>
       </div>
     </div>
-
-    <h4 class="mb-3">Administrator: Check mark the Activate box to enable Client Requests.</h4>
-    <div class="col-md-4 mb-3">
-      <%= form.check_box :status %>
-      <%= form.label :activate, class:"form-label" %>
-    </div>
+    <% if session[:userinfo][:info][:email] == @admin %>
+      <h4 class="mb-3">Administrator: Check mark the Activate box to enable Client Requests.</h4>
+      <div class="col-md-4 mb-3">
+        <%= form.check_box :status %>
+        <%= form.label :activate, class:"form-label" %>
+      </div>
+    <% end %>
 
     <hr class="mb-3">
 
