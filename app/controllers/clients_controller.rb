@@ -10,23 +10,21 @@ class ClientsController < ApplicationController
   def index
     @clients = Client.all
     #@user = session[:userinfo]
-    @admin = "wizard239@gmail.com"
   end
 
   # GET /clients/1 or /clients/1.json
   def show
-    @admin = "wizard239@gmail.com"
   end
 
   # GET /clients/new
   def new
     @client = Client.new
-    @admin = "wizard239@gmail.com"
+    @admin = "talontest7@gmail.com"
   end
 
   # GET /clients/1/edit
   def edit
-    @admin = "wizard239@gmail.com"
+    @admin = "talontest7@gmail.com"
   end
 
   # POST /clients or /clients.json
@@ -69,7 +67,7 @@ class ClientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def curr_user_is_admin? 
-      if !session[:userinfo].nil? && session[:userinfo][:info][:email] == "wizard239@gmail.com"
+      if !session[:userinfo].nil? && session[:userinfo][:info][:email] == "talontest7@gmail.com"
         return true
       else
         return false

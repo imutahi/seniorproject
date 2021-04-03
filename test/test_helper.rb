@@ -26,7 +26,7 @@ class ActiveSupport::TestCase
         :name => "W Remos",
         :first_name => "Warren",
         :nickname => "wizard239",
-        :email => "wizard239@gmail.com"
+        :email => "talontest7@gmail.com"
       },
       :extra => {
         :raw_info => {
@@ -49,7 +49,7 @@ class ActiveSupport::TestCase
         :name => "test",
         :first_name => "test",
         :nickname => "test",
-        :email => "test@gmail.com"
+        :email => "test@test.com"
       },
       :extra => {
         :raw_info => {
@@ -71,7 +71,7 @@ class ActiveSupport::TestCase
         :name => "W Remos",
         :first_name => "Warren",
         :nickname => "wizard239",
-        :email => "wizard239@gmail.com"
+        :email => "talontest7@gmail.com"
       },
       :extra => {
         :raw_info => {
@@ -95,7 +95,7 @@ class ActiveSupport::TestCase
         :name => "test testing",
         :first_name => "test",
         :nickname => "test",
-        :email => "test@gmail.com"
+        :email => "test@test.com"
       },
       :extra => {
         :raw_info => {
