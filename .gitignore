@@ -52,3 +52,6 @@ yarn-debug.log*
 # Ignore IntelliJ IDEA folder
 .idea
 .idea/
+
+# Ignore the public uploads directory so downloads test pdf files don't get commited
+/public/uploads
