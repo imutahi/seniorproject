@@ -22,14 +22,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
 <div>
-<nav class="navbar navbar-expand-lg navbar-custom shadow" style="background: #FFFFFF;">
+<nav class="navbar navbar-expand-lg navbar-custom shadow">
   <div class="container-fluid" >
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
        <i class="bi bi-justify"></i>
      </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
-        <a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  style="margin-top: 3px; margin-right: 10px; margin-left: 10px;"  alt=""></a>
+        <a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="nav-image d-inline-block align-top" alt=""></a>
         <a class="nav-item navbar-element mr-auto" href="<%= services_path %>">Services</a>
         <a class="nav-item navbar-element" href="<%= firms_path %>">Requests</a>
         <a class="nav-item navbar-element" href="<%= clients_path %>">Clients</a>
