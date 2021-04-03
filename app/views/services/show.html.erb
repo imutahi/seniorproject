@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<div class="jumbotron bg-light", style="border-radius:30px">
+<div class="jumbotron bg-light">
   <br />
   
   <header>
-  <h1 class="display-4", style="padding:10px">
+  <h1 class="service-info display-4">
       <strong>Service type:</strong>
       <%= @service.service_type %>
   </h1>
   </header>
 
   <main>
-  <p class="lead", style="padding:10px">
+  <p class="service-info lead">
     <strong>Description:</strong>
     <%= @service.description %> |
     <strong>Price:</strong>
@@ -20,7 +20,7 @@
   </p>
 </main>
 
-  <p class="my-4", style="padding:10px">
+  <p class="service-info my-4">
     <%= link_to 'Edit', edit_service_path(@service), class:"misc-button" %> |
     <%= link_to 'Back', services_path, class:"misc-button" %>
   </p>
