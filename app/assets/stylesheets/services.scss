@@ -1,3 +1,23 @@
 // Place all the styles related to the Services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.show-edit-buttons {
+  color: #457b9d;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.destroy-button {
+  color: #e63746;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron {
+  border-radius: 30px;
+}
+
+.service-info {
+  padding: 10px;
+}

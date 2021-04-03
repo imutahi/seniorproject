@@ -1,3 +1,32 @@
 // Place all the styles related to the Clients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.email-header {
+  width: 180px;
+}
+
+.client-id-header {
+  white-space: nowrap;
+}
+
+// .email-cell {
+//   width: 180px;
+//   word-break: break-all;
+// }
+
+.phone-fax-cell {
+  white-space: nowrap;
+}
+
+.show-edit-buttons {
+  color: #457b9d;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.destroy-button {
+  color: #e63746;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -11,3 +11,30 @@
   margin: 0 auto;
   padding-top: 14px;
 }
+
+.view-invoice-cell {
+  padding: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.dob-ssn-cells {
+  white-space: nowrap;
+}
+
+.show-edit-buttons {
+  color: #457b9d;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.destroy-button {
+  color: #e63746;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.service-type-cell {
+  padding: 10px;
+  font-size: 13px;
+}
