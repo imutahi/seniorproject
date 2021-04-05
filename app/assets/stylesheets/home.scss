@@ -168,8 +168,10 @@
 }
 
 .navbar-dropdown-menu {
+  left: unset !important;
   margin-top: 10px;
   min-width: 210px;
+  right: 0;
 }
 .talon-brand {
   font-size: 40px;
