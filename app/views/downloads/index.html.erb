@@ -30,6 +30,7 @@
 </main>
 
 <br>
-<% if @admin %> 
+<!-- FIXME (Try finding a different way to do this) -->
+<% if session[:userinfo] != nil && session[:userinfo][:info][:email] == @admin%> 
   <%= link_to 'Create Download Request', new_download_path, class:"btn btn-primary" %>
 <% end %>
