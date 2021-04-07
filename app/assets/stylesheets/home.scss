@@ -16,7 +16,6 @@
 
 .header {
   color: black;
-  font-size: 30px;
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -182,9 +181,7 @@
 
 .talon-landing-header {
   font-size: 5vw;
-  margin-top: 60px;
   font-weight: bold;
-  margin-left: 30px;
 }
 
 .talon-req-man-dir {
@@ -281,9 +278,9 @@
 
 .desc-container {
   background: #1d3557;
-  padding: 20px;
   border-radius: 10px;
   min-height: 40vw;
+  max-height: 40vw;
   width: 90%;
 }
 
@@ -303,9 +300,7 @@
 }
 
 .desc-text {
-  margin-top: 30px;
-  margin-bottom: 30px;
   color: #f1faee;
-  font-size: 2vw;
+  font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
