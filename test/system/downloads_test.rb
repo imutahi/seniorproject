@@ -25,7 +25,8 @@ class DownloadsTest < ApplicationSystemTestCase
         fill_in "Title", with: "Test Request"
         page.attach_file('File', Rails.root + 'test/fixtures/sample.pdf', make_visible: true)
         click_on "Create Request"
-        redirect_to downloads_path
+        assert_selector "h1", text: "Download Request"
+        #redirect_to downloads_path
         #assert_redirected_to downloads_url
 	end
 
