@@ -9,7 +9,6 @@ class ClientsController < ApplicationController
   # GET /clients or /clients.json
   def index
     @clients = Client.all
-    #@user = session[:userinfo]
   end
 
   # GET /clients/1 or /clients/1.json
@@ -66,14 +65,6 @@ class ClientsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def curr_user_is_admin? 
-      if !session[:userinfo].nil? && session[:userinfo][:info][:email] == "talontest7@gmail.com"
-        return true
-      else
-        return false
-      end
-    end
-
     def set_client
       @client = Client.find(params[:id])
     end
