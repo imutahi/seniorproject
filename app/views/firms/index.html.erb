@@ -42,8 +42,8 @@
           <td><%= firm.dl_number %></td>
           <td><%= firm.notes %></td>
   <!--        <td><%#= firm.client_request %></td>-->
-          <td class="service-type-cell"><% firm.services.each do |service| %>
-              <li><%= service.service_type %></li>
+          <td class="dob-ssn-cells"><% firm.services.each do |service| %>
+              <li><%= service.service_type %> - <%= service.price %></li>
             <% end %></td>
           <td><%= link_to 'Show', firm, class: "show-edit-buttons"%></td>
           <td><%= link_to 'Edit', edit_firm_path(firm), class: "show-edit-buttons"%></td>
