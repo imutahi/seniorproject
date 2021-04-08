@@ -54,4 +54,4 @@ yarn-debug.log*
 .idea/
 
 # Ignore the public uploads directory so downloads test pdf files don't get commited
-#/public/uploads
+/public/uploads/tmp
