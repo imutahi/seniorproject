@@ -22,17 +22,17 @@
         <td><%= service.description %></td>
         <td><%= service.price %></td>
         <td><%= link_to 'Show', service, class: "show-edit-buttons"%></td>
-        <% if !session[:userinfo].nil? %>
-          <td><%= link_to 'Edit', edit_service_path(service), class: "show-edit-buttons"%></td>
-          <td><%= link_to 'Destroy', service, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <% unless session[:userinfo].nil? %>
+          <td><%=  link_to 'Edit', edit_service_path(service), class: "show-edit-buttons" %></td>
+          <td><%= link_to 'Destroy', service, class: "destroy-button", method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <%  end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 </main>
-<% if !session[:userinfo].nil? %>
-  <%= link_to 'New Service', new_service_path, class:"bottom-button" %>
+<% unless session[:userinfo].nil? %>
+  <%=  link_to 'New Service', new_service_path, class:"bottom-button"  %>
 <% end %>
 <!--Need space for ipad to see the button-->
 <br><br><br><br><br>
