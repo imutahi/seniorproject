@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'store/index'
   root 'home#index'  
   
   get 'home/index'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   resources :services
   resources :clients
   resources :downloads
+  resources :charges
   
   resources :pages do 
     collection do
