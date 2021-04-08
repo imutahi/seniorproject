@@ -25,6 +25,12 @@ class DownloadsController < ApplicationController
     end
   end
 
+  def destroy
+    Download.find(params[:id]).destroy
+    redirect_to downloads_path
+  end
+  private
+
   def download_params
     params.require(:download).permit(:title, :file)
   end
