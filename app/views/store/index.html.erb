@@ -1,20 +1,33 @@
-<h1>Store#index</h1>
-
-<%= form_tag charges_path do %>
-    <article>
-      <% if flash[:error].present? %>
-        <div id="error_explanation">
-          <p><%= flash[:error] %></p>
-        </div>
-
-      <label class="amount">
-        <span>Amount: $75.00</span>
-      </label>
-    </article>
-
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="Criminal - Simple History Report"
-            data-amount="7500"
-            data-locale="auto"></script>
-<% end %>
+<!--<h1>Store#index</h1>-->
+<!--<p>Find me in app/views/store/index.html.erb</p>-->
+<p id="notice" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
+<div class="header">
+  <h1><a href="/home/index"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  alt=""></a>
+    Talon Agency Checkout</h1>
+</div>
+<hr style="border: 1px outset #595955;">
+<div class="">
+  <div class="background">
+    <%= image_tag("https://i.postimg.cc/nh9yZWt2/Talon-Agency-Logo.png", alt: "TALON AGENCY") %>
+  </div>
+  <div class="product">
+    <h5>Comprehensive Background Check: </h5>
+    <h3>$75.00</h3>
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+          </article>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="Talon Agency Background Check"
+                  data-amount="7500"
+                  data-label="Buy Now"
+                  data-locale="auto">
+          </script>
+        <% end %>
+  </div>
+</div>
