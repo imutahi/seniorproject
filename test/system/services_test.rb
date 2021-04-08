@@ -2,6 +2,7 @@ require "application_system_test_case"
 
 class ServicesTest < ApplicationSystemTestCase
   setup do
+    sign_in_system_admin
     @service = services(:one)
   end
 

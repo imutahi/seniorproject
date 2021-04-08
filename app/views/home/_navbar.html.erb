@@ -8,10 +8,11 @@
         <div class="navbar-nav me-auto">
           <a href="/"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="nav-image d-inline-block align-top" alt=""></a>
           <a class="nav-item navbar-element mr-auto" href="<%= services_path %>">Services</a>
-          <a class="nav-item navbar-element" href="<%= firms_path %>">Requests</a>
-          <a class="nav-item navbar-element" href="<%= clients_path %>">Clients</a>
-          <a class="nav-item navbar-element" href="<%= downloads_path %>">Downloads</a>
-
+          <% unless session[:userinfo].nil? %>
+            <a class="nav-item navbar-element" href="<%= firms_path %>">Requests</a>
+            <a class="nav-item navbar-element" href="<%= clients_path %>">Clients</a>
+            <a class="nav-item navbar-element" href="<%= downloads_path %>">Downloads</a>
+          <% end %>
         </div>
       </div>
     </div>
