@@ -3,7 +3,7 @@ require "application_system_test_case"
 class DownloadsTest < ApplicationSystemTestCase
     test "should get index" do
         visit downloads_url
-        assert_selector "h1", text: "Download Request"
+        assert_selector "h1", text: "Download Manager"
     end
 
     test "should get new" do
@@ -25,7 +25,7 @@ class DownloadsTest < ApplicationSystemTestCase
         fill_in "Title", with: "Test Request"
         page.attach_file('File', Rails.root + 'test/fixtures/sample.pdf', make_visible: true)
         click_on "Create Request"
-        assert_selector "h1", text: "Download Request"
+        assert_selector "h1", text: "Download Manager"
         #redirect_to downloads_path
         #assert_redirected_to downloads_url
 	end
