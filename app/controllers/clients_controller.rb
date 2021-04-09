@@ -8,11 +8,25 @@ class ClientsController < ApplicationController
 
   # GET /clients or /clients.json
   def index
-    @clients = Client.all
+    @admin = "talontest7@gmail.com"
+    if curr_user_is_admin? 
+      @clients = Client.all
+    else 
+      @currentclient = Client.find_by(email: session[:userinfo][:info][:email])
+    end
   end
 
   # GET /clients/1 or /clients/1.json
   def show
+    @currentclient = Client.find_by(email: session[:userinfo][:info][:email])
+    if curr_user_is_admin?
+      render :show
+    elsif !session[:userinfo].nil? && !@currentclient.nil? && session[:userinfo][:info][:email] == @currentclient.email
+      @client = Client.find_by(email: session[:userinfo][:info][:email])
+      render :show
+    else
+      redirect_to clients_path 
+    end
   end
 
   # GET /clients/new
