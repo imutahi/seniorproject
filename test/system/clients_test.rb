@@ -46,7 +46,7 @@ class ClientsTest < ApplicationSystemTestCase
     fill_in "Client", with: @client.client_id
     fill_in "Client name", with: "Sara Brilliance"
     fill_in "Company", with: @client.company
-    fill_in "Email", with: @client.email
+    fill_in "Email", with: "test@test.com"
     fill_in "Fax", with: @client.fax
     fill_in "Notes", with: @client.notes
     fill_in "Phone", with: @client.phone
