@@ -16,10 +16,10 @@
   <tbody>
     <% @downloads.each do |download| %>
       <tr>
-        <td><%= download.id %></td>
-        <td><%= download.title %></td>
+        <td data-title="ID"><%= download.id %></td>
+        <td data-title="Title"><%= download.title %></td>
         <%if download.file.url.present? %>
-          <td><%= link_to "Download", download.file.url, target: "_blank" %></td>
+          <td data-title="Download Request><%= link_to "Download", download.file.url, target: "_blank" %></td>
         <% else %>
           <td>Not exist</td>
         <% end %>

@@ -26,24 +26,24 @@
     <tbody>
       <% @firms.each do |firm| %>
         <tr>
-          <td class="view-invoice-cell">
+          <td data-title="Invoice Datae" class="view-invoice-cell">
             <%= link_to firm do %>
             View Invoice: <%= firm.id %><br>
             <% end %>
             <%=firm.created_at.strftime("%-m/%d/%y %-I:%M ET")%><br>
             Updated: <%=time_ago_in_words(firm.updated_at)%> ago</td>
-          <td><%= firm.first_name %></td>
-          <td><%= firm.middle_name %></td>
-          <td><%= firm.last_name %></td>
-          <td><%= firm.maiden_name %></td>
-          <td class="dob-ssn-cells"><%= firm.dob %></td>
-          <td class="dob-ssn-cells"><%= firm.ssn %></td>
-          <td><%= firm.dl_state %></td>
-          <td><%= firm.dl_number %></td>
-          <td><%= firm.notes %></td>
+          <td data-title="First Name"><%= firm.first_name %></td>
+          <td data-title="Middle Name"><%= firm.middle_name %></td>
+          <td data-title="Last Name"><%= firm.last_name %></td>
+          <td data-title="Maiden Name"><%= firm.maiden_name %></td>
+          <td data-title="DOB" class="dob-ssn-cells"><%= firm.dob %></td>
+          <td data-title="SSN" class="dob-ssn-cells"><%= firm.ssn %></td>
+          <td data-title="DL State"><%= firm.dl_state %></td>
+          <td data-title="DL Number"><%= firm.dl_number %></td>
+          <td data-title="Notes"><%= firm.notes %></td>
   <!--        <td><%#= firm.client_request %></td>-->
-          <td class="dob-ssn-cells"><% firm.services.each do |service| %>
-              <li><%= service.service_type %> - <%= service.price %></li>
+          <td data-title="Services Requested" class="dob-ssn-cells"><% firm.services.each do |service| %>
+              <li><%= service.service_type %> - $<%= service.price %></li>
             <% end %></td>
           <td><%= link_to 'Show', firm, class: "show-edit-buttons"%></td>
           <td><%= link_to 'Edit', edit_firm_path(firm), class: "show-edit-buttons"%></td>

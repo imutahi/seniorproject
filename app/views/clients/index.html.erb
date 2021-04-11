@@ -27,18 +27,18 @@
     <% if session[:userinfo][:info][:email] == @admin %>
       <% @clients.each do |client| %>
         <tr>
-          <td><%= client.client_name %></td>
-          <td><%= client.company %></td>
-          <td class="email-cell"><%= client.email %></td>
-          <td class="phone-fax-cell"><%= client.phone %></td>
-          <td class="phone-fax-cell"><%= client.fax %></td>
-          <td><%= client.address %></td>
-          <td><%= client.city %></td>
-          <td><%= client.state %></td>
-          <td><%= client.zip %></td>
-          <td><%= client.id %></td>
-          <td><%= client.notes %></td>
-          <td><%= client.status%></td>
+          <td data-title="Client Name"><%= client.client_name %></td>
+          <td data-title="Company"><%= client.company %></td>
+          <td data-title="Email" class="email-cell"><%= client.email %></td>
+          <td data-title="Phone" class="phone-fax-cell"><%= client.phone %></td>
+          <td data-title="Fax" class="phone-fax-cell"><%= client.fax %></td>
+          <td data-title="Address"><%= client.address %></td>
+          <td data-title="City"><%= client.city %></td>
+          <td data-title="State"><%= client.state %></td>
+          <td data-title="Zip"><%= client.zip %></td>
+          <td data-title="Client ID"><%= client.id %></td>
+          <td data-title="Notes"><%= client.notes %></td>
+          <td data-title="Status"><%= client.status%></td>
           <!--        <td><%#= client.status ? "active" : "inactive"%></td>-->
   <!--        <td><%#= client.total_requests %></td>-->
           <td><%= link_to 'Show', client, class: "show-edit-buttons"%></td>
