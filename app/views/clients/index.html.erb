@@ -24,26 +24,50 @@
   </thead>
   
   <tbody>
-    <% @clients.each do |client| %>
-      <tr>
-        <td><%= client.client_name %></td>
-        <td><%= client.company %></td>
-        <td class="email-cell"><%= client.email %></td>
-        <td class="phone-fax-cell"><%= client.phone %></td>
-        <td class="phone-fax-cell"><%= client.fax %></td>
-        <td><%= client.address %></td>
-        <td><%= client.city %></td>
-        <td><%= client.state %></td>
-        <td><%= client.zip %></td>
-        <td><%= client.id %></td>
-        <td><%= client.notes %></td>
-        <td><%= client.status%></td>
-        <!--        <td><%#= client.status ? "active" : "inactive"%></td>-->
-<!--        <td><%#= client.total_requests %></td>-->
-        <td><%= link_to 'Show', client, class: "show-edit-buttons"%></td>
-        <td><%= link_to 'Edit', edit_client_path(client), class: "show-edit-buttons"%></td>
-        <td><%= link_to 'Destroy', client, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% if session[:userinfo][:info][:email] == @admin %>
+      <% @clients.each do |client| %>
+        <tr>
+          <td data-title="Client Name"><%= client.client_name %></td>
+          <td data-title="Company"><%= client.company %></td>
+          <td data-title="Email" class="email-cell"><%= client.email %></td>
+          <td data-title="Phone" class="phone-fax-cell"><%= client.phone %></td>
+          <td data-title="Fax" class="phone-fax-cell"><%= client.fax %></td>
+          <td data-title="Address"><%= client.address %></td>
+          <td data-title="City"><%= client.city %></td>
+          <td data-title="State"><%= client.state %></td>
+          <td data-title="Zip"><%= client.zip %></td>
+          <td data-title="Client ID"><%= client.id %></td>
+          <td data-title="Notes"><%= client.notes %></td>
+          <td data-title="Status"><%= client.status%></td>
+          <!--        <td><%#= client.status ? "active" : "inactive"%></td>-->
+  <!--        <td><%#= client.total_requests %></td>-->
+          <td><%= link_to 'Show', client, class: "show-edit-buttons"%></td>
+          <td><%= link_to 'Edit', edit_client_path(client), class: "show-edit-buttons"%></td>
+          <td><%= link_to 'Destroy', client, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <% else %>
+        <% if !@currentclient.nil? %>
+          <tr>
+            <td><%= @currentclient.client_name %></td>
+            <td><%= @currentclient.company %></td>
+            <td class="email-cell"><%= @currentclient.email %></td>
+            <td class="phone-fax-cell"><%= @currentclient.phone %></td>
+            <td class="phone-fax-cell"><%= @currentclient.fax %></td>
+            <td><%= @currentclient.address %></td>
+            <td><%= @currentclient.city %></td>
+            <td><%= @currentclient.state %></td>
+            <td><%= @currentclient.zip %></td>
+            <td><%= @currentclient.id %></td>
+            <td><%= @currentclient.notes %></td>
+            <td><%= @currentclient.status%></td>
+            <!--        <td><%#= client.status ? "active" : "inactive"%></td>-->
+    <!--        <td><%#= client.total_requests %></td>-->
+            <td><%= link_to 'Show', @currentclient, class: "show-edit-buttons"%></td>
+            <td><%= link_to 'Edit', edit_client_path(@currentclient), class: "show-edit-buttons"%></td>
+            <td><%= link_to 'Destroy', @currentclient, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>

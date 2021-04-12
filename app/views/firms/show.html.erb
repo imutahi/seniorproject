@@ -79,7 +79,7 @@
   <dt class="col-sm-3">Services:</dt>
   <dd class="col-sm-9">
     <% @firm.services.each do |service| %>
-      <li><%= service.service_type %></li>
+      <li><%= service.service_type %> - <%= service.price %></li>
     <% end %>
   </dd>
 </dl>

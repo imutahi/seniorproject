@@ -6,30 +6,33 @@
 
 <!-- https://getbootstrap.com/docs/5.0/content/tables/ -->
 <main>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Service Type</th>
-      <th scope="col">Description</th>
-      <th scope="col">Price</th>
-      <th scope="col" colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @services.each do |service| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= service.service_type %></td>
-        <td><%= service.description %></td>
-        <td><%= service.price %></td>
-        <td><%= link_to 'Show', service, class: "show-edit-buttons"%></td>
-        <td><%= link_to 'Edit', edit_service_path(service), class: "show-edit-buttons"%></td>
-        <td><%= link_to 'Destroy', service, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Service Type</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @services.each do |service| %>
+        <tr>
+          <td data-title="Service Type"><%= service.service_type %></td>
+          <td data-title="Description"><%= service.description %></td>
+          <td data-title="Price">$<%= service.price %></td>
+          <td><%= link_to 'Show', service, class: "show-edit-buttons"%></td>
+          <% unless session[:userinfo].nil? %>
+            <td><%=  link_to 'Edit', edit_service_path(service), class: "show-edit-buttons" %></td>
+            <td><%= link_to 'Destroy', service, class: "destroy-button", method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <%  end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </main>
-
-<%= link_to 'New Service', new_service_path, class:"bottom-button" %>
+<% unless session[:userinfo].nil? %>
+  <%=  link_to 'New Service', new_service_path, class:"bottom-button"  %>
+<% end %>
 <!--Need space for ipad to see the button-->
 <br><br><br><br><br>

@@ -31,7 +31,6 @@ a:hover {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
-
 }
 
 .table thead tr {
@@ -110,3 +109,80 @@ table tbody tr {
   display: table;
   table-layout: fixed;
 } */
+
+@media only screen and (max-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  .table table,
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table tr {
+    border: 1px solid #ccc;
+  }
+
+  .table td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
+
+  .table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /*
+	Label the data
+	*/
+  .table td:before {
+    content: attr(data-title);
+  }
+}
+
+/*ABOUTUS PAGE*/
+
+.profile-title {
+  text-align: center;
+  font-weight: bold;
+}
+.panel-heading {
+  text-align: center;
+}
+
+.profile-pictures {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 50px;
+}

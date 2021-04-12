@@ -18,7 +18,9 @@
       <%= form.collection_check_boxes :service_ids, Service.all, :id, :service_type, unchecked: Service.all.map(&:id) do |b| %>
       <span>
        <%= b.check_box %>
-        <%= b.label %><br />
+       <%= b.label %>
+
+        <br />
      </span>
       <% end %>
     </div>
