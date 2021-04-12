@@ -110,3 +110,29 @@ table tbody tr {
   display: table;
   table-layout: fixed;
 } */
+
+
+
+/*ABOUTUS PAGE*/
+
+.profile-title{
+  text-align: center;
+  font-weight: bold;
+}
+.panel-heading{
+  text-align: center;
+}
+
+.profile-pictures {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-info{
+  text-align: center;
+  margin-bottom: 50px;
+
+}
