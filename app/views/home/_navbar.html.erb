@@ -17,6 +17,9 @@
       </div>
     </div>
     <a class="nav-item navbar-signup" href="/home/about">About</a>
+    <% unless session[:userinfo].nil? %>
+      <a class="nav-item navbar-signup" href="/store/index">Cart</a>
+    <% end %>
     <div class="navbar-nav ms-auto">
       <% if !session[:userinfo].nil? %>
         <div class="dropdown show">
