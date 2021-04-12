@@ -10,6 +10,7 @@
       <th>ID</th>
       <th>Title</th>
       <th>Download Request</th>
+      <th> Delete Request</th>
     </tr>
   </thead>
 
@@ -23,6 +24,7 @@
         <% else %>
           <td>Not exist</td>
         <% end %>
+        <td><%= link_to 'Destroy', download, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
