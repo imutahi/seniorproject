@@ -9,8 +9,8 @@
     <tr>
       <th>ID</th>
       <th>Title</th>
-      <th>Download Request</th>
-      <th> Delete Request</th>
+      <th>Download Report</th>
+      <th> Delete Report</th>
     </tr>
   </thead>
 
@@ -30,9 +30,7 @@
   </tbody>
 </table>
 </main>
-
-<br>
 <!-- FIXME (Try finding a different way to do this) -->
-<% if session[:userinfo] != nil && session[:userinfo][:info][:email] == @admin%> 
-  <%= link_to 'Create Download Request', new_download_path, class:"btn btn-primary" %>
+<% if session[:userinfo] != nil && session[:userinfo][:info][:email] == @admin%>
+  <%= link_to 'Upload Background Report', new_download_path, class:"bottom-button" %>
 <% end %>
