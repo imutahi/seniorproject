@@ -46,7 +46,7 @@ class DownloadsTest < ApplicationSystemTestCase
         fill_in "Title", with: "Hey how are you? Have you completed your task"
         click_on "Create Request"
         assert_text "Download Request"
-	 end
+	end
 
     test "destroying a Request" do
         visit downloads_url
