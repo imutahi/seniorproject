@@ -2,7 +2,6 @@ require "application_system_test_case"
 
 class DownloadsTest < ApplicationSystemTestCase
     setup do
-        sign_in_system_admin
         @download = downloads(:one)
     end
     test "should get index" do
