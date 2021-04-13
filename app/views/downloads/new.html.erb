@@ -1,8 +1,7 @@
-<p id="notice"><%= @notice %></p>
+<p id="notice"><%= notice %></p>
 
-<header>
-<h1>New Request</h1>
-</header>
+<div class="header"><h1>Upload Background Check Report</h1>
+</div>
 <%= render 'form', download: @download %>
 
-<%= link_to 'Back', downloads_path, class:"btn btn-dark" %>
+<%= link_to 'Back', downloads_path, class:"misc-button" %>

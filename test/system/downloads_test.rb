@@ -12,7 +12,7 @@ class DownloadsTest < ApplicationSystemTestCase
     test "should get new" do
         sign_in_system_admin
 	    visit new_download_url
-        assert_selector "h1", text: "New Request"
+        assert_selector "h1", text: "Upload Background Check Report"
 	end
 
     test "should not get new if not admin" do
@@ -27,7 +27,7 @@ class DownloadsTest < ApplicationSystemTestCase
 	    visit new_download_url
         fill_in "Title", with: "Test"
         page.attach_file('File', Rails.root + 'test/fixtures/sample.pdf', make_visible: true)
-        click_on "Create Request"
+        click_on "Upload Report"
         assert_selector "h1", text: "Download Manager"
         #redirect_to downloads_path
         #assert_redirected_to downloads_url
@@ -44,8 +44,8 @@ class DownloadsTest < ApplicationSystemTestCase
         sign_in_system_admin
         visit new_download_url
         fill_in "Title", with: "Hey how are you? Have you completed your task"
-        click_on "Create Request"
-        assert_text "Download Request"
+        click_on "Upload Report"
+        assert_text "Download Report"
 	end
 
     test "destroying a Request" do
