@@ -66,6 +66,13 @@ class ClientsTest < ApplicationSystemTestCase
     assert_text /error/
   end
 
+  test "should redirect to clients page for users with no clients" do
+    visit logout_url
+    sign_in_system_normal
+    visit client_url(@client)
+    assert_selector "h1", text: "Clients"
+  end
+
   test "updating a Client" do
     visit clients_url
     click_on "Edit", match: :first
