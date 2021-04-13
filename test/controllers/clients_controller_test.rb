@@ -163,22 +163,17 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "foo" do
-    sign_in_normal_user
-    get client_url(@clientthree)
-    assert_response :success
-  end
+  # test "should show client for normal user who created that client" do
+  #   sign_in_normal_user
+  #   get client_url(@clientone)
+  #   assert_response :success
+  # end
 
-  test "should show client for normal user who created that client" do
+  test "should redirect non-admin users to clients page when trying to show a client" do
     sign_in_normal_user
     get client_url(@clientone)
-    assert_response :success
+    assert_response 302
   end
-
-  # test "should redirect to clients page for non-auth users" do
-  #   get client_url(@clientone)
-  #   assert_response 302
-  # end
 
   test "should get edit" do
     sign_in_user_admin
