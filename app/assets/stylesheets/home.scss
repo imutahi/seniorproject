@@ -224,11 +224,10 @@
   }
 }
 
-@media (max-width: 400px) {
-  #bg-id {
-    height: 80vh;
-    width: 80vw;
-  }
+@media (max-width: 500px) {
+  #image-container{
+    margin-top: 3rem; 
+    }
 }
 
 .navbar {
@@ -250,7 +249,6 @@
   position: absolute;
   height: 150vh;
   right: 0;
-  top: 0;
   bottom: 0;
 }
 
@@ -259,21 +257,21 @@
 }
 
 .image-container {
-  margin-bottom: 80px;
-  margin-top: 150px;
   position: relative;
-}
+  margin-top: 15vh
+  }
 
 .image-box-bg {
   background: #49b5fd;
   border-radius: 10px;
-  padding: 20px;
+  padding: 1vw;
   position: absolute;
   z-index: -1;
 }
 
 .eagle-image-style {
-  border-radius: 20px;
+  border-radius: 1vw;
+  width: 80%;
 }
 
 .desc-container {
@@ -286,11 +284,6 @@
 
 .description-container {
   position: relative;
-  margin-top: -60px;
-}
-
-.desc-title-container {
-  margin: 10px;
 }
 
 .desc-title {
