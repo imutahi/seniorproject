@@ -2,7 +2,6 @@ require "application_system_test_case"
 
 class DownloadsTest < ApplicationSystemTestCase
     setup do
-        sign_in_system_admin
         @download = downloads(:one)
     end
     test "should get index" do
@@ -47,7 +46,7 @@ class DownloadsTest < ApplicationSystemTestCase
         fill_in "Title", with: "Hey how are you? Have you completed your task"
         click_on "Create Request"
         assert_text "Download Request"
-	 end
+	end
 
     test "destroying a Request" do
         visit downloads_url
