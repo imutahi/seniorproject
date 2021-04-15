@@ -68,7 +68,7 @@
   min-width: 200px;
 }
 
-.navbar-signup {
+.navbar-about {
   padding: 10px;
   text-decoration: none;
   margin: 5px;
@@ -236,6 +236,17 @@
   }
   #info-container{
     margin-top: 3em;
+  }
+  #navbar-login{
+    margin: 0;
+    width: 100%;
+    vertical-align: center;
+    position: relative;
+    min-width: 40vw;
+  }
+  #navbar-about{
+    width: 10%;
+    min-width: 35vw;
   }
 }
 .info-container{
