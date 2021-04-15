@@ -224,12 +224,21 @@
   }
 }
 
-@media (max-width: 500px) {
-  #image-container{
-    margin-top: 3rem; 
-    }
+@media (max-width: 800px){
+  #getting-started-container{
+      margin-top:.25em;
+      margin-bottom: 2em;
+  }
+  #info-row{
+    margin-bottom: 2em;
+  }
+  #info-container{
+    margin-top: 3em;
+  }
 }
-
+.info-container{
+  margin-top: 8em;
+}
 .navbar {
   background: #ffffff;
 }
@@ -276,10 +285,13 @@
 
 .desc-container {
   background: #1d3557;
-  border-radius: 10px;
-  min-height: 40vw;
-  max-height: 40vw;
-  width: 90%;
+  border-radius: .5rem;
+  min-height: 100%;
+}
+
+.neg-marg{
+  margin-top: -3rem;
+  margin-bottom: -5rem;
 }
 
 .description-container {
