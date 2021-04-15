@@ -213,6 +213,8 @@
   height: 150vh;
   width: 150vw;
   top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 @keyframes fadeInOpacity {
@@ -237,7 +239,7 @@
   }
 }
 .info-container{
-  margin-top: 8em;
+  margin-top: 10em;
 }
 .navbar {
   background: #ffffff;
@@ -251,31 +253,6 @@
 
 .divider {
   border: 1px outset #595955;
-}
-
-.bg-theme {
-  z-index: -1;
-  position: absolute;
-  height: 150vh;
-  right: 0;
-  bottom: 0;
-}
-
-.main-content {
-  margin-right: 30px;
-}
-
-.image-container {
-  position: relative;
-  margin-top: 15vh
-  }
-
-.image-box-bg {
-  background: #49b5fd;
-  border-radius: 10px;
-  padding: 1vw;
-  position: absolute;
-  z-index: -1;
 }
 
 .eagle-image-style {
