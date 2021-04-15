@@ -2,10 +2,11 @@ require 'test_helper'
 
 class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    sign_in_user_admin
+    #sign_in_user_admin
     @clientone = clients(:one)
     @clienttwo = {
         client_name: 'Tedeeee',
+        client_id: 1,
         address: '1000 Test Ave.',
         city: 'Testing',
         state: 'CO',
@@ -16,6 +17,21 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
         phone: '111-222-3333',
         fax: '111-222-3333',
     }
+    @clientthree = clients(:two)
+    # @clientthree = {
+    #   client_name: 'Alpha Dog',
+    #   status: false,
+    #   address: '123 Main St',
+    #   city: 'Denver',
+    #   state: 'CO',
+    #   zip: '90210',
+    #   email: 'alphadog@email.com',
+    #   company: 'ABC Company',
+    #   notes: 'asdfasdf',
+    #   phone: '123-456-7890',
+    #   fax: '123-456-7890',
+    #   client_id: 1,
+    # }
     @update = {
         client_name: 'Test Testing',
         address: '1000 Test Ave.',
@@ -45,45 +61,49 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
     }
   end
 
-  test "should get index admin" do
+  test "should get index for admin user" do
+    sign_in_user_admin
     get clients_url
     assert_response :success
   end
 
-  # test "should get index normal user" do
-  #   OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
-  #     :provider => 'auth0',
-  #     :uid => 'google-oauth2|113828971320495757925',
-  #     :info => {
-  #       :name => "test",
-  #       :first_name => "test",
-  #       :nickname => "test",
-  #       :email => "dom@test.com"
-  #     },
-  #     :extra => {
-  #       :raw_info => {
-  #         :given_name => "test"
-  #       }
-  #     }
-  #   })
-  #   Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
-  #   get auth_auth0_callback_path
-  #   post firms_url, params: { client: @clienttwo }
-  #   get clients_url
-  #   assert_response :success
-  # end
+  test "should get index normal user" do
+    sign_in_normal_user
+    # OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+    #   :provider => 'auth0',
+    #   :uid => 'google-oauth2|113828971320495757925',
+    #   :info => {
+    #     :name => "test",
+    #     :first_name => "test",
+    #     :nickname => "test",
+    #     :email => "dom@test.com"
+    #   },
+    #   :extra => {
+    #     :raw_info => {
+    #       :given_name => "test"
+    #     }
+    #   }
+    # })
+    # Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    # get auth_auth0_callback_path
+    # post firms_url, params: { client: @clienttwo }
+    get clients_url
+    assert_response :success
+  end
 
   test "should get new" do
+    sign_in_user_admin
     get new_client_url
     assert_response :success
   end
 
   # new test for normal users (the set up method logs in as admin)
   test "normal user can create client without status" do
-    get logout_url
+    # sign_in_user_admin
+    # get logout_url
     sign_in_normal_user
     assert_difference('Client.count') do
-      post clients_url, params: { client: {   
+      post clients_url, params: { client: {
         client_name: "MyString",
         total_requests: 1,
         company: "MyString",
@@ -102,9 +122,10 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create client" do
+    sign_in_user_admin
     assert_difference('Client.count') do
       #post clients_url, params: { client: { address: @client.address, city: @client.city, client_id: @client.client_id, client_name: @client.client_name, company: @client.company, email: @client.email, fax: @client.fax, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, total_requests: @client.total_requests, zip: @client.zip } }
-      post clients_url, params: { client: {   
+      post clients_url, params: { client: {
         client_name: "MyString",
         status: false,
         total_requests: 1,
@@ -126,6 +147,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should stay on same page if create client is invalid" do
+    sign_in_user_admin
     assert_no_difference('Client.count') do
       post clients_url, params: {
         client: @invalidClient
@@ -135,27 +157,38 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
     assert_response 422
   end
 
-  test "should show client" do
+  test "should show client for admin user" do
+    sign_in_user_admin
     get client_url(@clientone)
     assert_response :success
   end
 
-  test "should show client for normal user that already created a client for themselves" do
+  # test "should show client for normal user who created that client" do
+  #   sign_in_normal_user
+  #   get client_url(@clientone)
+  #   assert_response :success
+  # end
+
+  test "should redirect non-admin users to clients page when trying to show a client" do
+    sign_in_normal_user
     get client_url(@clientone)
-    assert_response :success
+    assert_response 302
   end
 
   test "should get edit" do
+    sign_in_user_admin
     get edit_client_url(@clientone)
     assert_response :success
   end
 
   test "should update client" do
+    sign_in_user_admin
     patch client_url(@clientone), params: { client: @update }
     assert_redirected_to client_url(@clientone)
   end
 
   test "should stay on same page if update client is invalid" do
+    sign_in_user_admin
     assert_no_changes(@clientone) do
       patch client_url(@clientone), params: {
         client: {
@@ -180,6 +213,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy client" do
+    sign_in_user_admin
     assert_difference('Client.count', -1) do
       delete client_url(@clientone)
     end

@@ -11,8 +11,14 @@
     <%= image_tag("https://i.postimg.cc/nh9yZWt2/Talon-Agency-Logo.png", alt: "TALON AGENCY") %>
   </div>
   <div class="product">
-    <h5>Comprehensive Background Check: </h5>
-    <h3>$75.00</h3>
+    <hr style="border: 1px outset #595955;">
+
+    <h2>Order Confirmation: </h2>
+    <h3>1. Comprehensive Background Check </h3>
+    <h2>$ 75.00</h2>
+    <hr style="border: 1px outset #595955;">
+    <h3>Total: $75.00</h3>
+
     <%= form_tag charges_path do %>
       <article>
         <% if flash[:error].present? %>
@@ -30,4 +36,7 @@
           </script>
         <% end %>
   </div>
+  <hr style="border: 1px outset #595955;">
+  <h2>*** After purchase, please wait for the confirmation page. ***</h2>
+
 </div>

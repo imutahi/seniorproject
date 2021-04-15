@@ -21,7 +21,7 @@ class DownloadsController < ApplicationController
   def create
     if curr_user_is_admin?
       @download = Download.new(download_params)
-      
+
       if @download.save
         redirect_to downloads_path
         @notice = "Download request was successfully created."
@@ -29,8 +29,14 @@ class DownloadsController < ApplicationController
         redirect_to downloads_path
         @notice = "Download request was not created."
       end
-    else 
+    else
+      #Jose made the following comment 04/12
+      #below is set to nocov since this block will never be reached due to def new action redirecting
+      #to root for non-admin users
+      #@NOTE: should we even keep this block of code?
+      # :nocov:
       redirect_to '/'
+      # :nocov:
     end
   end
 

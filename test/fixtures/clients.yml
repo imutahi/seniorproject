@@ -21,11 +21,11 @@ two:
   total_requests: 1
   company: "company"
   email: "email@email.com"
-  address: "333"
+  address: "333 Main St"
   city: "MyString"
   state: "CO"
-  zip: "888"
-  phone: "504-"
-  fax: "504-504-"
+  zip: "88834"
+  phone: "504-123-1234"
+  fax: "504-504-1234"
   notes: "MyString"
   client_id: 1
