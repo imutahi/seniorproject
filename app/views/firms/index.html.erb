@@ -24,6 +24,7 @@
     </thead>
 
     <tbody>
+      <% if !@firms.nil? %>
       <% @firms.each do |firm| %>
         <tr>
           <td data-title="Invoice Data" class="view-invoice-cell">
@@ -49,6 +50,7 @@
           <td><%= link_to 'Edit', edit_firm_path(firm), class: "show-edit-buttons"%></td>
           <td><%= link_to 'Destroy', firm, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
+      <% end %>
       <% end %>
     </tbody>
   </table>

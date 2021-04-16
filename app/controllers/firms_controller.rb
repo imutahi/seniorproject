@@ -8,7 +8,7 @@ class FirmsController < ApplicationController
     #@user = session[:userinfo]
 
     @currentclient = Client.find_by(email: session[:userinfo][:info][:email])
-    if @currentclient.nil?
+    if @currentclient.nil? and !curr_user_is_admin?
       redirect_to clients_path, notice: "You must fill out the client application in order to create a new request."
     elsif curr_user_is_admin?
       @firms = Firm.all
