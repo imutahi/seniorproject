@@ -1,54 +1,41 @@
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+<div class = "container" style="height: 100vh; top: 0; right: 0; background: url(background_shape.png) no-repeat left right relative">
+  <img id="bg-id" class="align-middle w-105 bg-image" src="/background_shape.png" alt="Background Shape Image">
 
-  <img id="bg-id" class="bg-theme align-middle w-105 bg-image" src="/background_shape.png" alt="Background Shape Image"> 
-
-
+<main>
 <p id="notice"><%= notice %></p>
 <div class="header">
-  <h1>Talon Agency</h1>
+  <h1 class="display-7">Talon Agency</h1>
     <hr class="divider">
 </div>
+      <div class="container-fluid mb-5">
+        <h1 class="talon-landing-header mt-5"> The most comprehensive background checks in the US. </h1>
+      </div>
 
-<div class="container-fluid center" >
-  <main class="main-content">
-      
-      <h1 class="talon-landing-header"> The most comprehensive background checks in the US. </h1>
-    
-      <div class="image-container container-fluid">
-        <div class="image-box-bg row">
-          <div class="col-5">
-            <div class="media">
-              <img class="eagle-image-style align-middle w-100" src="/american-eagle.jpg" alt="American Eagle Image">
-            </div>  
+     <div id="info-container" class="container p-3 info-container media">
+        <div id="info-row"  class="row shadow-lg  media" style="border-radius: 1rem; background: #49b5fd;">
+          <div class="col-lg-6 text-center">
+            <img class="img-fluid shadow-md p-3 mx-0" style="border-radius: 2em;" src="/american-eagle.jpg" alt="American Eagle Image">
           </div>
-          <div class="col-1"> </div>
-      </div>
-      </div>
 
-
-
-      <div class="description-container container-fluid">
-        <div class="row">
-        <div class="col-6"></div>
-
-        <div class="col-6">
-          <div class="desc-container shadow-lg"> 
-            <div class="desc-title-container">
-              <h2 class="desc-title text-left">
-                Getting Started:</h2>
-              <h4 class="desc-text text-justify">
-                - Click Login to Sign Up or Log In.<br>
-                - Go to the Clients page and complete a New Client application.<br>
-                - Once approved by an Investigator, you can create New Requests from the Requests page.<br>
-                - You will be notified once your request is ready for download.
-              </h4>
+          <div id="getting-started-container" class="neg-marg col-lg-6 h-100 media">
+            <div class="shadow-lg p-4 container desc-container">
+              <h2 class="desc-title text-left display-7"> Getting Started:</h2>
+                <ul class="desc-text">
+                  <li> Click Login to Sign Up or Log In. </li>
+                  <li> Go to the Clients page and complete a New Client application.</li>
+                  <li> Once approved by an Investigator, you can create New Requests from the Requests page. </li>
+                  <li> You will be notified once your request is ready for download. </li>
+                </ul>
             </div>
-
           </div>
+
         </div>
       </div>
-      </div>
-  </main>
-</div>
+
+
+
+  <main>
