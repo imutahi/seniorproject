@@ -35,6 +35,9 @@ class FirmsController < ApplicationController
   def create
     @firm = Firm.new(firm_params)
 
+    @currentclient = Client.find_by(email: session[:userinfo][:info][:email])
+    @firm.client_id = @currentclient[:id]
+
     respond_to do |format|
       if @firm.save
         format.html { redirect_to @firm, notice: "Firm was successfully created." }
