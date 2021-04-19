@@ -114,7 +114,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should update client" do
     sign_in_user_admin
     patch client_url(@clientone), params: { client: @update }
-    assert_redirected_to client_url(@clientone)
+    assert_redirected_to client_url(@clientone) 
   end
 
   test "should stay on same page if update client is invalid" do
