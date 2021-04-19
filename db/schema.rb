@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_165927) do
     t.string "client_request"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "service_id"
     t.string "file"
     t.integer "client_id"
   end

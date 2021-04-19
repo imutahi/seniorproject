@@ -16,10 +16,7 @@
         </div>
       </div>
     </div>
-    <a class="nav-item navbar-signup" href="/home/about">About</a>
-    <% unless session[:userinfo].nil? %>
-      <a class="nav-item navbar-signup" href="/store/index">Cart</a>
-    <% end %>
+    <a id="navbar-about" class="nav-item navbar-about" href="/home/about">About</a>
     <div class="navbar-nav ms-auto">
       <% if !session[:userinfo].nil? %>
         <div class="dropdown show">
@@ -37,7 +34,7 @@
           </div>
         </div>
       <% else %>
-        <%= link_to 'Login', 'auth/auth0', method: :post, class: 'nav-item navbar-login', 'aria-current' => "page" %>
+        <%= link_to 'Login', 'auth/auth0', method: :post, id: 'navbar-login', class: 'nav-item navbar-login', 'aria-current' => "page" %>
       <% end %>
     </div>
   </nav>
