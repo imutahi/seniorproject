@@ -3,6 +3,7 @@ require 'test_helper'
 class DownloadsControllerTest < ActionDispatch::IntegrationTest
 
 	test 'it should get index' do
+		sign_in_normal_user
 		get downloads_url
 		assert_response :success
 	end
