@@ -9,23 +9,27 @@
     <tr>
       <th>ID</th>
       <th>Title</th>
+      <th>Email </th>
       <th>Download Report</th>
-      <th> Delete Report</th>
+      <th>Delete Report</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @downloads.each do |download| %>
-      <tr>
-        <td data-title="ID"><%= download.id %></td>
-        <td data-title="Title"><%= download.title %></td>
-        <%if download.file.url.present? %>
-          <td data-title="Download Request"><%= link_to "Download", download.file.url, target: "_blank" %></td>
-        <% else %>
-          <td>Not exist</td>
-        <% end %>
-        <td><%= link_to 'Destroy', download, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% if !@downloads.nil? %>
+      <% @downloads.each do |download| %>
+        <tr>
+          <td data-title="ID"><%= download.id %></td>
+          <td data-title="Title"><%= download.title %></td>
+          <td data-title="Email"><%= download.email %></td>
+          <%if download.file.url.present? %>
+            <td data-title="Download Request"><%= link_to "Download", download.file.url, target: "_blank" %></td>
+          <% else %>
+            <td>Not exist</td>
+          <% end %>
+          <td><%= link_to 'Destroy', download, class: "destroy-button", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

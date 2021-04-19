@@ -1,34 +1,40 @@
 <div class="container-fluid">
-  <%= form_with(model: download, local: true) do |form| %>
-    <% if download.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(download.errors.count, "error") %> prohibited this firm from being saved:</h2>
 
-        <ul>
-          <% download.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
+    <%= form_with(model: download, local: true) do |form| %>
+      <% if download.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(download.errors.count, "error") %> prohibited this firm from being saved:</h2>
+
+          <ul>
+            <% download.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <%= form.label :title, class:"form-label" %>
+          <%= form.text_field :title, class:"form-control" %>
+        </div>
+      </div>
+
+      <div class="field mb-3">
+        <%= form.label :file, class:"form-label" %>
+        <%= form.file_field :file, class:"form-control" %>
+      </div>
+
+      <div class="col-md-12 mb-3">
+        <%= form.label :email, class:"form-label" %>
+        <%= form.text_field :email, class:"form-control" %>
+      </div>
+
+      <div class="actions mb-3">
+        <%= button_tag( :class => "bottom-button") do %>
+          Upload Report <i class="fas fa-paper-plane"></i>
+        <% end %>
       </div>
     <% end %>
 
-    <div class="row">
-      <div class="col-md-12 mb-3">
-        <%= form.label :title, class:"form-label" %>
-        <%= form.text_field :title, class:"form-control" %>
-      </div>
-    </div>
-
-    <div class="field mb-3">
-      <%= form.label :file, class:"form-label" %>
-      <%= form.file_field :file, class:"form-control" %>
-    </div>
-
-    <div class="actions mb-3">
-      <%= button_tag( :class => "bottom-button") do %>
-        Upload Report <i class="fas fa-paper-plane"></i>
-      <% end %>
-    </div>
-
-  <% end %>
 </div>

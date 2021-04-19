@@ -9,6 +9,12 @@ class DownloadsController < ApplicationController
     #if @admin_email == 'ian@gmail.com'
     #  @admin = true
     #end
+
+    if curr_user_is_admin?
+      @downloads = Download.all
+    else
+      @downloads = Download.where(email: session[:userinfo][:info][:email])
+    end
   end
 
   def new
@@ -48,6 +54,6 @@ class DownloadsController < ApplicationController
   private
 
   def download_params
-    params.require(:download).permit(:title, :file)
+    params.require(:download).permit(:title, :file, :email)
   end
 end
