@@ -112,8 +112,23 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update client" do
-    sign_in_user_admin
-    patch client_url(@clientone), params: { client: @update }
+    sign_in_user_without_client_application
+    patch client_url(@clientone), params: {
+      client: {
+        client_name: "Hugo Lopez",
+        total_requests: 1,
+        company: "Testable Solutions",
+        email: "hugo@test.com",
+        address: "MyString",
+        city: "MyString",
+        state: "CO",
+        zip: "11111",
+        phone: "504-504-5045",
+        fax: "504-504-5045",
+        notes: "MyString",
+        client_id: 4
+        }
+    }
     assert_redirected_to client_url(@clientone) 
   end
 
