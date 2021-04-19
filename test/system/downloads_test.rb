@@ -5,6 +5,7 @@ class DownloadsTest < ApplicationSystemTestCase
         @download = downloads(:one)
     end
     test "should get index" do
+        sign_in_system_admin
         visit downloads_url
         assert_selector "h1", text: "Download Manager"
     end
@@ -49,6 +50,7 @@ class DownloadsTest < ApplicationSystemTestCase
 	end
 
     test "destroying a Request" do
+        sign_in_system_admin
         visit downloads_url
         page.accept_confirm do
           click_on "Destroy", match: :first
