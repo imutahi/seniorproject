@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_19_164818) do
+ActiveRecord::Schema.define(version: 2021_04_19_165927) do
 
   create_table "clients", force: :cascade do |t|
     t.string "client_name"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_164818) do
     t.string "file"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "client_id"
+    t.string "email"
   end
 
   create_table "firms", force: :cascade do |t|
