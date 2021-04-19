@@ -15,7 +15,7 @@ class Client < ApplicationRecord
             format: {with: %r{\A\d{3}-\d{3}-\d{4}\Z}}
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP },
             #presence: true,
-            length: {maximum: 40}
-            #,uniqueness: {case_sensitive: false}
+            length: {maximum: 40},
+            uniqueness: {case_sensitive: false}
   validates :notes, length: { maximum: 140 }
 end

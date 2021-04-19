@@ -29,9 +29,10 @@
         <%= form.label :client_name, class:"form-label" %>
         <%= form.text_field :client_name, type: 'text', class: 'form-control', placeholder:"e.g. Jesse, Xiasong, Edgar"%>
       </div>
+
       <div class="col-md-3 mb-3">
         <%= form.label :email, class:"form-label" %>
-        <%= form.text_field :email, type: 'text', class: 'form-control', placeholder:"e.g. example@website.com"%>
+        <%= form.text_field :email, class:"form-control",:readonly => true %>
       </div>
       <div class="col-md-3 mb-3">
         <%= form.label :company, class:"form-label" %>

@@ -1,31 +1,27 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  client_name: "MyString"
-  status: false
-  total_requests: 1
-  company: "MyString"
-  email: "MyString@mystring.com"
+  client_name: "Talon"
+  status: true
+  company: "MSUDenver"
   address: "MyString"
-  city: "MyString"
+  city: "Denver"
   state: "CO"
   zip: "11111"
   phone: "504-504-5045"
   fax: "504-504-5045"
   notes: "MyString"
-  client_id: 1
-
+  email: "talontest7@gmail.com"
+  
 two:
-  client_name: "Jeff Hostetler"
-  status: false
-  total_requests: 1
-  company: "company"
-  email: "email@email.com"
-  address: "333 Main St"
-  city: "MyString"
+  client_name: "Talon UPDATED"
+  status: true
+  company: "MSUDenver"
+  address: "MyString"
+  city: "Denver"
   state: "CO"
-  zip: "88834"
-  phone: "504-123-1234"
-  fax: "504-504-1234"
+  zip: "11111"
+  phone: "504-504-5045"
+  fax: "504-504-5045"
   notes: "MyString"
-  client_id: 1
+  email: "talontest7@gmail.com"

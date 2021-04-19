@@ -2,62 +2,22 @@ require 'test_helper'
 
 class ClientsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    #sign_in_user_admin
     @clientone = clients(:one)
-    @clienttwo = {
-        client_name: 'Tedeeee',
-        client_id: 1,
-        address: '1000 Test Ave.',
-        city: 'Testing',
-        state: 'CO',
-        zip: '12345',
-        email: 'dom@test.com',
-        company: 'Test Inc.',
-        notes: 'test test test',
-        phone: '111-222-3333',
-        fax: '111-222-3333',
-    }
-    @clientthree = clients(:two)
-    # @clientthree = {
-    #   client_name: 'Alpha Dog',
-    #   status: false,
-    #   address: '123 Main St',
-    #   city: 'Denver',
-    #   state: 'CO',
-    #   zip: '90210',
-    #   email: 'alphadog@email.com',
-    #   company: 'ABC Company',
-    #   notes: 'asdfasdf',
-    #   phone: '123-456-7890',
-    #   fax: '123-456-7890',
-    #   client_id: 1,
-    # }
-    @update = {
-        client_name: 'Test Testing',
-        address: '1000 Test Ave.',
-        city: 'Testing',
-        state: 'CO',
-        zip: '12345',
-        email: 'domin@test.com',
-        company: 'Test Inc.',
-        notes: 'test test test',
-        phone: '111-222-3333',
-        fax: '111-222-3333',
-    }
-    @invalidClient = {
-      address: 123,
-      city: "Nowhere City",
-      client_id: 2,
-      client_name: "Invalid User",
-      company: "ABC Company",
-      email: 123,
-      fax: 123,
-      notes: "invalid entry",
-      phone: 123,
+    @update = clients(:two)
+    @updatev2 = {
+      client_name: "Willy Wonka",
+      status: false,
+      total_requests: 1,
+      company: "Choco Factory",
+      address: "MyString",
+      city: "MyString",
+      email: "willywonka@test.com",
       state: "CO",
-      status: 1,
-      total_requests: 2,
-      zip: "90210",
+      zip: "11111",
+      phone: "504-504-5045",
+      fax: "504-504-5045",
+      notes: "MyString",
+      client_id: 5
     }
   end
 
@@ -69,24 +29,6 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index normal user" do
     sign_in_normal_user
-    # OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
-    #   :provider => 'auth0',
-    #   :uid => 'google-oauth2|113828971320495757925',
-    #   :info => {
-    #     :name => "test",
-    #     :first_name => "test",
-    #     :nickname => "test",
-    #     :email => "dom@test.com"
-    #   },
-    #   :extra => {
-    #     :raw_info => {
-    #       :given_name => "test"
-    #     }
-    #   }
-    # })
-    # Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
-    # get auth_auth0_callback_path
-    # post firms_url, params: { client: @clienttwo }
     get clients_url
     assert_response :success
   end
@@ -99,15 +41,13 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
 
   # new test for normal users (the set up method logs in as admin)
   test "normal user can create client without status" do
-    # sign_in_user_admin
-    # get logout_url
-    sign_in_normal_user
+    sign_in_user_without_client_application
     assert_difference('Client.count') do
       post clients_url, params: { client: {
-        client_name: "MyString",
+        client_name: "Hugo",
         total_requests: 1,
-        company: "MyString",
-        email: "MyString@mystring.com",
+        company: "Testable Solutions",
+        email: "hugo@test.com",
         address: "MyString",
         city: "MyString",
         state: "CO",
@@ -115,32 +55,16 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
         phone: "504-504-5045",
         fax: "504-504-5045",
         notes: "MyString",
-        client_id: 1
+        client_id: 4
         }
       }
     end
   end
 
   test "should create client" do
-    sign_in_user_admin
+    sign_in_user_without_client_application_for_update
     assert_difference('Client.count') do
-      #post clients_url, params: { client: { address: @client.address, city: @client.city, client_id: @client.client_id, client_name: @client.client_name, company: @client.company, email: @client.email, fax: @client.fax, notes: @client.notes, phone: @client.phone, state: @client.state, status: @client.status, total_requests: @client.total_requests, zip: @client.zip } }
-      post clients_url, params: { client: {
-        client_name: "MyString",
-        status: false,
-        total_requests: 1,
-        company: "MyString",
-        email: "MyString@mystring.com",
-        address: "MyString",
-        city: "MyString",
-        state: "CO",
-        zip: "11111",
-        phone: "504-504-5045",
-        fax: "504-504-5045",
-        notes: "MyString",
-        client_id: 1
-        }
-      }
+      post clients_url, params: { client: @updatev2}
     end
 
     assert_redirected_to client_url(Client.last)
@@ -149,8 +73,20 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should stay on same page if create client is invalid" do
     sign_in_user_admin
     assert_no_difference('Client.count') do
-      post clients_url, params: {
-        client: @invalidClient
+      post clients_url, params: { client: {
+        address: 123,
+        city: "Nowhere City",
+        client_id: 3,
+        client_name: "Invalid User",
+        company: "ABC Company",
+        fax: 123,
+        notes: "invalid entry",
+        phone: 123,
+        state: "CO",
+        status: 1,
+        total_requests: 2,
+        zip: "90210",
+        }
       }
     end
 
@@ -162,12 +98,6 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
     get client_url(@clientone)
     assert_response :success
   end
-
-  # test "should show client for normal user who created that client" do
-  #   sign_in_normal_user
-  #   get client_url(@clientone)
-  #   assert_response :success
-  # end
 
   test "should redirect non-admin users to clients page when trying to show a client" do
     sign_in_normal_user
@@ -184,7 +114,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   test "should update client" do
     sign_in_user_admin
     patch client_url(@clientone), params: { client: @update }
-    assert_redirected_to client_url(@clientone)
+    assert_redirected_to client_url(@clientone) 
   end
 
   test "should stay on same page if update client is invalid" do
@@ -197,7 +127,6 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
           client_id: 2,
           client_name: "Invalid User",
           company: "ABC Company",
-          email: 123,
           fax: 123,
           notes: "invalid entry",
           phone: 123,
