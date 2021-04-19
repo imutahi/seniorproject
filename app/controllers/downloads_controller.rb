@@ -1,5 +1,6 @@
 class DownloadsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  include Secured
 
   def index
     @downloads = Download.all
