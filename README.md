@@ -49,3 +49,10 @@ MSU Denver Senior Project for CS4360, Spring 2021. We are building a Web-App tha
 - Designed Logo and Color Scheme for Talon Agency
 
 ## Sprint Deliverables -3/10
+
+- Added a User Profile to the Web Application
+- Added content such as the nav bar, the footer, the sign in ans also the sign out button
+- Created a style guide that finalized the style of fonts, buttons, colors etc for the web app. 
+- Implemented and fixed associations: 
+  The client should be able to choose which services they want from the firm requests page; The administrator should be able to see and also edit the client's request
+  
