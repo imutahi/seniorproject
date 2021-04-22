@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Download</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Download" transform="translate(9.000000, 9.000000)">
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="17" cx="51" cy="51" r="51"></circle>
+            <g id="Group" transform="translate(51.500000, 51.000000) rotate(90.000000) translate(-51.500000, -51.000000) translate(17.000000, 28.000000)" fill="#FFFFFF">
+                <rect id="Rectangle" x="0" y="16.84" width="51.974026" height="12.32"></rect>
+                <polygon id="Rectangle" transform="translate(53.287129, 16.333333) rotate(45.000000) translate(-53.287129, -16.333333) " points="37.8382838 10.4488449 68.8844884 10.0693069 68.7359736 22.2178218 37.689769 22.5973597"></polygon>
+                <polygon id="Rectangle" transform="translate(53.287129, 29.666667) rotate(-45.000000) translate(-53.287129, -29.666667) " points="37.689769 23.4026403 68.7359736 23.7821782 68.8844884 35.9306931 37.8382838 35.5511551"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

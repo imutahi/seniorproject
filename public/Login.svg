@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="129px" height="110px" viewBox="0 0 129 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Login</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login" transform="translate(0.000000, -10.000000)">
+            <path d="M74,110.903955 C99.3520542,110.903955 119.903955,90.3520542 119.903955,65 C119.903955,39.6479458 99.3520542,19.0960452 74,19.0960452 C48.6479458,19.0960452 28.0960452,39.6479458 28.0960452,65" id="Oval" stroke="#FFFFFF" stroke-width="17" transform="translate(74.000000, 65.000000) rotate(45.000000) translate(-74.000000, -65.000000) "></path>
+            <g id="Group" transform="translate(0.000000, 41.000000)" fill="#FFFFFF">
+                <rect id="Rectangle" x="0" y="17.8150466" width="55.6831683" height="13.0909091"></rect>
+                <polygon id="Rectangle" transform="translate(57.148515, 16.727273) rotate(45.000000) translate(-57.148515, -16.727273) " points="40.3834383 10.219622 73.9621962 10.0954095 73.9135914 23.2349235 40.3348335 23.3591359"></polygon>
+                <polygon id="Rectangle" transform="translate(57.148515, 31.272727) rotate(-45.000000) translate(-57.148515, -31.272727) " points="40.3348335 24.6408641 73.9135914 24.7650765 73.9621962 37.9045905 40.3834383 37.780378"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
