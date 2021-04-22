@@ -82,6 +82,26 @@ class ActiveSupport::TestCase
     get auth_auth0_callback_path
   end
 
+  def sign_in_user2_without_client_application
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "Table Meyer",
+        :first_name => "Table",
+        :nickname => "Table",
+        :email => "table@test.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "Table"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    get auth_auth0_callback_path
+  end
+
   def sign_in_user_without_client_application_for_update
     OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
       :provider => 'auth0',

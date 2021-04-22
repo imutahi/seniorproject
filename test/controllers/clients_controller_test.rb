@@ -19,6 +19,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
       notes: "MyString",
       client_id: 5
     }
+    @clientnormaluser = clients(:three)
   end
 
   test "should get index for admin user" do
@@ -99,12 +100,25 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should redirect non-admin users to clients page when trying to show a client" do
+  test "should show client for nonadmin user" do
     sign_in_normal_user
+    #post clients_url, params: { client: @clientnormaluser}
+    get client_url(@clientnormaluser)
+    assert_response :success
+  end
+
+  test "non-admin users can only see their client application in show" do
+    sign_in_normal_user
+    get client_url(@clientone)
+    assert_response 200
+  end
+
+  test "client can't access show page of a different client" do
+    sign_in_user2_without_client_application
     get client_url(@clientone)
     assert_response 302
   end
-
+  
   test "should get edit" do
     sign_in_user_admin
     get edit_client_url(@clientone)
