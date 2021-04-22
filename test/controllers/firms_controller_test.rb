@@ -17,16 +17,18 @@ class FirmsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get firms_url
     assert_response :success
-    # puts("in test")
-    # sign_in_user
-    # get logout_url
-    # puts(session[:userinfo])
-    # get auth_auth0_callback_url
-    # puts(session[:userinfo])
-    # puts("end session")
-    # get firms_url
-    # assert_response :success
-    # get logout_url
+  end
+
+  test "client is redirected if they don't have a client application" do
+    sign_in_user2_without_client_application
+    get firms_url
+    assert_response 302
+  end
+
+  test "client should only see their requests on the index page" do
+    sign_in_normal_user
+    get firms_url
+    assert_response :success
   end
 
   test "should get new" do
