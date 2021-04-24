@@ -1,7 +1,7 @@
 class FirmsController < ApplicationController
   before_action :set_firm, only: %i[ show edit update destroy ]
   include Secured
-
+  $grand_total = 0.0
   # GET /firms or /firms.json
   def index
     @services = Service.all
@@ -15,6 +15,17 @@ class FirmsController < ApplicationController
     else
       @firms = Firm.where(client_id: @currentclient.id)
       @email = session[:userinfo][:info][:email]
+      
+      total_amount = 0
+      @firms.each do |firm|
+        if firm.paid == false
+          total_amount += firm.total
+        else
+          next
+        end
+      end
+      @total_price = total_amount
+      $grand_total = @total_price
     end
   end
 
@@ -41,11 +52,11 @@ class FirmsController < ApplicationController
 
     # loop through all the services of the current firm record and total the prices
     # and insert it into the total column
-    total = 0
+    total_amount = 0
     @firm.services.each do |service|
-      total += service.price.to_d
+      total_amount += service.price.to_d
    end
-   @firm.total = total
+   @firm.total = total_amount
 
     respond_to do |format|
       if @firm.save
