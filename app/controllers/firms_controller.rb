@@ -41,6 +41,11 @@ class FirmsController < ApplicationController
 
     # loop through all the services of the current firm record and total the prices
     # and insert it into the total column
+    total = 0
+    @firm.services.each do |service|
+      total += service.price.to_d
+   end
+   @firm.total = total
 
     respond_to do |format|
       if @firm.save
