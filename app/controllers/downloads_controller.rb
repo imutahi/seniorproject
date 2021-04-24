@@ -3,13 +3,7 @@ class DownloadsController < ApplicationController
   include Secured
 
   def index
-    @downloads = Download.all
     @admin = "talontest7@gmail.com"
-    #@admin_email = 'ian@gmail.com'
-    #if @admin_email == 'ian@gmail.com'
-    #  @admin = true
-    #end
-
     if curr_user_is_admin?
       @downloads = Download.all
     else

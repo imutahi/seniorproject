@@ -25,3 +25,17 @@ two:
   fax: "504-504-5045"
   notes: "MyString"
   email: "talontest7@gmail.com"
+
+three:
+  client_name: "Hugo"
+  total_requests: 1
+  company: "Testable Solutions"
+  email: "test@test.com"
+  address: "MyString"
+  city: "MyString"
+  state: "CO"
+  zip: "11111"
+  phone: "504-504-5045"
+  fax: "504-504-5045"
+  notes: "MyString"
+  client_id: 4
