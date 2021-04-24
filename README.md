@@ -53,7 +53,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 ## Sprint Deliverables - 3/10
 
 - Added a User Profile to the Web Application
-- Added content such as the nav bar, the footer, the sign in ans also the sign out button
+- Added content such as the nav bar, the footer, the sign in and also the sign out button
 - Created a style guide that finalized the style of fonts, buttons, colors etc for the web app. 
 - Implemented and fixed associations: 
   The client should be able to choose which services they want from the firm requests page; The administrator should be able to see and also edit the client's request
@@ -70,5 +70,5 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Utilized "Include Secured" to ensure that only signed in users in the Web Appliction can access the clients and requests page, otherwise no redirect happens and the user stays on the current page.
 - Implemented tests for "Include Secured" 
 - Wrote new tests for the implemented front end design changes
-- Experimented with Stripe
+- Experimented with Stripe for E-Commerce.
 - Updated the Identity providers
