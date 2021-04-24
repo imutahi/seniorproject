@@ -44,7 +44,7 @@
           <td data-title="DL Number"><%= firm.dl_number %></td>
           <td data-title="Email"><%= @email %></td>
           <td data-title="Total"><%= firm.total %></td>
-          <td></td>
+          <td data-title="Paid"><%= firm.paid %></td>
           <td data-title="Notes"><%= firm.notes %></td>
   <!--        <td><%#= firm.client_request %></td>-->
           <td data-title="Services Requested" class="dob-ssn-cells"><% firm.services.each do |service| %>
@@ -62,4 +62,44 @@
 
 <%= link_to 'New Request', new_firm_path, class:"bottom-button" %>
 <!--Need space for ipad to see the button-->
+
+<br><br><br>
+
+<div class="header">
+  <h1><a href="/home/index"><img src=<%=asset_path('TalonAgencyLogo.png')%> width="45" height="41" class="d-inline-block align-top"  alt=""></a>
+    Talon Agency Checkout</h1>
+</div>
+<hr style="border: 1px outset #595955;">
+<div class="">
+  <div class="product">
+    <h2>Order Confirmation: </h2>
+    <h3>1. Comprehensive Background Check </h3>
+    <h2>$<%= @total_price %></h2>
+    <hr style="border: 1px outset #595955;">
+    <h3>Total: $<%= @total_price %></h3><% $grand_total = @total_price %>
+
+    <% if $grand_total != 0 %>
+      <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+            </article>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="Talon Agency Background Check"
+                    data-amount="<%@total_price%>"
+                    data-label="Buy Now"
+                    data-locale="auto">
+            </script>
+      <% end %>
+    <% end %>
+  </div>
+  <hr style="border: 1px outset #595955;">
+  <h2>*** After purchase, please wait for the confirmation page. ***</h2>
+
+</div>
+
 <br><br><br><br><br>

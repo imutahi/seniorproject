@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2021_04_24_020159) do
     t.string "file"
     t.integer "client_id"
     t.decimal "total"
-    t.boolean "paid"
+    t.boolean "paid", default: false
   end
 
   create_table "firms_services", id: false, force: :cascade do |t|
