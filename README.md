@@ -2,13 +2,16 @@
 
 ## Table of Contents
 
-> (coming soon)
+> Project, Project Summary 
+> TalonsOut Team Members
+> Tools Used
+> Sprint Deliverables from 2/10 (First Sprint) - 5/06 (Last Sprint)  
 
 MSU Denver Senior Project for CS4360, Spring 2021. 
 
 We are building a Web-App that allows its clients to make encrypted service requests.
 
-## Team Members
+## TalonsOut Team Members:
 
 - Dominick Licciardi (Product Owner)
 
@@ -24,7 +27,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 
 - Jose Velasquez (Development Team)
 
-## Notes
+## Tools Used
 
 - Ruby on Rails: a familiar and robust framework that allows the team to quickly and easily work in an MVC environment
 
@@ -72,3 +75,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Wrote new tests for the implemented front end design changes
 - Experimented with Stripe for E-Commerce.
 - Updated the Identity providers
+- Created a page that shows the Team's information.
+
+## Sprint Deliverables - 4/14
+- 
