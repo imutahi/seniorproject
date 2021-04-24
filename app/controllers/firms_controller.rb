@@ -14,6 +14,7 @@ class FirmsController < ApplicationController
       @firms = Firm.all
     else
       @firms = Firm.where(client_id: @currentclient.id)
+      @email = session[:userinfo][:info][:email]
     end
   end
 
@@ -37,6 +38,9 @@ class FirmsController < ApplicationController
 
     @currentclient = Client.find_by(email: session[:userinfo][:info][:email])
     @firm.client_id = @currentclient[:id]
+
+    # loop through all the services of the current firm record and total the prices
+    # and insert it into the total column
 
     respond_to do |format|
       if @firm.save
