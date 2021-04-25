@@ -184,6 +184,10 @@
   font-weight: bold;
 }
 
+.title-spacing{
+  margin-top: 1em;
+}
+
 .get-started-button{
   background: #49B5FD;
   border-radius: 20px;
@@ -219,7 +223,7 @@
 .bg-image {
   z-index: -1;
   position: absolute;
-  height: 150vh;
+  height: 200vh;
   width: 150vw;
   top: 0;
   right: 0;
