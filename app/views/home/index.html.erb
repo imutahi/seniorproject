@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
 <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
-<div class = "container" style="height: 100vh; top: 0; right: 0; background: url(background_shape.png) no-repeat left right relative">
+
   <img id="bg-id" class="align-middle w-105 bg-image" src="/background_shape.png" alt="Background Shape Image">
 
 <main>
@@ -11,10 +11,11 @@
   <h1 class="display-7">Talon Agency</h1>
     <hr class="divider">
 </div>
+ <!--
       <div class="container-fluid mb-5">
         <h1 class="talon-landing-header mt-5"> The most comprehensive background checks in the US. </h1>
       </div>
-<!--
+
      <div id="info-container" class="container p-3 info-container media">
         <div id="info-row"  class="row shadow-lg  media" style="border-radius: 1rem; background: #49b5fd;">
           <div class="col-lg-6 text-center">
@@ -36,6 +37,38 @@
         </div>
       </div>
 -->
+<div class="container-fluid mb-5">
+  <h1 class="talon-landing-header mt-5"> The most comprehensive background checks in the US. </h1>
+</div>
+
+<div id="info-container" class="container-fluid p-3 media">
+  <div class="row shadow-lg  media" style=" background: White;">
+    <div class="row">
+      <div class="col-7">
+        <img class="img-fluid p-4 mt-auto" src="/Profile_Graphic@3x.png" alt="Profile Graphic">
+      </div>
+      <div class="col-5 p-4">
+        <div class="row">
+          <p class="h2" style="font-size: 3em; font-weight: bold;">Find what's in the background </p>
+        </div>
+        <div class="row">
+          <p style="font-size: 1.5em;"> Secure and comprensive background checks available through online requests. View, create, and download total background checks easily. </p>
+        </div>
+        <div class="row mt-2">
+          <div class="col-8">
+              <%= link_to('auth/auth0', method: :post, class: 'btn p-2 shadow get-started-button', 'aria-current' => "page") do%>
+                Get Started
+                <i class="fas fa-arrow-alt-circle-right"></i>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
   <div class="container mt-5">
     <div class="row">
       <div class="col text-center" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 5vw; font-weight: bold;">
@@ -44,20 +77,20 @@
     </div>
 
     <div class="row mt-5">
-      <div class="col-sm-3 mt-auto d-flex justify-content-center">
-          <img class="img-fluid" src="/Login.png" alt="Login-Icon" style="height: 50%; width: 50%;">
+      <div class="col-sm-3 mt-auto img-fluid d-flex justify-content-center">
+          <img class="img-fluid" src="/Login.png" alt="Login-Icon">
       </div>
       <div class="col-sm-3 mt-auto d-flex justify-content-center">
-        <img class="img-fluid"  src="/Apply.png" alt="Apply-Icon" style="height: 50%; width: 50%;">
+        <img class="img-fluid"  src="/Apply.png" alt="Apply-Icon">
       </div>
       <div class="col-sm-3 mt-auto d-flex justify-content-center">
-        <img class="img-fluid"  src="/Request.png" alt="Request-Icon" style="height: 50%; width: 50%;">
+        <img class="img-fluid"  src="/Request.png" alt="Request-Icon">
       </div>
       <div class="col-sm-3 mt-auto d-flex justify-content-center">
-          <img class="img-fluid" src="/Download.png" alt="Download-Icon" style="height: 50%; width: 50%;">
+          <img class="img-fluid" src="/Download.png" alt="Download-Icon">
       </div>
     </div>
   </div>
 
-
+-->
   <main>
