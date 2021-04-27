@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
 <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
-<div class = "container" style="height: 100vh; top: 0; right: 0; background: url(background_shape.png) no-repeat left right relative">
+
   <img id="bg-id" class="align-middle w-105 bg-image" src="/background_shape.png" alt="Background Shape Image">
 
 <main>
@@ -11,6 +11,7 @@
   <h1 class="display-7">Talon Agency</h1>
     <hr class="divider">
 </div>
+ <!--
       <div class="container-fluid mb-5">
         <h1 class="talon-landing-header mt-5"> The most comprehensive background checks in the US. </h1>
       </div>
@@ -35,7 +36,80 @@
 
         </div>
       </div>
+-->
+<div class="container-fluid mb-5">
+  <h1 id="landing-header" class="talon-landing-header mt-5 media"> The most comprehensive background checks in the US. </h1>
+</div>
+
+
+<div class="container-fluid p-3">
+  <div class="row shadow-lg media mt-5" style=" background: White;">
+    <div class="row">
+      <div class="col-lg-7">
+        <img data-aos="fade-right" data-aos-once="true" data-aos-delay="500" data-aos-duration="2500" class="img-fluid p-4 mt-auto" src="/Profile_Graphic@3x.png" alt="Profile Graphic">
+      </div>
+      <div class="col-lg p-4">
+        <div class="row">
+          <p id="header-text" class="h2 media header-text">Find what's in the background </p>
+        </div>
+        <div class="row">
+          <p id="detail-text" class="media detail-text"> Secure and comprensive background checks available through online requests. View, create, and download total background checks easily. </p>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg">
+              <%= link_to('auth/auth0', method: :post, class: 'btn p-2 shadow get-started-button', 'aria-current' => "page") do%>
+                Get Started
+                <i class="fas fa-arrow-alt-circle-right"></i>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-3">
+  <div class="row shadow-lg media mt-5 p-3 " style=" background: White;">
+    <div class="col-lg-4 p-4">
+      <div class="row">
+        <p id="header-text" class="h2 media header-text">Make a request</p>
+      </div>
+      <div class="row">
+        <p id="detail-text" class="media detail-text"> Login or signup, then fill out a new client form on the clients page. Once approved by an investigator you can purchase new requests from the requests page, and will be notified when they are ready for download.</p>
+      </div>
+    </div>
+    <div class="col-lg">
+      <img id="image" data-aos="fade-left" data-aos-once="true" data-aos-duration="2500" class="img-fluid p-4 mt-auto media" src="/Flowchart@3x.png" alt="flow chart">
+    </div>
+  </div>
+</div>
 
 
 
+
+<!--
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col text-center" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 5vw; font-weight: bold;">
+        Getting Started
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-sm-3 mt-auto img-fluid d-flex justify-content-center">
+          <img class="img-fluid" src="/Login.png" alt="Login-Icon">
+      </div>
+      <div class="col-sm-3 mt-auto d-flex justify-content-center">
+        <img class="img-fluid"  src="/Apply.png" alt="Apply-Icon">
+      </div>
+      <div class="col-sm-3 mt-auto d-flex justify-content-center">
+        <img class="img-fluid"  src="/Request.png" alt="Request-Icon">
+      </div>
+      <div class="col-sm-3 mt-auto d-flex justify-content-center">
+          <img class="img-fluid" src="/Download.png" alt="Download-Icon">
+      </div>
+    </div>
+  </div>
+
+-->
   <main>

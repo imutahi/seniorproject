@@ -184,6 +184,19 @@
   font-weight: bold;
 }
 
+.title-spacing{
+  margin-top: 1em;
+}
+
+.get-started-button{
+  background: #49B5FD;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .talon-req-man-dir {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -210,7 +223,7 @@
 .bg-image {
   z-index: -1;
   position: absolute;
-  height: 150vh;
+  height: 220vh;
   width: 150vw;
   top: 0;
   right: 0;
@@ -226,7 +239,7 @@
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 750px){
   #getting-started-container{
       margin-top:.25em;
       margin-bottom: 2em;
@@ -241,13 +254,52 @@
     margin: 0;
     width: 100%;
     vertical-align: center;
-    position: relative;
-    min-width: 40vw;
   }
   #navbar-about{
     width: 10%;
     min-width: 35vw;
   }
+
+  #header-text{
+    font-size: 2.5em;
+  }
+  #detail-text{
+    font-size:1em;
+  }
+
+  #landing-header{
+    font-size: 8vw;
+  }
+
+  #bg-id{
+    min-height: 300vh;
+  }
+}
+@media(max-width: 350px){
+  #header-text{
+    font-size: 1.5em;
+    text-align: left;
+    align-content: center;
+  }
+  #detail-text{
+    font-size:.5em;
+    text-align: left;
+  }
+  #button-row{
+    align-content: center;
+  }
+  #image{
+    min-width: 10em;
+    min-height: 100%;
+  }
+}
+.header-text{
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.detail-text{
+  font-size: 1.5em;
 }
 .info-container{
   margin-top: 10em;

@@ -22,6 +22,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
 
+    <!-- Animate On Scroll -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -45,6 +48,10 @@
         </div>
     <%= render 'home/footer' %>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 
   </body>
 </html>
