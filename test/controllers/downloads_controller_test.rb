@@ -2,7 +2,18 @@ require 'test_helper'
 
 class DownloadsControllerTest < ActionDispatch::IntegrationTest
 
-	test 'it should get index' do
+	setup do
+		@downloadtest =  downloads(:one)
+	end
+
+	test 'non-admin should get index' do
+		sign_in_normal_user
+		get downloads_url
+		assert_response :success
+	end
+
+	test 'admin should get index' do
+		sign_in_user_admin
 		get downloads_url
 		assert_response :success
 	end
@@ -37,4 +48,10 @@ class DownloadsControllerTest < ActionDispatch::IntegrationTest
 	    assert_redirected_to downloads_url
 	 end
 
+	test "should destroy download" do
+		sign_in_user_admin
+		assert_difference('Download.count', -1) do
+		  delete download_url(@downloadtest)
+		end
+	end
 end

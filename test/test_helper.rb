@@ -61,6 +61,67 @@ class ActiveSupport::TestCase
     get auth_auth0_callback_path
   end
 
+  # used for controller test
+  def sign_in_user_without_client_application
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "Hugo Meyer",
+        :first_name => "Hugo",
+        :nickname => "Hue",
+        :email => "hugo@test.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "hugo"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    get auth_auth0_callback_path
+  end
+
+  def sign_in_user2_without_client_application
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "Table Meyer",
+        :first_name => "Table",
+        :nickname => "Table",
+        :email => "table@test.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "Table"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    get auth_auth0_callback_path
+  end
+
+  def sign_in_user_without_client_application_for_update
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "Willy Wonka",
+        :first_name => "Willy",
+        :nickname => "Will",
+        :email => "willywonka@test.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "will"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    get auth_auth0_callback_path
+  end
+
   def sign_in_system_admin
     visit root_url
     OmniAuth.config.test_mode = true
@@ -108,4 +169,51 @@ class ActiveSupport::TestCase
     #puts(session[:userinfo])
     #puts(session[:userinfo].present?)
   end
+
+  def sign_in_system_normal_without_client_application
+    visit root_url
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "test testing",
+        :first_name => "test",
+        :nickname => "test",
+        :email => "noemail@test.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "test"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"]  = OmniAuth.config.mock_auth[:auth0]
+    click_on("Login", match: :first)
+    #puts(session[:userinfo])
+    #puts(session[:userinfo].present?)
+  end
+
+  def sign_in_system_normal_without_client_applicationv2
+    visit root_url
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new({
+      :provider => 'auth0',
+      :uid => 'google-oauth2|113828971320495757925',
+      :info => {
+        :name => "test testing",
+        :first_name => "test",
+        :nickname => "test",
+        :email => "nononono@test.com"
+      },
+      :extra => {
+        :raw_info => {
+          :given_name => "test"
+        }
+      }
+    })
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:auth0]
+    click_on("Login", match: :first)
+  end
+
 end
