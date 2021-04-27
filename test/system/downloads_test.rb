@@ -10,11 +10,17 @@ class DownloadsTest < ApplicationSystemTestCase
         assert_selector "h1", text: "Download Manager"
     end
 
-    test "should get new" do
+    test "admin should get new" do
         sign_in_system_admin
 	    visit new_download_url
         assert_selector "h1", text: "Upload Background Check Report"
 	end
+
+    test 'non-admin should get index' do
+        sign_in_system_normal
+        visit downloads_url
+        assert_selector "h1", text: "Download Manager"
+    end
 
     test "should not get new if not admin" do
         sign_in_system_normal
