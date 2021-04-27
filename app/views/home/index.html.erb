@@ -38,25 +38,25 @@
       </div>
 -->
 <div class="container-fluid mb-5">
-  <h1 class="talon-landing-header mt-5"> The most comprehensive background checks in the US. </h1>
+  <h1 id="landing-header" class="talon-landing-header mt-5 media"> The most comprehensive background checks in the US. </h1>
 </div>
 
 
 <div class="container-fluid p-3">
   <div class="row shadow-lg media mt-5" style=" background: White;">
     <div class="row">
-      <div class="col-7">
-        <img data-aos="zoom-in" data-aos-once="true" data-aos-delay="500" data-aos-duration="2500" class="img-fluid p-4 mt-auto" src="/Profile_Graphic@3x.png" alt="Profile Graphic">
+      <div class="col-lg-7">
+        <img data-aos="fade-right" data-aos-once="true" data-aos-delay="500" data-aos-duration="2500" class="img-fluid p-4 mt-auto" src="/Profile_Graphic@3x.png" alt="Profile Graphic">
       </div>
-      <div class="col-5 p-4">
+      <div class="col-lg p-4">
         <div class="row">
-          <p class="h2" style="font-size: 3em; font-weight: bold;">Find what's in the background </p>
+          <p id="header-text" class="h2 media header-text">Find what's in the background </p>
         </div>
         <div class="row">
-          <p style="font-size: 1.5em;"> Secure and comprensive background checks available through online requests. View, create, and download total background checks easily. </p>
+          <p id="detail-text" class="media detail-text"> Secure and comprensive background checks available through online requests. View, create, and download total background checks easily. </p>
         </div>
         <div class="row mt-2">
-          <div class="col-8">
+          <div class="col-lg">
               <%= link_to('auth/auth0', method: :post, class: 'btn p-2 shadow get-started-button', 'aria-current' => "page") do%>
                 Get Started
                 <i class="fas fa-arrow-alt-circle-right"></i>
@@ -69,18 +69,19 @@
 </div>
 
 <div class="container-fluid p-3">
-  <div class="row shadow-lg media mt-5 p-3" style=" background: White;">
-    <div class="col-4 p-4">
+  <div class="row shadow-lg media mt-5 p-3 " style=" background: White;">
+    <div class="col-lg-4 p-4">
       <div class="row">
-        <p class="h2" style="font-size: 3em; font-weight: bold;">Make a request</p>
+        <p id="header-text" class="h2 media header-text">Make a request</p>
       </div>
       <div class="row">
-        <p style="font-size: 1.5em;"> Login or signup, then fill out a new client form on the clients page. Once approved by an investigator you can purchase new requests from the requests page, and will be notified when they are ready for download.</p>
+        <p id="detail-text" class="media detail-text"> Login or signup, then fill out a new client form on the clients page. Once approved by an investigator you can purchase new requests from the requests page, and will be notified when they are ready for download.</p>
       </div>
     </div>
-    <div class="col-8 p-4 justify-content-center">
-      <img data-aos="zoom-in" data-aos-once="true" data-aos-duration="2500" class="img-fluid" src="Flowchart@3x.png" alt="flow chart">
+    <div class="col-lg">
+      <img id="image" data-aos="fade-left" data-aos-once="true" data-aos-duration="2500" class="img-fluid p-4 mt-auto media" src="/Flowchart@3x.png" alt="flow chart">
     </div>
+  </div>
 </div>
 
 

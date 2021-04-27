@@ -239,7 +239,7 @@
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 750px){
   #getting-started-container{
       margin-top:.25em;
       margin-bottom: 2em;
@@ -254,13 +254,48 @@
     margin: 0;
     width: 100%;
     vertical-align: center;
-    position: relative;
-    min-width: 40vw;
   }
   #navbar-about{
     width: 10%;
     min-width: 35vw;
   }
+
+  #header-text{
+    font-size: 2.5em;
+  }
+  #detail-text{
+    font-size:1em;
+  }
+
+  #landing-header{
+    font-size: 8vw;
+  }
+}
+@media(max-width: 350px){
+  #header-text{
+    font-size: 1.5em;
+    text-align: left;
+    align-content: center;
+  }
+  #detail-text{
+    font-size:.5em;
+    text-align: left;
+  }
+  #button-row{
+    align-content: center;
+  }
+  #image{
+    min-width: 10em;
+    min-height: 100%;
+  }
+}
+.header-text{
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.detail-text{
+  font-size: 1.5em;
 }
 .info-container{
   margin-top: 10em;
