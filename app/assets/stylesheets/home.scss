@@ -293,6 +293,89 @@
     min-height: 100%;
   }
 }
+
+.rect-info{
+  overflow: hidden;
+  visibility: hidden;
+  animation: info-anim;
+  animation-delay: var(--delay);
+  animation-duration: var(--time);
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.blob-shape{
+  overflow: hidden;
+  animation: blob-move;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+.blob-shape-2{
+  overflow: hidden;
+  animation: blob-move-2;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+.flow-chart-path{
+  stroke-dasharray: 900;
+  visibility: hidden;
+  animation: draw;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.hide-flowchart{
+  visibility: hidden;
+}
+@keyframes info-anim{
+    from {
+      width: 0;
+      visibility: visible;
+    }
+    to {
+      width: 140;
+      visibility: visible;
+    }
+}
+
+@keyframes blob-move{
+  from{
+    transform-origin: center;
+  }
+  to{
+    transform-origin: center;
+    transform: rotate(5deg);
+  }
+}
+@keyframes blob-move-2{
+  from{
+    transform-origin: center;
+  }
+  to{
+    transform-origin: center;
+    transform: rotate(-15deg);
+  }
+}
+
+
+@keyframes draw{
+  from{
+    visibility: visible;
+  }
+  to{
+    visibility: visible;
+    stroke-dashoffset: 1000;
+  }
+}
+
 .header-text{
   font-size: 3em;
   font-weight: bold;
