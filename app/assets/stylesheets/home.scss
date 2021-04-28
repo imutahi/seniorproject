@@ -204,22 +204,6 @@
   white-space: nowrap;
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeInOpacity ease 5s;
-  animation-iteration-count: 1;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
-
-.fade-in-slow {
-  opacity: 0;
-  animation: fadeInOpacity ease 5s;
-  animation-iteration-count: 1;
-  animation-delay: 2s;
-  animation-fill-mode: both;
-}
-
 .bg-image {
   z-index: -1;
   position: absolute;
@@ -329,12 +313,38 @@
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-direction: reverse;
-  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 .hide-flowchart{
   visibility: hidden;
 }
+.hidden-element{
+  visibility: hidden;
+  opacity: 50%;
+}
+.fade-in-flowchart{
+  overflow: hidden;
+  animation: fade-in-flowchart-element;
+  animation-duration: 1s;
+  animation-delay: var(--delay);
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.hidden-path{
+  visibility: hidden;
+}
+
+@keyframes fade-in-flowchart-element{
+  from{
+    visibility: visible;
+    opacity: 50%;
+  }
+  to{
+    visibility: visible;
+    opacity: 100%;
+  }
+}
+
 @keyframes info-anim{
     from {
       width: 0;
