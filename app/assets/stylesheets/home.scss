@@ -207,7 +207,7 @@
 .bg-image {
   z-index: -1;
   position: absolute;
-  height: 240vh;
+  height: 290vh;
   width: 150vw;
   top: 0;
   right: 0;
@@ -256,7 +256,7 @@
   }
 
   #bg-id{
-    min-height: 300vh;
+    min-height: 350vh;
   }
 }
 @media(max-width: 350px){
@@ -332,6 +332,21 @@
 }
 .hidden-path{
   visibility: hidden;
+}
+
+.puzzle{
+  overflow: hidden;
+  animation: puzzle-slide;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes puzzle-slide{
+  to{
+    transform: translateX(-194px);
+  }
 }
 
 @keyframes fade-in-flowchart-element{
