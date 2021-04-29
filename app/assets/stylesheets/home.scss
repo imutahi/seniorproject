@@ -207,8 +207,9 @@
 .bg-image {
   z-index: -1;
   position: absolute;
-  height: 290vh;
+  height: 260vh;
   width: 150vw;
+  min-height: 260vh;
   top: 0;
   right: 0;
   bottom: 0;
@@ -223,7 +224,7 @@
   }
 }
 
-@media (max-width: 750px){
+@media (max-width: 800px){
   #getting-started-container{
       margin-top:.25em;
       margin-bottom: 2em;
@@ -256,7 +257,7 @@
   }
 
   #bg-id{
-    min-height: 350vh;
+    min-height: 400vh;
   }
 }
 @media(max-width: 350px){
