@@ -90,11 +90,11 @@
   <div class="row text-left">
     <div class="col-lg-6 offset-md-1 p-4 my-auto text-left">
       <div class="row">
-      <p id="header-text" class="h2 media header-text">Talon Angency helps you find the missing piece</p>
+      <p id="header-text" class="h2 media header-text">Talon Agency helps you find the missing piece</p>
       </div>
       <div class="row">
         <div class="col-lg-7">
-          <p id="detail-text" class="media detail-text"> Background checks are crucial to protecting individuals from risk and preventing situations before they happen. </p>
+          <p id="detail-text" class="media detail-text"> Background checks are critical to protecting individuals from risk and preventing bad situations before they happen. </p>
           </div>
       </div>
     </div>
@@ -406,7 +406,7 @@
             </g>
           </g>
         </g>
-        <g id="Top-Right" class="puzzle">
+        <g id="Top-Right">
           <g class="cls-37">
             <g class="cls-9">
               <g class="cls-38">
@@ -525,12 +525,14 @@
 <!-- This script waits until svg image is in view to play animations -->
 <script>
       var scroll_position = 0;
-      var section_position = 700;
+      var section_position = 1300;
+      var puzzle_location = 800;
       var flowchart = document.getElementById("flowchart-path");
       var login = document.getElementById("Login")
       var apply = document.getElementById("Apply")
       var request = document.getElementById("Request")
       var download = document.getElementById("Download")
+      var puzzle_piece = document.getElementById("Top-Right")
 
       function startAnimation() {
          flowchart.classList.add("flow-chart-path");
@@ -540,10 +542,17 @@
          download.classList.add("fade-in-flowchart")
       }
 
+      function startPuzzleAnimation(){
+        puzzle_piece.classList.add("puzzle")
+      }
+
       window.addEventListener('scroll', function(e) {
         scroll_position = window.scrollY;
         if (scroll_position > section_position) {
           startAnimation()
+        }
+        else if (scroll_position > puzzle_location){
+          startPuzzleAnimation()
         }
       });
 
