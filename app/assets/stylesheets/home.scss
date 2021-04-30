@@ -204,27 +204,12 @@
   white-space: nowrap;
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeInOpacity ease 5s;
-  animation-iteration-count: 1;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
-
-.fade-in-slow {
-  opacity: 0;
-  animation: fadeInOpacity ease 5s;
-  animation-iteration-count: 1;
-  animation-delay: 2s;
-  animation-fill-mode: both;
-}
-
 .bg-image {
   z-index: -1;
   position: absolute;
-  height: 220vh;
+  height: 260vh;
   width: 150vw;
+  min-height: 260vh;
   top: 0;
   right: 0;
   bottom: 0;
@@ -239,7 +224,7 @@
   }
 }
 
-@media (max-width: 750px){
+@media (max-width: 800px){
   #getting-started-container{
       margin-top:.25em;
       margin-bottom: 2em;
@@ -272,7 +257,7 @@
   }
 
   #bg-id{
-    min-height: 300vh;
+    min-height: 400vh;
   }
 }
 @media(max-width: 350px){
@@ -293,6 +278,129 @@
     min-height: 100%;
   }
 }
+
+.rect-info{
+  overflow: hidden;
+  visibility: hidden;
+  animation: info-anim;
+  animation-delay: var(--delay);
+  animation-duration: var(--time);
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.blob-shape{
+  overflow: hidden;
+  animation: blob-move;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+.blob-shape-2{
+  overflow: hidden;
+  animation: blob-move-2;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+.flow-chart-path{
+  stroke-dasharray: 900;
+  visibility: hidden;
+  animation: draw;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+.hide-flowchart{
+  visibility: hidden;
+}
+.hidden-element{
+  visibility: hidden;
+  opacity: 50%;
+}
+.fade-in-flowchart{
+  overflow: hidden;
+  animation: fade-in-flowchart-element;
+  animation-duration: 1s;
+  animation-delay: var(--delay);
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.hidden-path{
+  visibility: hidden;
+}
+
+.puzzle{
+  overflow: hidden;
+  animation: puzzle-slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes puzzle-slide{
+  to{
+    transform: translateX(-194px);
+  }
+}
+
+@keyframes fade-in-flowchart-element{
+  from{
+    visibility: visible;
+    opacity: 50%;
+  }
+  to{
+    visibility: visible;
+    opacity: 100%;
+  }
+}
+
+@keyframes info-anim{
+    from {
+      width: 0;
+      visibility: visible;
+    }
+    to {
+      width: 140;
+      visibility: visible;
+    }
+}
+
+@keyframes blob-move{
+  from{
+    transform-origin: center;
+  }
+  to{
+    transform-origin: center;
+    transform: rotate(5deg);
+  }
+}
+@keyframes blob-move-2{
+  from{
+    transform-origin: center;
+  }
+  to{
+    transform-origin: center;
+    transform: rotate(-15deg);
+  }
+}
+
+
+@keyframes draw{
+  from{
+    visibility: visible;
+  }
+  to{
+    visibility: visible;
+    stroke-dashoffset: 1000;
+  }
+}
+
 .header-text{
   font-size: 3em;
   font-weight: bold;
