@@ -166,23 +166,34 @@ table tbody tr {
 
 /*ABOUTUS PAGE*/
 
-.profile-title {
+.profile-title{
+  text-align: center;
+}
+.panel-heading{
   text-align: center;
   font-weight: bold;
 }
-.panel-heading {
-  text-align: center;
-}
 
 .profile-pictures {
+  border-radius: 200px;
   margin: 0 auto;
   text-align: center;
   display: block;
   width: 300px;
   height: 300px;
 }
+.social-icon-container {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-.profile-info {
+.profile-social-icons {
+    color: #49b6fd;
+    font-size: 35px;
+}
+.profile-info{
   text-align: center;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
+  max-width: 400px;
 }
