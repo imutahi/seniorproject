@@ -1,15 +1,9 @@
-# TALON AGENCY - Encrypted Request Manager
+# TALON AGENCY - Encrypted Request Manager  
 
-## Table of Contents
-
-> Project, Project Summary 
-> TalonsOut Team Members
-> Tools Used
-> Sprint Deliverables from 2/10 (First Sprint) - 5/06 (Last Sprint)  
-
-MSU Denver Senior Project for CS4360, Spring 2021. 
+# MSU Denver Senior Project for CS4360, Spring 2021. 
 
 We are building a Web-App that allows its clients to make encrypted service requests.
+
 
 ## TalonsOut Team Members:
 
@@ -27,6 +21,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 
 - Jose Velasquez (Development Team)
 
+
 ## Tools Used
 
 - Ruby on Rails: a familiar and robust framework that allows the team to quickly and easily work in an MVC environment
@@ -36,6 +31,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - PostGreSQL Database: a free and popular relational database management system that will allow the project to be deployed to Heroku
 
 - Travis CI: allows for continuous integration to maintain code quality and integrity
+
 
 ## Sprint Deliverables - 2/10
 
