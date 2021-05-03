@@ -3,7 +3,9 @@
 
 # MSU Denver Senior Project for CS4360, Spring 2021. 
 
-We are building a Web-App that allows its clients to make encrypted service requests.
+# Summary:
+
+We built a Web-Application that makes it easier for private investigators to perform  encrypted background checks for their clients. We created a webpage that enables the private investigator using it to approve clients, retrieve the clients background check requests along with their payments, and to distribute the encrypted reports back to the client once they are finished. 
 
 
 ## TalonsOut Team Members:
@@ -23,7 +25,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Jose Velasquez (Development Team)
 
 
-## Tools Used
+## Tools Used:
 
 - Ruby on Rails: a familiar and robust framework that allows the team to quickly and easily work in an MVC environment
 
@@ -35,7 +37,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 
 - Auth0: Flexible drop in tool that adds authentication and authorization services to applications
 
-- Heroku: Container based cloud platform to deploy, manage and scale the web application.
+- Heroku: Container based cloud platform to deploy, manage and scale the web application
 
 - Stripe: For E-Commerce transactions 
 
