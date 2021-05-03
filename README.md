@@ -78,6 +78,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Created a page that shows the Team's information.
 
 ## Sprint Deliverables - 4/14
+
 - Finished the download manager which allows the Administrator to Upload a PDF file containing the client's services 
 - Implemented Permissions: Only administrators can change the status through the HTTP requests 
 - Created a cart and e-commerce page 
@@ -86,3 +87,12 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Made the tables mobile friendly
 
 ## Sprint Deliverables - 5/5
+
+- Implemented E-Commerce Stripe 
+- Implemented Request Pricing for E-Commerce: Clients can now pay for their services
+- Fixed the tests for the clients/ requests page 
+- Made the Webpages style compliant 
+- Added information to Talons Agency About Page 
+- Fixed Github Security vulnerabilities 
+- Made visual front end changes to the main webpage
+- Converted Repo to Public
