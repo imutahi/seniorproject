@@ -78,4 +78,11 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Created a page that shows the Team's information.
 
 ## Sprint Deliverables - 4/14
-- 
+- Finished the download manager which allows the Administrator to Upload a PDF file containing the client's services 
+- Implemented Permissions: Only administrators can change the status through the HTTP requests 
+- Created a cart and e-commerce page 
+- Updated the framework so that only clients can see themselves on the clients table
+- Updated the framework so that the clients can only see the downloads table on the downloads page 
+- Made the tables mobile friendly
+
+## Sprint Deliverables - 5/5
