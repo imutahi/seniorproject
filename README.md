@@ -1,15 +1,12 @@
-# TALON AGENCY - Encrypted Request Manager
+# TALON AGENCY
+# Encrypted Request Manager # 
 
-## Table of Contents
+# MSU Denver Senior Project for CS4360, Spring 2021. 
 
-> Project, Project Summary 
-> TalonsOut Team Members
-> Tools Used
-> Sprint Deliverables from 2/10 (First Sprint) - 5/06 (Last Sprint)  
+# Summary:
 
-MSU Denver Senior Project for CS4360, Spring 2021. 
+We built a Web-Application that makes it easier for private investigators to perform  encrypted background checks for their clients. We created a webpage that enables the private investigator using it to approve clients, retrieve the clients background check requests along with their payments, and to distribute the encrypted reports back to the client once they are finished. 
 
-We are building a Web-App that allows its clients to make encrypted service requests.
 
 ## TalonsOut Team Members:
 
@@ -27,7 +24,8 @@ We are building a Web-App that allows its clients to make encrypted service requ
 
 - Jose Velasquez (Development Team)
 
-## Tools Used
+
+## Tools Used:
 
 - Ruby on Rails: a familiar and robust framework that allows the team to quickly and easily work in an MVC environment
 
@@ -37,7 +35,14 @@ We are building a Web-App that allows its clients to make encrypted service requ
 
 - Travis CI: allows for continuous integration to maintain code quality and integrity
 
-## Sprint Deliverables - 2/10
+- Auth0: Flexible drop in tool that adds authentication and authorization services to applications
+
+- Heroku: Container based cloud platform to deploy, manage and scale the web application
+
+- Stripe: For E-Commerce transactions 
+
+
+## Sprint Deliverables - 2/10 (Sprint 1)
 
 - Basic app working with minimal features (3 scaffolds/pages)
 - basic front-end features (bootstrap, HTML)
@@ -46,14 +51,14 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Travis-CI (passing)
 - all hosted on Heroku.
 
-## Sprint Deliverables - 2/24
+## Sprint Deliverables - 2/24 (Sprint 2)
 
 - Researched, Implemented and Tested Authentication - Auth0 add on created through Heroku
 - Added HTML5 elements for screen readers to access the landmark features on Web Pages
 - Decided to Utilize Minitest to test Auth0
 - Designed Logo and Color Scheme for Talon Agency
 
-## Sprint Deliverables - 3/10
+## Sprint Deliverables - 3/10 (Sprint 3)
 
 - Added a User Profile to the Web Application
 - Added content such as the nav bar, the footer, the sign in and also the sign out button
@@ -61,7 +66,7 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Implemented and fixed associations: 
   The client should be able to choose which services they want from the firm requests page; The administrator should be able to see and also edit the client's request
   
-## Sprint Deliverables - 3/31 
+## Sprint Deliverables - 3/31  (Sprint 4)
 
 - Made major front end style enhancements and visual updates to the Web App; made the styling consistent with every page and created styling guidelines for all of the pages that will follow afterwards
 - Made the navbar buttons collapse into a hamburger menu when the screen is made smaller
@@ -77,5 +82,22 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - Updated the Identity providers
 - Created a page that shows the Team's information.
 
-## Sprint Deliverables - 4/14
-- 
+## Sprint Deliverables - 4/14 (Sprint 5)
+
+- Finished the download manager which allows the Administrator to Upload a PDF file containing the client's services 
+- Implemented Permissions: Only administrators can change the status through the HTTP requests 
+- Created a cart and e-commerce page 
+- Updated the framework so that only clients can see themselves on the clients table
+- Updated the framework so that the clients can only see the downloads table on the downloads page 
+- Made the tables mobile friendly
+
+## Sprint Deliverables - 5/5 (Final Sprint)
+
+- Implemented E-Commerce Stripe 
+- Implemented Request Pricing for E-Commerce: Clients can now pay for their services
+- Fixed the tests for the clients/ requests page 
+- Made the Webpages style compliant 
+- Added information to Talons Agency About Page 
+- Fixed Github Security vulnerabilities 
+- Made visual front end changes to the main webpage
+- Converted Repo to Public
