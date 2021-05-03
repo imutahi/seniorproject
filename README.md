@@ -1,4 +1,5 @@
-# TALON AGENCY - Encrypted Request Manager  
+# TALON AGENCY
+# Encrypted Request Manager # 
 
 # MSU Denver Senior Project for CS4360, Spring 2021. 
 
@@ -31,6 +32,12 @@ We are building a Web-App that allows its clients to make encrypted service requ
 - PostGreSQL Database: a free and popular relational database management system that will allow the project to be deployed to Heroku
 
 - Travis CI: allows for continuous integration to maintain code quality and integrity
+
+- Auth0: Flexible drop in tool that adds authentication and authorization services to applications
+
+- Heroku: Container based cloud platform to deploy, manage and scale the web application.
+
+- Stripe: For E-Commerce transactions 
 
 
 ## Sprint Deliverables - 2/10
